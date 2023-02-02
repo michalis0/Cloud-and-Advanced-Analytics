@@ -15,7 +15,7 @@ For your project you can use the M5stack IoT device as a visualization device (s
 
 ## Deliverables
 
-- The YouTube URL (private is fine) of a video describing your approach (problem + your solution + a demo).
+- The YouTube URL (unlisted or public) of a video describing your approach (problem + your solution + a demo).
 - An article for the general public (ie describe the problem on a high level) which you will post in LinkedIn, and include also your video in it.
 - A git repo with your code, and a readme describing how to deploy it (don't include any passwords or secret keys!).
 
