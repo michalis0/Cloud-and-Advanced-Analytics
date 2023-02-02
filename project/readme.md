@@ -22,7 +22,7 @@ Your project is expected to have some machine learning component or analytics (e
 1. Weather monitoring systems, detecting anomalies and pushing alerts.
 2. A cashier application that scans barcodes of products and does recommendations.
 3. A home video surveillance system.
-4. A energy monitoring application for your house, RV, boat etc.
+4. A remote energy monitoring application for your house, RV, boat etc.
 5. (your idea here).
 
 There needs to be an interface whether in the browser or in Google Cloud/Run, so that someone can test your application.
