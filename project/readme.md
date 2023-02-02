@@ -23,9 +23,10 @@ Your project is expected to have some machine learning component or analytics (e
 2. A cashier application that scans barcodes of products and does recommendations.
 3. A home video surveillance/monitoring system.
 4. A remote energy monitoring application for your house, RV, boat etc.
-5. (your idea here).
+5. You may also consider using ChatGPT's API to make some more [intelligent application](https://www.youtube.com/watch?v=mCk4Rabkmjc).
+6. (your idea here).
 
-Your idea also needs to have some kind of user interface, either in the browser (via Google Cloud/Run) or on the display of the M5Stack device.
+Your project should also feature some type of user interface, with which the user can interact, either in the browser (via Google Cloud/Run) or on the display of the M5Stack device.
 
 ## Deadlines
 
