@@ -3,6 +3,11 @@
 For your class project you should combine Google Cloud and the M5Stack IoT devices to create a full application. 
 Think of something that you always wanted to do, and then try to do during the class project!
 
+<img width="134" alt="image" src="https://user-images.githubusercontent.com/28807066/216301010-7b1297e5-1568-40f8-8bce-b0f545d9d1b4.png">
+
+<img width="134" alt="image" src="https://user-images.githubusercontent.com/28807066/216301115-eaec45d2-e1e9-4b52-8685-ce0531edb72f.png">
+
+
 Your project is expected to have some machine learning component or analytics (eg Google AutoML, recommendations, etc), some data component (eg Google BigQuery, Google IoT), and use the M5stack devices with some sensors. If you need a sensor that we don't already have you can ask for it. If you need more than one m5stack device for your project don't hesitate to ask.
 
 
