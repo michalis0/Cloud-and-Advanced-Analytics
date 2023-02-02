@@ -13,7 +13,7 @@ Your project is expected to have some machine learning component or analytics (e
 
 ## Deliverables
 
-- A video describing your approach.
+- The YouTube URL (private is fine) of a video describing your approach (problem + your solution + a demo).
 - An article for the general public (ie describe the problem on a high level) which you will post in LinkedIn, and include also your video in it.
 - A git repo with your code, and a readme describing how to deploy it (don't include any passwords or secret keys!).
 
