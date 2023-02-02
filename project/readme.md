@@ -19,17 +19,17 @@ Your project is expected to have some machine learning component or analytics (e
 
 ## Ideas of what to do
 
-1. Weather monitoring systems, detecting anomalies and pushing alerts.
+1. A weather monitoring system, detects anomalies and pushes alerts.
 2. A cashier application that scans barcodes of products and does recommendations.
-3. A home video surveillance system.
+3. A home video surveillance/monitoring system.
 4. A remote energy monitoring application for your house, RV, boat etc.
 5. (your idea here).
 
-There needs to be an interface either in the browser (via Google Cloud/Run) or using the M5Stack devices, so that someone can test your application.
+Your idea also needs to have some kind of user interface, either in the browser (via Google Cloud/Run) or on the display of the M5Stack device.
 
 ## Deadlines
 
-1. March 09: send your 1-page proposal to your TAs for approval. You should clearly write down how many sensors, devices, etc you will need for your project, and also which services from Google Cloud you expect to use. Your TAs may add more elements to your project to make it more challenging!
-2. March 30: Milestone 1: Show your progress during the lab.
-3. May 04: Milestone 2: Show your progress. 
+1. March 09: send your 1-page proposal to your TAs for approval. You should clearly write down how many sensors, devices, etc you will need for your project (the fewer the better, as we can only guarantee 1-2 devices and 1-2 sensors pro group), and also which services from Google Cloud you expect to use. Your TAs may add more elements to your project to make it more challenging!
+2. March 30: Milestone 1: Show your progress during the lab (we expect you to have some parts fleshed out).
+3. May 04: Milestone 2: Show your progress (we expect some connectivity with google cloud/services)
 4. May 30: Final deliverable (LinkedIn article, video, github, and web address if your application is live)
