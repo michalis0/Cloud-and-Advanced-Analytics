@@ -25,7 +25,7 @@ Your project is expected to have some machine learning component or analytics (e
 4. A remote energy monitoring application for your house, RV, boat etc.
 5. (your idea here).
 
-There needs to be an interface whether in the browser or in Google Cloud/Run, so that someone can test your application.
+There needs to be an interface either in the browser (via Google Cloud/Run) or using the M5Stack devices, so that someone can test your application.
 
 ## Deadlines
 
