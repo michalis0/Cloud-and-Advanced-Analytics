@@ -29,7 +29,7 @@ There needs to be an interface either in the browser (via Google Cloud/Run) or u
 
 ## Deadlines
 
-1. March 10: send your 1-page proposal to your TAs for approval. You should clearly write down how many sensors, devices, etc you will need for your project, and also which services from Google Cloud you expect to use. Your TAs may add more elements to your project to make it more challenging!
-2. March 30: Show your progress during the lab.
-3. May 04: Show your progress. 
-4. June 1: Final deliverable (LinkedIn article, video, github, and web address if your application is live)
+1. March 09: send your 1-page proposal to your TAs for approval. You should clearly write down how many sensors, devices, etc you will need for your project, and also which services from Google Cloud you expect to use. Your TAs may add more elements to your project to make it more challenging!
+2. March 30: Milestone 1: Show your progress during the lab.
+3. May 04: Milestone 2: Show your progress. 
+4. May 30: Final deliverable (LinkedIn article, video, github, and web address if your application is live)
