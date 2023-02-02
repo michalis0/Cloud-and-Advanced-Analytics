@@ -10,6 +10,8 @@ Think of something that you always wanted to do, and then try it to do during th
 
 Your project is expected to have some machine learning component or analytics (eg Google AutoML, recommendations, etc), some data component (eg Google BigQuery, Google IoT), and use the M5stack devices with some [sensors](https://shop.m5stack.com/collections/m5-sensor). We have many sensors (presence, distance, light, etc) which you can borrow during the semester (and be responsible for it!). If you need a sensor that we don't already have, you can ask for it, same if you need more m5stack devices for your project. 
 
+For your project you can use the M5stack IoT device as a visualization device (see what is happening in the world) and/or for interacting or initiating actions to your backend.
+
 
 ## Deliverables
 
