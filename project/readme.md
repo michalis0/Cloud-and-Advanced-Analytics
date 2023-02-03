@@ -26,7 +26,8 @@ For your project you can use the M5stack IoT device as a visualization device (s
 3. A home video surveillance/monitoring system.
 4. A remote energy monitoring application for your house, RV, boat etc.
 5. You may also consider using ChatGPT's API to make some more [intelligent application](https://www.youtube.com/watch?v=mCk4Rabkmjc).
-6. (your idea here).
+6. A GPS system with map support for your bike/kayak/...
+7. (your idea here).
 
 Your project should also feature some type of user interface, with which the user can interact, either in the browser (via Google Cloud/Run) or on the display of the M5Stack device.
 
