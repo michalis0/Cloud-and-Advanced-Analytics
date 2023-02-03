@@ -42,3 +42,4 @@ Your project should also feature some type of user interface, with which the use
 - Originality: be creative! 
 - Smart usage of the tools shown during the course 
 - Functionality / ease of use: is it easy to use and understand? Does it work? Is it useful?
+- High-quality / elegant code
