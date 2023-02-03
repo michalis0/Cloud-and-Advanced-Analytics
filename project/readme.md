@@ -16,7 +16,7 @@ For your project you can use the M5stack IoT device as a visualization device (s
 ## Deliverables
 
 - The YouTube URL (unlisted or public) of a video describing your approach (problem + your solution + a demo).
-- An article for the general public (ie describe the problem on a high level) which you will post in LinkedIn, and include also your video in it.
+- An article for the general public (i.e. describe the problem on a high level) which you will post in LinkedIn if you want, and include also your video in it.
 - A git repo with your code, and a readme describing how to deploy it (don't include any passwords or secret keys!).
 
 ## Ideas of what to do
@@ -33,6 +33,12 @@ Your project should also feature some type of user interface, with which the use
 ## Deadlines
 
 1. March 09: send your 1-page proposal to your TAs for approval. You should clearly write down how many sensors, devices, etc you will need for your project (the fewer the better, as we can only guarantee 1-2 devices and 1-2 sensors pro group), and also which services from Google Cloud you expect to use. Your TAs may add more elements to your project to make it more challenging!
-2. March 30: Milestone 1: Show your progress during the lab (we expect you to have some parts fleshed out).
+2. March 30: Milestone 1: Show your progress during the lab (we expect you to have some parts fleshed out)
 3. May 04: Milestone 2: Show your progress (we expect some connectivity with google cloud/services)
 4. May 30: Final deliverable (LinkedIn article, video, github, and web address if your application is live)
+
+## What will make your project stand out
+
+- Originality: be creative! 
+- Smart usage of the tools shown during the course 
+- Functionality / ease of use: is it easy to use and understand? Does it work? Is it useful?
