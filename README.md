@@ -1,4 +1,5 @@
 # Cloud and Advanced Analytics
+## HEC, University of Lausanne
 
 Dear Students,
 
