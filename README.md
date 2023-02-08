@@ -12,7 +12,7 @@ The labs will generally always have the same basic structure:
 
 Also, when the project will kick off, during the labs you will be able to ask for advice about your group project. 
 
-If you have questions or face problems you cannot resolve during the labs, do not hesitate to ask for clarifications. If you have questions after the labs, please use the discussion forum on Moodle. Also, remember that Google is your friend, especially while coding!
+If you have questions or face problems you cannot resolve during the labs, do not hesitate to ask for clarifications. If you have questions after the labs, please use the our slack channel. Also, remember that Google/ChatGPT are your friends, especially while coding!
 
 We are looking forward to a great semester with you.
 
