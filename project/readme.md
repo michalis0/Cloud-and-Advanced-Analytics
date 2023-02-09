@@ -8,7 +8,7 @@ Think of something that you always wanted to do, and then try it to do during th
 <img width="134" alt="image" src="https://user-images.githubusercontent.com/28807066/216301115-eaec45d2-e1e9-4b52-8685-ce0531edb72f.png">
 
 
-Your project is expected to have some machine learning component or analytics (eg Google AutoML, recommendations, etc), some data component (eg Google BigQuery, Google IoT), and use the M5stack devices with some [sensors](https://shop.m5stack.com/collections/m5-sensor). We have many sensors (presence, distance, light, etc) which you can borrow during the semester (and be responsible for it!). If you need a sensor that we don't already have, you can ask for it, same if you need more m5stack devices for your project. 
+Your project is expected to have some machine learning component or analytics (eg Google AutoML, recommendations, etc), some data component (eg Google BigQuery, Google IoT), and must use an M5stack device, possibly with some [sensors](https://shop.m5stack.com/collections/m5-sensor). We have many sensors (presence, distance, light, etc) which you can borrow during the semester (and be responsible for it!). If you need a sensor that we don't already have, you can ask for it, same if you need more m5stack devices for your project. 
 
 For your project you can use the M5stack IoT device as a visualization device (see what is happening in the world) and/or for interacting or initiating actions to your backend.
 
@@ -27,10 +27,10 @@ For your project you can use the M5stack IoT device as a visualization device (s
 4. A remote energy monitoring application for your house, RV, boat etc.
 5. You may also consider using ChatGPT's API to make some more [intelligent application](https://www.youtube.com/watch?v=mCk4Rabkmjc).
 6. A GPS system with map support for your bike/kayak/...
-7. If you want you can even create a game (come to me for ideas!), but it should have some cloud component (e.g. storage of multi-user data, etc).
+7. If you want you can even create a game on the M5stack (eg [Roll the ball](https://apps.apple.com/us/app/roll-the-ball-slide-puzzle/id961875786), or Snake), but it should have some cloud component (e.g. storage of multi-user data, etc).
 8. (your own idea here).
 
-Your project should also feature some type of user interface, with which the user can interact, either in the browser (via Google Cloud/Run) or on the display of the M5Stack device.
+Your project should feature some type of user interface with which the user can interact, either on the browser (via Google Cloud/Run) or on the display of the M5Stack device.
 
 ## Deadlines
 
