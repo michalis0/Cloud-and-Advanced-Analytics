@@ -28,9 +28,10 @@ For your project you can use the M5stack IoT device as a visualization device (s
 5. You may also consider using ChatGPT's API to make some more [intelligent application](https://www.youtube.com/watch?v=mCk4Rabkmjc).
 6. A GPS system with map support for your bike/kayak/...
 7. If you want you can even create a game on the M5stack (eg [Roll the ball](https://apps.apple.com/us/app/roll-the-ball-slide-puzzle/id961875786), or Snake), but it should have some cloud component (e.g. storage of multi-user data, etc).
-8. (your own idea here).
+8. An interactive display for a shop, using small motors, and so on.
+9. (your own idea here).
 
-Your project should feature some type of user interface with which the user can interact, either on the browser (via Google Cloud/Run) or on the display of the M5Stack device.
+Your project should feature some type of **user interface** with which the user can interact, either on the browser (via Google Cloud/Run) or on the display of the M5Stack device.
 
 ## Deadlines
 
