@@ -16,17 +16,20 @@ You are going to use this services all throughout the semester, so make sure tha
 
 
 ## Learning Goals
-* Setup of Google Cloud accounts
-* Gaining familiarity with Google Cloud Console, especially billing, storage, Big Data, AI
-* Uploading a dataframe to Google Cloud
-* Working with a publicly available dataset on Google Cloud
+The learning goal of this lab is to gain familiarity with the Google Cloud console and make some first small experiments of usage.
 
 ## Walkthrough
+TAs will show:
+* Setup of Google Cloud accounts
+* Useful aspects of the Google Cloud Console, especially billing, storage, Big Data, AI
+* How to upload a dataframe to Google Cloud
+* Show more sopihsticated usage examples, e.g. APIs on Google Cloud
+
 
 ## Exercises
 
 ### Exercise 1 - Storage
-* From the side menu, go to _Storage_ > _Storage_ and create a new bucket. Besides a unique name, you can keep the default configuration (but read through it anyway to see what kind of options are available to you).
+* From the side menu, go to _Storage_ > _Storage_ and create a new bucket (or go directly to the Bucket section by googling). Besides a unique name, you can keep the default configuration (but read through it anyway to see what kind of options are available to you).
 * Upload a CSV from your laptop (either an existing one or one that you create for that purpose).
 * Change the permissions so that the file is readable by everyone (i.e., "Public").
 * Access the CSV file from your browser (private session) using the public URL.
@@ -34,6 +37,6 @@ You are going to use this services all throughout the semester, so make sure tha
 * For further reference the [documentation is available here](https://cloud.google.com/storage/docs/access-control/making-data-public?hl=en-GB).
 
 
-### Exercise 2 - functions
+### Exercise 2 - possibly cloud functions
 
 
