@@ -37,6 +37,6 @@ TAs will show:
 * For further reference the [documentation is available here](https://cloud.google.com/storage/docs/access-control/making-data-public?hl=en-GB).
 
 
-### Exercise 2 - 
+### Exercise 2 - possibly cloud functions
 
 
