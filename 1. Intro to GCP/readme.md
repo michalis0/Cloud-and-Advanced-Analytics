@@ -3,11 +3,11 @@ Welcome to the first lab of Cloud and Advanced Analytics.
 
 In this week, we will give you a brief overview of cloud-based services. More specifically, we will look into **Google Cloud**, one of the most popular cloud services platforms. 
 
-💳 <u>Please bring your credit card to the Week 1 lab or [register on your own for your Google cloud account from home before the lab using this quick guide](Week1_Google_Cloud-create_account.pdf).</u> 
-
 * Register on Slack. This will be our main communication channel.
+* Redeem the code for students that we provide you. For this, you need to use your .unil or .epfl account.
 * Create an account on [Google Cloud](https://cloud.google.com). This needs to be a google account.
-* **Note**: For the Google Cloud account, you will have to enter your credit card information, but you won't be charged. It is just to verify that you are not a bot. Upon joining, you will receive a free $300 credit valid for 3 months. See also [here](https://edu.google.com/programs/students/?modal_active=none) for classes on Google Cloud for students.
+
+* **Note**: For the Google Cloud account, with the code for students you will get free $50 credit. When you will finish them, you will need to enter your credit card information, but you won't be charged. It is just to verify that you are not a bot. At that point, you will receive a free $300 credit valid for 3 months. See also [here](https://edu.google.com/programs/students/?modal_active=none) for classes on Google Cloud for students.
 * Do some simple exercises using the cloud.
 
 You are going to use this services all throughout the semester, so make sure that you have created your account by the end of the week. Afterwards try to explore the various features you see in Google Cloud.
