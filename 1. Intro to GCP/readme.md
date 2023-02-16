@@ -21,9 +21,8 @@ The learning goal of this lab is to gain familiarity with the Google Cloud conso
 ## Walkthrough
 TAs will show (directly on the Google Console):
 * Setup of Google Cloud accounts
-* Useful aspects of the Google Cloud Console, especially billing, storage, Big Data, AI
-* How to upload a dataframe to Google Cloud
-* Show more sopihsticated usage examples, e.g. APIs on Google Cloud
+* Useful aspects of the Google Cloud Console, especially Billing, Storage, Big Query, AI, Cloud Functions
+* Serverless backend: Cloud Functions 
 
 
 ## Exercises
@@ -38,7 +37,7 @@ TAs will show (directly on the Google Console):
 
 
 ### Exercise 2 - Cloud functions
-* From the side menu, go to _Compute_ > _Cloud Functions_.
+* From the side menu, go to _View all products_ > _Serverless_ > _Cloud Functions_, or search for _Cloud Functions_ in the Search bar at the top.
 * Create a simple Python function that can be triggered over HTTP. Make sure to pick the "Allow unauthenticated invocations" option.
    * The function should accept one parameter called `company_stock_name` and call the following external API, using that parameter as the value for the `symbol` parameter: https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=MSFT&apikey=demo. "demo" should be replaced with your own API key, which you can get for free [here](https://www.alphavantage.co/support/#api-key).
    * The function should return the last recorded value of the company's stock.
