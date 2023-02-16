@@ -5,7 +5,6 @@ This week, we will first cover a quick recap of the SQL syntax and see how we ca
 ## Goals
 
 * Get reacquainted with the SQL syntax to prepare you for the upcoming assignment
-* Create and query an SQLite database using Python
 * Learn how BigQuery works (data upload and exploration)
 * Strengthen SQL knowledge by querying a public dataset on BigQuery
 
