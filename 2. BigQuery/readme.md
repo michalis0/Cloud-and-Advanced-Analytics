@@ -21,3 +21,7 @@ The walkthrough will be done directly on the Google BigQuery console, as well as
 
 SQL recap: https://www.w3schools.com/sql/
 
+## TODO at Home
+1. https://www.kaggle.com/learn/intro-to-sql
+2. https://www.kaggle.com/learn/advanced-sql
+
