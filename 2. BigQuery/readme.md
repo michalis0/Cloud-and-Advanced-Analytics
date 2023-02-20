@@ -2,7 +2,7 @@
 
 This week, we will first cover a quick recap of the SQL syntax and see how we can run SQL queries from Colab notebooks. Then we will see how to use Google BigQuery more in depth and how to access it from our notebooks.
 
-## Goals
+## Learning Goals
 
 * Get reacquainted with the SQL syntax to prepare you for the upcoming assignment
 * Learn how BigQuery works (data upload and exploration)
