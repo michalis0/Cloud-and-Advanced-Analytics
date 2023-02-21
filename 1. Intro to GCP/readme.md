@@ -6,9 +6,9 @@ In this week, we will give you a brief overview of cloud-based services. More sp
 * Register on [Slack](https://join.slack.com/t/cloud-and-analytics23/shared_invite/zt-1oh2n2asy-l70~dhXVmgy34cqgvRLheg). This will be our main communication channel.
 * Create a Google account on [Google Cloud](https://cloud.google.com) with your academic email address (if you do not already have one). This needs to be a google account.
 * DO NOT start you free trial of 300$ on Google cloud now. You will use it for the project later in the course. Now, we will start will a voucher.
-* [Redeem the voucher code](https://gcp.secure.force.com/GCPEDU?cid=JVXdXMsqt29K9hweAVG5vLI9hhB68%2BT5LZzAhjbq9TUwDxaLhjeQGUu88SEhBvyZ/) for students that we provide you. For this, you need to use your .unil or .epfl account.
+* Redeem the voucher code for students that we provide you. For this, you need to use your .unil or .epfl account. See instructions in Moodle.
   * Once you have entered your information (first name, lastname and email address), a first confirmation email will be send. Click on it to confirm your email address.
-  * Then you will recevied a second email with the voucher code. Click on it to link it to your Google Cloud account (you may have to copy-paste it.)
+  * Then you will receve a second email with the voucher code. Click on it to link it to your Google Cloud account (you may have to copy-paste it.)
 
 * **Note**: For the Google Cloud account, with the code for students you will get free $50 credit. When you will finish them, you will need to enter your credit card information, but you won't be charged. It is just to verify that you are not a bot. At that point, you will receive a free $300 credit valid for 3 months. See also [here](https://edu.google.com/programs/students/?modal_active=none) for classes on Google Cloud for students.
 * Verify that the 50 $ voucher code has been applied to your account by going on the [billing tab](https://console.cloud.google.com/billing/01B32E-AE678C-E613F9?organizationId=0)
