@@ -3,9 +3,9 @@ Welcome to the first lab of Cloud and Advanced Analytics.
 
 In this week, we will give you a brief overview of cloud-based services. More specifically, we will look into **Google Cloud**, one of the most popular cloud services platforms. 
 
-* Register on Slack. This will be our main communication channel.
-* Redeem the code for students that we provide you. For this, you need to use your .unil or .epfl account.
-* Create an account on [Google Cloud](https://cloud.google.com). This needs to be a google account.
+* Register on [Slack](https://join.slack.com/t/cloud-and-analytics23/shared_invite/zt-1oh2n2asy-l70~dhXVmgy34cqgvRLheg). This will be our main communication channel.
+* [Redeem the code](https://gcp.secure.force.com/GCPEDU?cid=JVXdXMsqt29K9hweAVG5vLI9hhB68%2BT5LZzAhjbq9TUwDxaLhjeQGUu88SEhBvyZ/) for students that we provide you. For this, you need to use your .unil or .epfl account.
+* Create an account on [Google Cloud](https://cloud.google.com) with your academic email address. This needs to be a google account.
 
 * **Note**: For the Google Cloud account, with the code for students you will get free $50 credit. When you will finish them, you will need to enter your credit card information, but you won't be charged. It is just to verify that you are not a bot. At that point, you will receive a free $300 credit valid for 3 months. See also [here](https://edu.google.com/programs/students/?modal_active=none) for classes on Google Cloud for students.
 * Do some simple exercises using the cloud.
