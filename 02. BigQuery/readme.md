@@ -11,11 +11,11 @@ This week, we will see how to use Google BigQuery more in depth and how to acces
 
 2. Access to Google Cloud
 3. BigQuery walkthrough
-4. [Exercises](https://github.com/michalis0/Cloud-and-Advanced-Analytics/blob/main/2.%20BigQuery/week_02_exercises.ipynb)
+4. [Exercises](https://github.com/michalis0/Cloud-and-Advanced-Analytics/blob/main/02.%20BigQuery/week_02_exercises.ipynb)
 
 ## Walkthrough
 
-The walkthrough will be done directly on the Google BigQuery console, as well as on the BigQuery exercises [notebook](https://github.com/michalis0/Cloud-and-Advanced-Analytics/blob/main/2.%20BigQuery/week_02_exercises.ipynb). We have also added some [slides](https://github.com/michalis0/Cloud-and-Advanced-Analytics/blob/main/02.%20BigQuery/week_02_walkthrough.pdf) containing all the information you need to get you started in BigQuery. You can use the SQL notebook to refresh your SQL skills.
+The walkthrough will be done directly on the Google BigQuery console, as well as on the BigQuery exercises [notebook](https://github.com/michalis0/Cloud-and-Advanced-Analytics/blob/main/02.%20BigQuery/week_02_exercises.ipynb). We have also added some [slides](https://github.com/michalis0/Cloud-and-Advanced-Analytics/blob/main/02.%20BigQuery/week_02_walkthrough.pdf) containing all the information you need to get you started in BigQuery. You can use the SQL notebook to refresh your SQL skills.
 
 SQL recap: https://www.w3schools.com/sql/
 
