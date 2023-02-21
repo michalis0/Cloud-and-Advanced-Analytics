@@ -4,11 +4,14 @@ Welcome to the first lab of Cloud and Advanced Analytics.
 In this week, we will give you a brief overview of cloud-based services. More specifically, we will look into **Google Cloud**, one of the most popular cloud services platforms. 
 
 * Register on [Slack](https://join.slack.com/t/cloud-and-analytics23/shared_invite/zt-1oh2n2asy-l70~dhXVmgy34cqgvRLheg). This will be our main communication channel.
-* [Redeem the code](https://gcp.secure.force.com/GCPEDU?cid=JVXdXMsqt29K9hweAVG5vLI9hhB68%2BT5LZzAhjbq9TUwDxaLhjeQGUu88SEhBvyZ/) for students that we provide you. For this, you need to use your .unil or .epfl account.
-* Create an account on [Google Cloud](https://cloud.google.com) with your academic email address. This needs to be a google account.
+* Create a Google account on [Google Cloud](https://cloud.google.com) with your academic email address (if you do not already have one). This needs to be a google account.
+* DO NOT start you free trial of 300$ on Google cloud now. You will use it for the project later in the course. Now, we will start will a voucher.
+* [Redeem the voucher code](https://gcp.secure.force.com/GCPEDU?cid=JVXdXMsqt29K9hweAVG5vLI9hhB68%2BT5LZzAhjbq9TUwDxaLhjeQGUu88SEhBvyZ/) for students that we provide you. For this, you need to use your .unil or .epfl account.
+  * Once you have entered your information (first name, lastname and email address), a first confirmation email will be send. Click on it to confirm your email address.
+  * Then you will recevied a second email with the voucher code. Click on it to link it to your Google Cloud account (you may have to copy-paste it.)
 
 * **Note**: For the Google Cloud account, with the code for students you will get free $50 credit. When you will finish them, you will need to enter your credit card information, but you won't be charged. It is just to verify that you are not a bot. At that point, you will receive a free $300 credit valid for 3 months. See also [here](https://edu.google.com/programs/students/?modal_active=none) for classes on Google Cloud for students.
-* Do some simple exercises using the cloud.
+* Verify that the 50 $ voucher code has been applied to your account by going on the [billing tab](https://console.cloud.google.com/billing/01B32E-AE678C-E613F9?organizationId=0)
 
 You are going to use this services all throughout the semester, so make sure that you have created your account by the end of the week. Afterwards try to explore the various features you see in Google Cloud.
 
@@ -28,9 +31,12 @@ TAs will show (directly on the Google Console):
 ## Exercises
 
 ### Exercise 1 - Storage
-* From the side menu, go to _Storage_ > _Storage_ and create a new bucket (or go directly to the Bucket section by googling). Besides a unique name, you can keep the default configuration (but read through it anyway to see what kind of options are available to you).
+* From the side menu, go to _Storage_ > _Storage_ and create a new project with a name of yyour choice, then create a bucket (or go directly to the Bucket section by googling). Besides a unique name, you can keep the default configuration (but read through it anyway to see what kind of options are available to you) except for the "Access Control" parameter (under "Permission") which should be set to __Fine Grained__ and not "Uniform". This will allow you to get a Public URL for one of your file (next steps).
 * Upload a CSV from your laptop (either an existing one or one that you create for that purpose).
-* Change the permissions so that the file is readable by everyone (i.e., "Public").
+* Change the permissions so that the file is readable by everyone (i.e., "Public"). To make it publicly accessible, click on the three vertical dots of you csv file, then on _Edit Access_. You can now add an Entry where:
+  * _Entity_ = _Public_,
+  * _Name_N_ = _allUsers_,
+  * _Access_N_ = _Reader_
 * Access the CSV file from your browser (private session) using the public URL.
 * Remove the previously set permission.
 * For further reference the [documentation is available here](https://cloud.google.com/storage/docs/access-control/making-data-public?hl=en-GB).
