@@ -43,6 +43,11 @@ TAs will show (directly on the Google Console):
 
 
 ### Exercise 2 - Cloud functions
+
+The goal of this exercise is to allow you to gain familiarity with Cloud Functions. You will create a cloud function that, given the ticker of a company, will return the last value of the stock recorded, using an API. You will need to do 2 things: write a function on gcp in Python and call the function from a notebook (either in Colab or in Jupyter). The function will need to be based on the default “Hello world” function (in the provided notebook). You will need to add a call to the api, and extract the relevant info from the api response (the lines of code to do this are also available in the provided notebook). Finally, the code to call the function from a Python notebook is provided as well.
+
+
+
 * From the side menu, go to _View all products_ > _Serverless_ > _Cloud Functions_, or search for _Cloud Functions_ in the Search bar at the top.
 * Create a simple Python function that can be triggered over HTTP. Make sure to pick the "Allow unauthenticated invocations" option.
    * The function should accept one parameter called `company_stock_name` and call the following external API, using that parameter as the value for the `symbol` parameter: https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=AAPL&interval=5min&apikey=demo. "demo" should be replaced with your own API key, which you can get for free [here](https://www.alphavantage.co/support/#api-key) and AAPL should be replaced with the value inserted by the user. Here the documentation for the API: https://www.alphavantage.co/documentation/#intraday
