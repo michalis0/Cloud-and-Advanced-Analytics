@@ -1,11 +1,7 @@
 # Cloud and Advanced Analytics <BR>
 ## HEC, University of Lausanne
 
-Dear Students,
-
-Here you will find everything you need for the labs. Simply go to the corresponding week and you will find the materials.
-
-The labs will generally always have the same basic structure:
+Here you will find everything nedded for the labs. The labs have the same basic structure:
 
 1. Walkthroughs: The TAs will guide you through Google Cloud that explain how to practically apply concepts seen in the lectures. These notebooks will greatly help you solve the exercices and the assignment, therefore, it will only benefit you to pay close attention.
 2. Exercises: You will do some exercises, either by yourselves, or in small groups
