@@ -18,3 +18,8 @@ If you have questions or face problems you cannot resolve during the labs, do no
 We are looking forward to a great semester with you.
 
 Your Cloud and Advanced Analytics TAs
+
+## Content
+
+1. [1 - Intro to GCP]()
+2. [2 - BigQuery and SQL]()
