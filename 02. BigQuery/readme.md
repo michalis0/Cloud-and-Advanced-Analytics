@@ -10,7 +10,7 @@ This week, we will see how to use Google BigQuery more in depth and how to acces
 ## Lab Structure
 
 2. Access to Google Cloud
-3. BigQuery walkthrough
+3. [BigQuery walkthrough](https://github.com/michalis0/Cloud-and-Advanced-Analytics/blob/main/02.%20BigQuery/week_02_walkthrough.pdf)
 4. [Exercises](https://github.com/michalis0/Cloud-and-Advanced-Analytics/blob/main/02.%20BigQuery/week_02_exercises.ipynb)
 
 ## Walkthrough
