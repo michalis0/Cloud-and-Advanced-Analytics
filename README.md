@@ -21,5 +21,5 @@ Your Cloud and Advanced Analytics TAs
 
 ## Content
 
-1. [1 - Intro to GCP]()
-2. [2 - BigQuery and SQL]()
+1. [Intro to GCP](/01.%20Intro%20to%20GCP)
+2. [BigQuery and SQL](02.%20BigQuery)
