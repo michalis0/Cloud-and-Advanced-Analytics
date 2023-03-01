@@ -23,4 +23,5 @@ SQL recap: https://www.w3schools.com/sql/
 ## TODO at Home
 1. https://www.kaggle.com/learn/intro-to-sql
 2. https://www.kaggle.com/learn/advanced-sql
+3. https://codingisforlosers.com/learn-bigquery-sql/
 
