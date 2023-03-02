@@ -35,7 +35,7 @@ Your project should feature some type of **user interface** with which the user 
 
 ## Deadlines
 
-1. March 16 (at midnight): send your 1-page proposal as a pdf on Moodle (link). You should clearly write down how many sensors, devices, etc you will need for your project (the fewer the better, as we can only guarantee 1-2 devices and 1-2 sensors pro group), and also which services from Google Cloud you expect to use. Your TAs may add more elements to your project to make it more challenging! It doens't necessarily need to use everything, but make it original!
+1. March 16 (at midnight): send your 1-page proposal as a pdf on Moodle (link). You should clearly write down how many sensors, devices, etc you will need for your project (the fewer the better, as we can only guarantee 1-2 devices and 1-2 sensors pro group), and also which services from Google Cloud you expect to use. Your TAs may add more elements to your project to make it more challenging!
 2. April 06: Milestone 1: Show your progress during the lab (we expect you to have some parts fleshed out)
 3. May 04: Milestone 2: Show your progress (we expect some connectivity with google cloud/services)
 4. May 30: Final deliverable (LinkedIn article, video, github, and web address if your application is live)
