@@ -19,3 +19,4 @@ Your Cloud and Advanced Analytics TAs
 
 1. [Intro to GCP](/01.%20Intro%20to%20GCP)
 2. [BigQuery and SQL](02.%20BigQuery)
+3. Intro to IoT (hands-on). [Great tutorials here](https://www.youtube.com/playlist?list=PLgvIHLw9-cydbokzAKhi7lWcOVJ67RRTR)
