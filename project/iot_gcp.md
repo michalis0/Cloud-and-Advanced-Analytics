@@ -58,10 +58,14 @@ openssl rsa -in rsa_private.pem -pubout -out rsa_public.pem
   `python3 jwt_create.py path/to/rsa_private.pem`
   You will need to insert the jwt in the app file (see code below)
 * In order to send the data, you can use the mflow file manager or the ampy library.  `ampy` with `sudo pip3 install adafruit-ampy` more info [here](https://github.com/scientifichackers/ampy). You need to send to the m5Stack the following files:
-- TLS certificate (you downloaded it in the step above) in location `/flash`
-- the `google_iot.py` class shoud be placed under `/flash/apps`
-- your test micropython file should be placed under `/flash/apps`
-- the config file should be placed at `/flash` on the device
+1. TLS certificate (you downloaded it in the step above) in location `/flash`
+2. the `google_iot.py` class shoud be placed under `/flash/apps`
+3. your test micropython file should be placed under `/flash/apps`
+4. the config file should be placed at `/flash` on the device
+
+* Ampy commands
+`ampy --port /dev/tty.usbserial-025653AD put app_test.py /flash/apps/app_test.py`
+
 
 * Then here is an example on how to use the cloud class
 
