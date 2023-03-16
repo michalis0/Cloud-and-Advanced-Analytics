@@ -56,6 +56,14 @@ openssl rsa -in rsa_private.pem -pubout -out rsa_public.pem
   `/flash`
 * Run the following command to get a jwt: 
   `python3 jwt_create.py path/to/rsa_private.pem`
+  You will need to insert the jwt in the app file (see code below)
+* You need to send to the device the following files:
+- TLS certificate (you downloaded it in the step above) in location `/flash`
+- the `google_iot.py` class shoud be placed under `/flash/apps`
+- your test micropython file should be placed under `/flash/apps`
+- the config file should be placed at `/flash` on the device
+* In order to send the data, you can use the mflow file manager
+
 * Then here is an example on how to use the cloud class
 
 ```python3
@@ -68,7 +76,7 @@ from apps import google_iot
 screen = M5Screen()
 screen.clean_screen()
 
-cloud = google_iot.Cloud('jwt generated in previous step')
+cloud = google_iot.Cloud('INSERT_YOUR_JWT')
 
 for i in range(10):
   cloud.publish("payload number {}".format(i))
@@ -79,9 +87,6 @@ for i in range(10):
 * If everything was done correctly you should see new data on your BigQuery
   table
 
-> the config file should be placed at `/flash` on the device,
-> the `google_iot.py` class shoud be placed under `/flash/apps`
-> and your test micropython file should be placed under `/flash/apps`
 
 > Could be usefull to debug
 > * Install `ampy` with `sudo pip3 install adafruit-ampy` more info [here](https://github.com/scientifichackers/ampy)
