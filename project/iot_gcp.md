@@ -1,0 +1,88 @@
+# How to push data on Google Cloud service
+
+## Create a project on Google Cloud
+
+* Go to [Google Cloud Console web site](https://console.cloud.google.com) and
+  create a new project
+  * Enter a project name
+* You can already report the project ID in the file `config.json`
+* Using the top left menu go to **Google Cloud IoT API** and activate the API
+* Once the API activated we will create a *registry*. Go to **IoT Core**.
+  * Enter an ID and choose a project region
+  * You can leave the other fields empty
+* You can report the registry ID and the region in the `config.json` file
+* Now click on *Devices* (should be on the left of your screen) to create a new
+  device
+  * Entre a device ID and create the device
+  * In your terminal generate a public/private key pair with the following
+    commands then jump to the authentication section to add the generated public
+    key to the device. You can directly upload the generated file (the public one).
+```bash
+openssl genrsa -out rsa_private.pem 2048
+openssl rsa -in rsa_private.pem -pubout -out rsa_public.pem
+```
+* You can now report the device ID to the file `config.json`
+* Going back to the main page of our project go to the **BigQuery** section (top
+  left menu)
+  * Clicking on the three dots next to your project ID in the explorer section
+    allow you to create a new dataset
+  * Enter a dataset ID and a location
+  * Clicking on the three dots of our new dataset you can create a new table
+    * Enter a table name
+    * In the Schema part add a *data* field and leave it as a string
+    * Confirm 
+* Now select **Pub/Sub** section for the top left menu
+* Create a new topic and provide a topic ID
+* Now create a new subscription (you can use the default subscription)
+  * Enter a subscription ID 
+  * For the Delivery type, select *write to BigQuery* and select the dataset and
+    table you created before 
+    * Note: The table name field does not have autocompletion
+  * Then create the subscription
+    * In case of an authorisation error : copy the bold red link and go to **IAM
+      and Admin** section using the top left menu
+    * Click on the Grant Access button; under new principal paste the red text
+      and under role select *BigQuery Data Editor* 
+    * Save your changes and retry to create the subscription
+* Going back to the **Iot Core section**, select your registry and click on *add or
+  edit topics*
+  * Under *Cloud Pub/Sub topics* select the new created one
+  * Finally click on update
+
+## Use the micropython cloud Class
+
+* To use the cloud class you need to download SSL/TLS certificate downloaded
+  [here](https://pki.goog/roots.pem) and push it to the device at location
+  `/flash`
+* Run the following command to get a jwt: 
+  `python3 jwt_create.py path/to/rsa_private.pem`
+* Then here is an example on how to use the cloud class
+
+```python3
+from m5stack import *
+from m5stack_ui import *
+from uiflow import *
+
+from apps import google_iot 
+
+screen = M5Screen()
+screen.clean_screen()
+
+cloud = google_iot.Cloud('jwt generated in previous step')
+
+for i in range(10):
+  cloud.publish("payload number {}".format(i))
+  lcd.print(i, 10, i * 10, 0xff0000)
+  wait_ms(1000)
+```
+
+* If everything was done correctly you should see new data on your BigQuery
+  table
+
+> the config file should be placed at `/flash` on the device,
+> the `google_iot.py` class shoud be placed under `/flash/apps`
+> and your test micropython file should be placed under `/flash/apps`
+
+> Could be usefull to debug
+> * Install `ampy` with `sudo pip3 install adafruit-ampy` more info [here](https://github.com/scientifichackers/ampy)
+> * `sudo screen -L /dev/ttyACM0 115200` command should allow you to see the print
