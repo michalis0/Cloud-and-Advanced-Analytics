@@ -57,7 +57,7 @@ openssl rsa -in rsa_private.pem -pubout -out rsa_public.pem
 * Run the following command to get a jwt: 
   `python3 jwt_create.py path/to/rsa_private.pem`
   You will need to insert the jwt in the app file (see code below)
-* You need to send to the device the following files:
+* You need to send to the m5Stack the following files:
 - TLS certificate (you downloaded it in the step above) in location `/flash`
 - the `google_iot.py` class shoud be placed under `/flash/apps`
 - your test micropython file should be placed under `/flash/apps`
