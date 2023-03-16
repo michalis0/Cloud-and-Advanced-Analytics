@@ -62,7 +62,7 @@ openssl rsa -in rsa_private.pem -pubout -out rsa_public.pem
 - the `google_iot.py` class shoud be placed under `/flash/apps`
 - your test micropython file should be placed under `/flash/apps`
 - the config file should be placed at `/flash` on the device
-* In order to send the data, you can use the mflow file manager
+* In order to send the data, you can use the mflow file manager or the ampy library.  `ampy` with `sudo pip3 install adafruit-ampy` more info [here](https://github.com/scientifichackers/ampy)
 
 * Then here is an example on how to use the cloud class
 
@@ -89,5 +89,4 @@ for i in range(10):
 
 
 > Could be usefull to debug
-> * Install `ampy` with `sudo pip3 install adafruit-ampy` more info [here](https://github.com/scientifichackers/ampy)
 > * `sudo screen -L /dev/ttyACM0 115200` command should allow you to see the print
