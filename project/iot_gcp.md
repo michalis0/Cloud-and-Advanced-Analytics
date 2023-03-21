@@ -11,17 +11,25 @@
   * Enter an ID and choose a project region
   * You can leave the other fields empty
 * Take note of the registry id
-* Now click on *Devices* (should be on the left of your screen) to create a new
-  device
-  * Entre a device ID and create the device. Take note of the device id. 
-  * In your terminal generate a public/private key pair with the following
+* In the terminal of your pc generate a public/private key pair with the following
     commands then jump to the authentication section to add the generated public
     key to the device. You can directly upload the generated file (the public one).
-```bash
+* - On linux:
+```
 openssl genrsa -out rsa_private.pem 2048
 openssl rsa -in rsa_private.pem -pubout -out rsa_public.pem
 ```
-* Take note of the Device ID
+* - On Windows:
+```
+ssh-keygen -t rsa -b 4096 -m PEM -f jwtRS256.key
+# Don't add passphrase
+openssl rsa -in jwtRS256.key -pubout -outform PEM -out jwtRS256.key.pub
+```
+* Now click on *Devices* (should be on the left of your screen) to create a new
+  device
+  * Entre a device ID and create the device. Take note of the device id. 
+  * In "Authentication" Either upload or copypaste the file with the PUBLIC key
+  
 * Going back to the main page of our project go to the **BigQuery** section (top
   left menu)
   * Clicking on the three dots next to your project ID in the explorer section
