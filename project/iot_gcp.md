@@ -63,35 +63,13 @@ openssl rsa -in rsa_private.pem -pubout -out rsa_public.pem
 * - `ampy --port /dev/tty.usbserial-025653AD put app_test.py /flash/apps/app_test.py`
 * - `ampy --port COM5 put app_test.py /flash/apps/app_test.py`
 * You need to send to the m5Stack the following files:
-1. TLS certificate (you downloaded it in the step above) in location `/flash`
-2. the `google_iot.py` class shoud be placed under `/flash/apps`
-3. your test micropython file should be placed under `/flash/apps`
-4. the config file should be placed at `/flash` on the device
+1. TLS certificate (you downloaded it in the step above) in location `/flash`. This needs to be pushed through ampy because of the size of the file. 
+2. The micropython file should be placed under `/flash/apps`. For this, you can also directly use flow.m5stack by copy-pasting the code. As an initial test, use simple_cloud_app.py. Then, you can add your code and build your app for the project.
 
-
-* Then here is an example on how to use the cloud class
-
-```python3
-from m5stack import *
-from m5stack_ui import *
-from uiflow import *
-
-from apps import google_iot 
-
-screen = M5Screen()
-screen.clean_screen()
-
-cloud = google_iot.Cloud('INSERT_YOUR_JWT')
-
-for i in range(10):
-  cloud.publish("payload number {}".format(i))
-  lcd.print(i, 10, i * 10, 0xff0000)
-  wait_ms(1000)
-```
 
 * If everything was done correctly you should see new data on your BigQuery
   table
 
 
-> Could be usefull to debug
+> Could be useful to debug
 > * `sudo screen -L /dev/ttyACM0 115200` command should allow you to see the print
