@@ -71,15 +71,18 @@ openssl rsa -in jwtRS256.key -pubout -outform PEM -out jwtRS256.key.pub
 * To send data to the m5 via ampy you need to use the following command: `ampy --port YOUR_PORT_HERE put LOCAL_FILE DESTINATION_FILE`. Examples:
 * - `ampy --port /dev/tty.usbserial-025653AD put app_test.py /flash/apps/app_test.py`
 * - `ampy --port COM5 put app_test.py /flash/apps/app_test.py`
-* You need to send to the m5Stack the following files:
+* You need to send to the m5Stack the following file:
 1. TLS certificate (you downloaded it in the step above) in location `/flash`. This needs to be pushed through ampy because of the size of the file. 
-2. The micropython file should be placed under `/flash/apps`. For this, you can also directly use flow.m5stack by copy-pasting the code. As an initial test, use simple_cloud_app.py. Then, you can add your code and build your app for the project. 
+
+* To send the micropython file, you have 2 possibilities: either sending it with ampy and placing it under `/flash/apps`, or copy-pasting the code on flow.m5stack. As an initial test, use simple_cloud_app.py. Then, you can add your code and build your app for the project. 
+
 
 
 * If everything was done correctly you should see new data on your BigQuery
   table
   
 > PAY ATTENTION: the jwt expires. The duration of validity can be specified in the jwt_create.py file. The current value is set at 2 hours.
+> OTHER NOTE: if ampy is not able to use the serial port, you will need to install a driver from (here)[https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads]
 
 
 > Possible tricks to do debugging
