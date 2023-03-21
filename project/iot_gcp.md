@@ -82,8 +82,8 @@ openssl rsa -in jwtRS256.key -pubout -outform PEM -out jwtRS256.key.pub
   table
   
 > PAY ATTENTION: the jwt expires. The duration of validity can be specified in the jwt_create.py file. The current value is set at 2 hours.
-> OTHER NOTE: if ampy is not able to use the serial port, you will need to install a driver from 
-> (here)[https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads]
+> OTHER NOTE: if ampy is not able to use the serial port, you will need to install a driver from here:
+> https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads
 
 
 > Possible tricks to do debugging
