@@ -52,19 +52,21 @@ openssl rsa -in rsa_private.pem -pubout -out rsa_public.pem
 ## Use the micropython cloud Class
 
 * To use the cloud class you need to download SSL/TLS certificate downloaded
-  [here](https://pki.goog/roots.pem) and push it to the device at location
-  `/flash`
-* Run the following command to get a jwt: 
-  `python3 jwt_create.py path/to/rsa_private.pem`
-  You will need to insert the jwt in the app file (see code below)
-* In order to send the data, you can use the mflow file manager or the ampy library.  `ampy` with `sudo pip3 install adafruit-ampy` more info [here](https://github.com/scientifichackers/ampy). You need to send to the m5Stack the following files:
+  [here](https://pki.goog/roots.pem). We will need it in a few minutes.
+* Substitute the path to the private key you generated and run the following command to get a jwt: 
+  `python3 jwt_create.py PATH/TO/RSA_PRIVATE.PEM`
+  You will need to insert the jwt in the app file (see code below).
+* We need to send some files to the m5Stack. In order to send the data, we need to use the ampy library. On linux/Mac , You can install `ampy` with `sudo pip3 install adafruit-ampy`, on Windows `pip install adafruit-ampy` more info [here](https://github.com/scientifichackers/ampy). Once installed, you need to connect the m5 via cable to your pc, then you need to identify the name of the port to which it is connected. 
+* - On windows, open "Device Manager", look for PORTS, then you should see something like (not necessarily identical): "Silicon Labs CP210x USB to UART Bridge (COM5). The port is COM5.
+* - On Mac, open "System information", go to USB, you should see something like USB 3.0 Bus, then CP2104 USB to UART Bridge Controller. Note the serial number.
+* To send data to the m5 via ampy you need to use the following command: `ampy --port YOUR_PORT_HERE put LOCAL_FILE DESTINATION_FILE`. Examples:
+* - `ampy --port /dev/tty.usbserial-025653AD put app_test.py /flash/apps/app_test.py`
+* - `ampy --port COM5 put app_test.py /flash/apps/app_test.py`
+* You need to send to the m5Stack the following files:
 1. TLS certificate (you downloaded it in the step above) in location `/flash`
 2. the `google_iot.py` class shoud be placed under `/flash/apps`
 3. your test micropython file should be placed under `/flash/apps`
 4. the config file should be placed at `/flash` on the device
-
-* Ampy commands
-`ampy --port /dev/tty.usbserial-025653AD put app_test.py /flash/apps/app_test.py`
 
 
 * Then here is an example on how to use the cloud class
