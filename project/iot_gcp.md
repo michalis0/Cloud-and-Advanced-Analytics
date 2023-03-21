@@ -1,5 +1,7 @@
 # How to push data on Google Cloud service
 
+Click (here)[https://www.youtube.com/watch?v=PmXZ08tknxM] for the video tutorial.
+
 ## Create a project on Google Cloud
 
 * Go to [Google Cloud Console web site](https://console.cloud.google.com) and
