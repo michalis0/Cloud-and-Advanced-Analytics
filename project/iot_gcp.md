@@ -73,5 +73,7 @@ openssl rsa -in rsa_private.pem -pubout -out rsa_public.pem
 > PAY ATTENTION: the jwt expires. The duration of validity can be specified in the jwt_create.py file. The current value is set at 2 hours.
 
 
-> Could be useful to debug
-> * `sudo screen -L /dev/ttyACM0 115200` command should allow you to see the print
+> Possible tricks to do debugging
+> * what's explained in (this video)[https://www.youtube.com/watch?v=V67MY-1ccqM]
+> * using try, except in your code
+> * using the screen command: `sudo screen -L /dev/ttyACM0 115200` command should allow you to see what you print
