@@ -69,6 +69,8 @@ openssl rsa -in rsa_private.pem -pubout -out rsa_public.pem
 
 * If everything was done correctly you should see new data on your BigQuery
   table
+  
+> PAY ATTENTION: the jwt expires. The duration of validity can be specified in the jwt_create.py file. The current value is set at 2 hours.
 
 
 > Could be useful to debug
