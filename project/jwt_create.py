@@ -3,7 +3,7 @@ import datetime
 # pip3 install PyJWT
 import jwt
 import sys
-import config 
+
 
 
 #from jwt.contrib.algorithms.pycrypto import RSAAlgorithm
@@ -20,7 +20,7 @@ if len(sys.argv) != 2:
 private_key_file = sys.argv[1]
 
 
-project_id = config.google_cloud_config['project_id']
+project_id = "INSERT YOUR PROJECT_ID HERE"
 algorithm = "RS256"
 
 token = {
