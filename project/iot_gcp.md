@@ -63,7 +63,7 @@ openssl rsa -in jwtRS256.key -pubout -outform PEM -out jwtRS256.key.pub
 
 * To use the cloud class you need to download SSL/TLS certificate downloaded
   [here](https://pki.goog/roots.pem). We will need it in a few minutes.
-* Substitute the path to the private key you generated and run the following command to get a jwt: 
+* Insert your project ID in "jwt_create.py". Substitute the path to the private key you generated in the following command and run the following command to get a jwt: 
   `python3 jwt_create.py PATH/TO/RSA_PRIVATE.PEM`
   You will need to insert the jwt in the app file (see code below).
 * In the microython file, you need to fill the first few lines with the IDs you annotated during the procedure, your wifi, and the jwt.
