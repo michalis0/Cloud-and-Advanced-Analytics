@@ -70,6 +70,7 @@ openssl rsa -in jwtRS256.key -pubout -outform PEM -out jwtRS256.key.pub
   
 > PAY ATTENTION: the jwt expires. The duration of validity can be specified in the Colab notebook, inside "timedelta"
 
+> PS: if you are looking for the old version, where I was suggesting to use ampy, look into the "legacy" folder
 
 
 > Possible tricks to do debugging
