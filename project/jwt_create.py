@@ -20,14 +20,14 @@ if len(sys.argv) != 2:
 private_key_file = sys.argv[1]
 
 
-project_id = "INSERT YOUR PROJECT_ID HERE"
+project_id = "YOUR_PROJECT_ID"
 algorithm = "RS256"
 
 token = {
     # The time that the token was issued at
     "iat": datetime.datetime.now(tz=datetime.timezone.utc),
     # The time the token expires.
-    "exp": datetime.datetime.now(tz=datetime.timezone.utc) + datetime.timedelta(minutes=120),
+    "exp": datetime.datetime.now(tz=datetime.timezone.utc) + datetime.timedelta(minutes=1000),
     # The audience field should always be set to the GCP project id.
     "aud": project_id,
 }

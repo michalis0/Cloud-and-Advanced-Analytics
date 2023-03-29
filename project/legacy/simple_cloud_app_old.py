@@ -2,7 +2,6 @@ from m5stack import *
 from m5ui import *
 from uiflow import *
 from m5mqtt import M5mqtt
-import urequests
 
 
 project_id = "YOUR PROJECT ID"
@@ -24,7 +23,6 @@ mqtt_topic = "/devices/{}/events".format(device_id)
 
 mqtt_bridge_hostname='mqtt.googleapis.com'
 mqtt_bridge_port = 8883
-roots = urequests.get('https://pki.goog/roots.pem')
 
 
 
@@ -53,8 +51,6 @@ except:
 
 
 
-#old version
-#ssl_params={"cert": "/flash/roots.pem"}
 
 
 
@@ -67,7 +63,7 @@ try:
               password=jwt,
               keepalive=300,
               ssl=True,
-              ssl_params={"cert": roots}
+              ssl_params={"cert": "/flash/roots.pem"}
           )
           
   client.start()

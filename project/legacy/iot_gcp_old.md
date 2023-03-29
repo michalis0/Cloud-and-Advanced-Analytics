@@ -61,15 +61,35 @@ openssl rsa -in jwtRS256.key -pubout -outform PEM -out jwtRS256.key.pub
 
 ## Use the micropython cloud Class
 
-* Go to (this link)[https://colab.research.google.com/drive/16X6q78X_r_gdjOi-2Dr5vRV905hrTvHp?usp=sharing]. Go to File -> Save a copy in drive. On the left panel, click on the folder icon and then drag and drop your private key there. In the second cell of the notebook, change the private_key_file to be the name of your private key, and the project_id to be your project id. Run all cells and take note of the ID. Pay attention: you'll need to re-do this when the jwt expires! (I set 1000 minutes validity, which is 16hour)
-* In the microython file (simple_cloud_app.py), you need to fill the first few lines with the IDs you annotated during the procedure, your wifi, and the jwt you've just created.
-* Copy-paste the micropython code to flow and run.
+* To use the cloud class you need to download SSL/TLS certificate downloaded
+  [here](https://pki.goog/roots.pem). We will need it in a few minutes.
+* Insert your project ID in "jwt_create.py". Substitute the path to the private key you generated in the following command and run the following command to get a jwt: 
+  `python3 jwt_create.py PATH/TO/RSA_PRIVATE.PEM`
+  You will need to insert the jwt in the app file (see code below).
+* In the microython file, you need to fill the first few lines with the IDs you annotated during the procedure, your wifi, and the jwt.
+* We need to send some files to the m5Stack. In order to send the data, we need to use the ampy library. On linux/Mac , You can install `ampy` with `sudo pip3 install adafruit-ampy`, on Windows `pip install adafruit-ampy` more info [here](https://github.com/scientifichackers/ampy). Once installed, you need to connect the m5 via cable to your pc, then you need to identify the name of the port to which it is connected. 
+* - On windows, open "Device Manager", look for PORTS, then you should see something like (not necessarily identical): "Silicon Labs CP210x USB to UART Bridge (COM5). The port is COM5.
+* - On Mac, open "System information", go to USB, you should see something like USB 3.0 Bus, then CP2104 USB to UART Bridge Controller. Note the serial number.
+* To send data to the m5 via ampy you need to use the following command: `ampy --port YOUR_PORT_HERE put LOCAL_FILE DESTINATION_FILE`. The following are EXAMPLES to show what the ampy commands look like, they are not exactly the ones you need now:
+* - `ampy --port /dev/tty.usbserial-025653AD put app_test.py /flash/apps/app_test.py`
+* - `ampy --port COM5 put app_test.py /flash/apps/app_test.py`
+* You need to send to the m5Stack the following file:
+1. TLS certificate (you downloaded it in the step above) in location `/flash`. This needs to be pushed through ampy because of the size of the file. The command should be something like:
+- `ampy --port YOUR_PORT put roots.pem`
+
+
+* To send the micropython file, you have 2 possibilities: either sending it with ampy and placing it under `/flash/apps`, or copy-pasting the code on flow.m5stack. As an initial test, use `simple_cloud_app.py`. Then, you can add your code and build your app for the project. If you choose ampy, the command should be something like:
+* - `ampy --port YOUR_PORT put simple_cloud_app.py /flash/apps/simple_cloud_app.py`
+> I recommend the first route: copy-pasting the code on flow, as it's simpler and faster. 
+
+
 
 * If everything was done correctly you should see new data on your BigQuery
   table
   
-> PAY ATTENTION: the jwt expires. The duration of validity can be specified in the Colab notebook, inside "timedelta"
-
+> PAY ATTENTION: the jwt expires. The duration of validity can be specified in the jwt_create.py file. The current value is set at 2 hours.
+> OTHER NOTE: if ampy is not able to use the serial port, you will need to install a driver from (here)[https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads]
+> 
 
 
 > Possible tricks to do debugging
