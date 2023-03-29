@@ -61,7 +61,7 @@ openssl rsa -in jwtRS256.key -pubout -outform PEM -out jwtRS256.key.pub
 
 ## Use the micropython cloud Class
 
-* Go to (this link)[https://colab.research.google.com/drive/16X6q78X_r_gdjOi-2Dr5vRV905hrTvHp?usp=sharing]. Go to File -> Save a copy in drive. On the left panel, click on the folder icon and then drag and drop your private key there. In the second cell of the notebook, change the private_key_file to be the name of your private key, and the project_id to be your project id. Run all cells and take note of the ID. Pay attention: you'll need to re-do this when the jwt expires! (I set 1000 minutes validity, which is 16hour)
+* Go to [this link](https://colab.research.google.com/drive/16X6q78X_r_gdjOi-2Dr5vRV905hrTvHp?usp=sharing). Go to File -> Save a copy in drive. On the left panel, click on the folder icon and then drag and drop your private key there. In the second cell of the notebook, change the private_key_file to be the name of your private key, and the project_id to be your project id. Run all cells and take note of the ID. Pay attention: you'll need to re-do this when the jwt expires! (I set 1000 minutes validity, which is 16hour)
 * In the microython file (simple_cloud_app.py), you need to fill the first few lines with the IDs you annotated during the procedure, your wifi, and the jwt you've just created.
 * Copy-paste the micropython code to flow and run.
 
@@ -73,6 +73,6 @@ openssl rsa -in jwtRS256.key -pubout -outform PEM -out jwtRS256.key.pub
 
 
 > Possible tricks to do debugging
-> * what's explained in (this video)[https://www.youtube.com/watch?v=V67MY-1ccqM]
+> * what's explained in [this video](https://www.youtube.com/watch?v=V67MY-1ccqM)
 > * using try, except in your code
 > * using the screen command: `sudo screen -L /dev/ttyACM0 115200` command should allow you to see what you print
