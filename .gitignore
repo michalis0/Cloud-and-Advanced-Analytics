@@ -1,7 +1,8 @@
 #Ignore DS files from MACos
 **.DS_Store
 
-**.csv
+/week_06_recommenders/data
+/week_06_recommenders/ml-20m
 **.zip
 
 # Ignore IDE specific files and directories
