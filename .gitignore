@@ -1,6 +1,9 @@
 #Ignore DS files from MACos
 **.DS_Store
 
+**.csv
+**.zip
+
 # Ignore IDE specific files and directories
 **.idea/
 **.vscode/
