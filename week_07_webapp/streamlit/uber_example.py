@@ -1,7 +1,6 @@
 """An example of showing geographic data."""
 
 import os
-
 import altair as alt
 import numpy as np
 import pandas as pd
@@ -35,3 +34,12 @@ def load_data():
     )
 
     return data
+
+data = load_data()
+
+hour = st.sidebar.slider("Hour to look at", 0, 23)
+data = data[data["date/time"].dt.hour == hour]
+
+st.map(data)
+
+f'UBER PICKUPS DATA FILTERED AT {hour}', data
