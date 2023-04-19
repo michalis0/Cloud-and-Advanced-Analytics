@@ -17,6 +17,9 @@ Your Cloud and Advanced Analytics TAs
 
 ## Content
 
-1. [Intro to GCP](/01.%20Intro%20to%20GCP)
-2. [BigQuery and SQL](02.%20BigQuery)
+1. [Intro to GCP](/week_01_intro_to_GCP)
+2. [BigQuery and SQL](/week_02_BigQuery)
 3. Intro to IoT (hands-on). [Great tutorials here](https://www.youtube.com/playlist?list=PLgvIHLw9-cydbokzAKhi7lWcOVJ67RRTR)
+3. [Recommenders](/week_06_recommenders)
+3. [Webapps](/week_07_webapp)
+3. [Elastic Cloud](/week_09_elastic_search) 
