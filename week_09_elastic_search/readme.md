@@ -18,7 +18,7 @@ If you want to broaden your knowledge beyond this lab, the Elastic website provi
 3. Elastic Cloud intro: Elastic Search and Kibana
 4. Walkthrough: initial exploration - visualize a sample dataset (discover page, dashboards, canvas, maps, graphs)
 5. Walkthrough: upload of custom dataset
-6. Walkthrough: introducion to query DSL using the Kibana Dev Tools Console: CRUD operations (credits to [this guide](https://github.com/LisaHJung/Part-1-Intro-to-Elasticsearch-and-Kibana)). Difference between PUT and POST.
+6. Walkthrough: introduction to query DSL using the Kibana Dev Tools Console: CRUD operations (credits to [this guide](https://github.com/LisaHJung/Part-1-Intro-to-Elasticsearch-and-Kibana)). Difference between PUT and POST.
 7. Exercise 1: CRUD Operations
 8. Walkthrough: creation an autocomplete functionality for your index using the Edge n-gram tokenizer in the Kibana Dev Tools Console
 9. Exercise 2: create a kibana dashboard with a public dataset
@@ -58,8 +58,8 @@ GET destinations/_search
 6. Present your dashboard to the class: which dataset, which visualizations you chose and why.
 
 
-## Resources
+## Further Resources
 
-If you are unsure how to make your queries, the [Query DSL documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html) has everything, including examples.
+- If you are unsure how to make your queries, the [Query DSL documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html) has everything, including examples.
 
-[Beginners crush course](https://github.com/LisaHJung/Part-1-Intro-to-Elasticsearch-and-Kibana)
+- [Beginners crash-course](https://github.com/LisaHJung/Part-1-Intro-to-Elasticsearch-and-Kibana)
