@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 from model import SentimentClassifierBert
+import pdb
 
 app = Flask(__name__)
 classifier = SentimentClassifierBert()
@@ -15,4 +16,6 @@ def index():
 
 if __name__ == '__main__':
     app.run(host='127.0.0.1', port=8080, debug=True)
+
+
 
