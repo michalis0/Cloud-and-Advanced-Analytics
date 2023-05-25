@@ -29,7 +29,7 @@ FYI: once you have your docker container, it is easy to host the app on cloud, e
 4. How to publish a container's port to the host
 
 
-## Exercise: build and run the sentiment analysis app from week 7
+## Exercise: build and run the app in the exercise folder
 
 
 # Part 3: pulling a docker image
