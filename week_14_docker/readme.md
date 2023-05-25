@@ -56,5 +56,6 @@ We will now see how to dockerize and run a simple flask app.
 - Creating an building a dockerfile: https://www.youtube.com/watch?v=LQjaJINkQXY
 - Dockerizing python applications: https://runnable.com/docker/python/dockerize-your-python-application
 - Convert a Python flask app to Docker container: https://www.youtube.com/watch?v=prlixoDIfrc
+- Convert a Python flask app to Docker container (blog post): https://blog.logrocket.com/build-deploy-flask-app-using-docker/
 - Deploying a dockerized flask app to google cloud: https://towardsdatascience.com/deploy-a-dockerized-flask-app-to-google-cloud-platform-71d91b39b25e
 
