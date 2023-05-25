@@ -65,3 +65,6 @@ FYI: once you have your docker container, it is easy to host the app on cloud, e
 - Convert a Python flask app to Docker container (blog post): https://blog.logrocket.com/build-deploy-flask-app-using-docker/
 - Deploying a dockerized flask app to google cloud: https://towardsdatascience.com/deploy-a-dockerized-flask-app-to-google-cloud-platform-71d91b39b25e
 
+
+Solution of the exercise 1:
+https://github.com/lvthillo/python-flask-docker
