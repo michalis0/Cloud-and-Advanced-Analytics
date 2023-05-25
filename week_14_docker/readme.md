@@ -4,6 +4,8 @@ We will learn about Docker and its advantages. We will answer to the following q
 - What is Docker? How is it different from a virtual machine?
 - What are images and containers and what is their difference?
 
+Test your docker installation:
+`docker run hello-world`
 
 ## Goals
 
@@ -15,6 +17,10 @@ We will learn about Docker and its advantages. We will answer to the following q
 # Part 2: building a docker image
 
 We will now see how to dockerize and run a simple flask app.
+
+Optional: push the repo to docker hub
+
+FYI: once you have your docker container, it is easy to host the app on cloud, e.g. GCP, heroku
 
 ## Goals
 1. Understand concepts in building a docker image
