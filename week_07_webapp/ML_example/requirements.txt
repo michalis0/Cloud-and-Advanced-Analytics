@@ -1,4 +1,0 @@
-Flask==2.2.2
-gunicorn==20.1.0
-pytorch==1.10.2
-transformers==4.24.0
