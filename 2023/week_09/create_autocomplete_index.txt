@@ -1,0 +1,184 @@
+STEP BY STEP GUIDE TO IMPLEENTING SEARCH AS YOU TYPE AUTOCOMPLETION USING EDGE N-GRAMS
+
+From Kibana console > Management > Dev Tools
+
+1. CREATE SIMPLE INDEX CALLED books MANUALLY WITH ONE FIELD CALLED title OF THE TYPE text
+
+PUT books
+{
+  "settings": {},
+  "mappings": {
+    "properties": {
+      "title": {
+        "type": "text"
+      }
+    }
+  }
+}
+
+Check that we have no data - or the query below returns zero results:
+GET books/_search
+{
+  "query": {
+    "match_all": {}
+  }
+}
+
+2. ADD DOCUMENTS TO THE books INDEX
+
+POST books/_bulk
+{ "index" : { "_index" : "books", "_id" : "1" } }
+{"title": "Much Ado about Nothing"}
+{ "index" : { "_index" : "books", "_id" : "2" } }
+{"title": "Timon of Athens"}
+{ "index" : { "_index" : "books", "_id" : "3" } }
+{"title": "Titus Andronicus"}
+{ "index" : { "_index" : "books", "_id" : "4" } }
+{"title": "Romeo and Juliet"}
+{ "index" : { "_index" : "books", "_id" : "5" } }
+{"title": "Antony and Cleopatra"}
+{ "index" : { "_index" : "books", "_id" : "6" } }
+{"title": "Richard II"}
+{ "index" : { "_index" : "books", "_id" : "7" } }
+{"title": "Richard III"}
+{ "index" : { "_index" : "books", "_id" : "8" } }
+{"title": "Merry Wives of Windsor"}
+{ "index" : { "_index" : "books", "_id" : "9" } }
+{"title": "Merchant of Venice"}
+{ "index" : { "_index" : "books", "_id" : "10" } }
+{"title": "Julius Caesar"}
+
+Check again that now we do have some data - the 10 documents added above:
+GET books/_search
+{
+  "query": {
+    "match_all": {}
+  }
+}
+
+Check what we have by default in terms of autocompletion
+
+GET books/_search
+{
+  "query": {
+    "match": {
+      "title": "tim"
+    }
+  }
+}
+
+This returns no documents.
+
+HOW NOT TO DO IT:
+
+GET books/_search
+{
+  "query": {
+    "prefix": {
+      "title": "tim"
+    }
+  }
+}
+
+BECAUSE
+
+GET books/_search
+{
+  "query": {
+    "prefix": {
+      "title": "timon of"
+    }
+  }
+}
+
+RETURNS NO RESULTS
+
+3. DELETE THE books INDEX
+
+DELETE books
+
+
+
+4. CREATE INDEX WITH AUTOCOMPLETE
+
+PUT books
+{
+  "settings": {
+    "analysis": {
+      "analyzer": {
+        "autocomplete": {
+          "tokenizer": "autocomplete_tokenizer",
+          "filter": [
+            "lowercase"
+          ]
+        },
+        "autocomplete_search": {
+          "tokenizer": "lowercase"
+        }
+      },
+      "tokenizer": {
+        "autocomplete_tokenizer": {
+          "type": "edge_ngram",
+          "min_gram": 2,
+          "max_gram": 15,
+          "token_chars": [
+            "letter",
+            "digit"
+          ]
+        }
+      }
+    }
+  },
+  "mappings": {
+    "properties": {
+      "title": {
+        "type": "text",
+        "analyzer": "autocomplete",
+        "search_analyzer": "autocomplete_search"
+      }
+    }
+  }
+}
+
+REIMPORT THE BOOKS (take command from above)
+
+
+TRY TO SEE IF NOW WE CAN RETRIEVE THE DOCUMENT WE WERE SEARCHING FOR BEFORE BY TYPING ONLY PART OF THE TITLE
+
+GET books/_search
+{
+  "query": {
+    "match": {
+      "title": {
+        "query": "timon of"
+      }
+    }
+  }
+}
+
+IT RETRIEVES ALL DOCUMENTS THAT CONTAIN EITHER timon OR of
+
+GET books/_search
+{
+  "query": {
+    "match": {
+      "title": {
+        "query": "timon of",
+        "operator": "and"
+      }
+    }
+  }
+}
+
+ALSO WORKS FOR WORDS THAT ARE IN THE MIDDLE OF THE TITLE STRING
+
+GET books/_search
+{
+  "query": {
+    "match": {
+      "title": {
+        "query": "venice"
+      }
+    }
+  }
+}
