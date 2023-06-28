@@ -13,10 +13,10 @@
 
 This central hub will provide you with key resources and updates throughout the year, neatly organized within three primary subfolders:
 
-- **Labs**: This folder houses the weekly walkthroughs and exercises conducted during our lab sessions. It also includes supplemental exercises designed for independent practice at home. The content here aims to reinforce and expand your understanding of the topics discussed.
+- **labs**: This folder houses the weekly walkthroughs and exercises conducted during our lab sessions. It also includes supplemental exercises designed for independent practice at home. The content here aims to reinforce and expand your understanding of the topics discussed.
 
-- **Assignments**: Here you'll find graded assignments that contribute 15% to your overall grade. Each assignment will be released with ample time for completion, and the specifications for each will be clearly outlined within.
+- **assignment**: Here you'll find graded assignment that contribute 15% to your overall grade. The assignment will be released with ample time for completion, and the specifications for each will be clearly outlined within.
 
-- **Projects**: This folder is dedicated to your group projects. It will contain all the essential guidance and materials you'll need. Expect periodic updates as your project progresses.
+- **project**: This folder is dedicated to your group project. It will contain all the essential guidance and materials you'll need. Expect periodic updates as your project progresses.
 
 Remember, the effective use of these resources can greatly enhance your learning experience in Cloud Advanced Analytics. We encourage you to take full advantage of this repository throughout your journey. Happy learning!
