@@ -40,5 +40,6 @@ Each week, we will focus on different aspects of IoT and M5 Stack devices:
 
 Stay tuned for a fascinating journey through the realm of IoT!
 
-## Ressources
-We will often refer to this [Github repository](https://github.com/michalis0/project_IoT).
+## Resources
+- [TinyML](https://www.hackster.io/shahizat/tinyml-face-mask-detector-with-m5stack-core2-and-unitv2-0040be)
+- More examples for TAs [here](https://github.com/michalis0/project_IoT).
