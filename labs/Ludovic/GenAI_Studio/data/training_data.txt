@@ -1,0 +1,7 @@
+sentence,difficulty
+"Les coûts kilométriques réels peuvent diverger sensiblement des valeurs moyennes en fonction du moyen de transport utilisé, du taux d'occupation ou du taux de remplissage, de l'infrastructure utilisée, de la topographie des lignes, du flux de trafic, etc.",C1
+"Le bleu, c'est ma couleur préférée mais je n'aime pas le vert!",A1
+"Dans les écoles de commerce, dans les couloirs de places financières, il arrive aujourd'hui de croiser de jeunes adultes de 20 ou 25 ans qui prévoient d'ouvrir une maison d'hôtes dans une quinzaine d'années.",B1
+"voilà une autre histoire que j'ai beaucoup aimée.",A2
+"Il est particulièrement observé chez les personnes ayant un besoin de popularité développé, qui considèrent dès lors le moindre signal du smartphone comme un possible indicateur de leur degré de popularité.",B2
+"Ma timidité me quittait dès que je m'éloignais d'Ellénore ; je reprenais alors mes plans habiles et mes profondes combinaisons : mais à peine me retrouvais-je auprès d'elle, que je me sentais de nouveau tremblant et troublé.",C2

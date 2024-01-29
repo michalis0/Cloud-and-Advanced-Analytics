@@ -1,0 +1,4 @@
+id,sentence
+0,"Nous dûmes nous excuser des propos que nous eûmes prononcés"
+1,"Vous ne pouvez pas savoir le plaisir que j'ai de recevoir cette bonne nouvelle."
+2,"Et, paradoxalement, boire froid n'est pas la bonne parade."
