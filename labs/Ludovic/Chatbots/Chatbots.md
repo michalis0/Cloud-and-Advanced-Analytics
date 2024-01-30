@@ -34,7 +34,7 @@ The ES is for the standard agent type and is suitable for small agents and the C
 
 Go to the [console](https://dialogflow.cloud.google.com) and enable the API. Then create your first agent by choosing the name, the language, and the time zone. You can also link it to a project to reuse functions that have been created in the project. If you need more details, you can read the [documentation](https://cloud.google.com/dialogflow/es/docs?hl=en)
 
-![dialog-es](/images/dialog_es.png)
+![dialog-es](./images/dialog_es.png)
 
 You can also import an agent that is in the data folder as an example. 
 
@@ -54,14 +54,14 @@ Try to play with the pre-built agents and create an agent that answers questions
 ## [Implement with Dialog CX](#implement-with-dialog-cx)
 
 Now, let's try to do the same with CX. Click on `Create agent`. You have two options:
-![cx](/images/dialog_cx.png)
+![cx](./images/dialog_cx.png)
 
 Let's first try with Auto-generate
 
 ### [Auto-generate an agent](#auto-generate-an-agent)
 
 Once you click on auto-generate, it will redirect you to the Vertex AI. Select the `Chat` option. 
-![chat](/images/chat.png)
+![chat](./images/chat.png)
 
 Configure the agent by giving it your organization name, the time zone, the language, and the name. Note that providing your company name helps the model provide higher-quality responses.
 
@@ -72,7 +72,7 @@ Your agent is almost ready, we need now to create the flow of the diagram. We wi
 ### [Build your own agent](#build-your-own-agent)
 
 Go back to the main view of the console and select your project. Then click on use pre-built agents:
-![agents](/images/agents.png)
+![agents](./images/agents.png)
 
 Here you have a variety of agents, you can play with them to better understand how agents are built. We will use the *Small talk* agent. 
 
@@ -83,13 +83,13 @@ In the left panel, you have the flows. Flows are used to define these topics and
 
 As an example, we will look at the flows of a pizza delivery agent.
 
-![pizza-flow](/images/cx-flow.svg)
+![pizza-flow](./images/cx-flow.svg)
 
 #### [Pages](#pages)
 On the main window, you see the pages. Pages are the states that define the conversation. For each flow, you define many pages, where your combined pages can handle a complete conversation on the topics the flow is designed for. At any given moment, exactly one page is the current page, the current page is considered active, and the flow associated with that page is considered active. Every flow has a special start page. When a flow initially becomes active, the start page becomes the current page. For each conversational turn, the current page will either stay the same or transition to another page.
 
 You configure each page to collect information from the end-user that is relevant to the conversational state represented by the page. For example, you might create the pages (in blue) in the diagram below for a `Food Order` flow of a pizza delivery agent. The Start node of the diagram represents the start page of the Food Order flow. When the flow is complete, it transitions to the Confirmation flow.
-![pizza-page](/images/cx-page.svg)
+![pizza-page](./images/cx-page.svg)
 
 #### [Entity types](#entity-types)
 Entity types are used to control how data from end-user input is extracted. CX entity types are very similar to ES entity types.
@@ -114,6 +114,87 @@ There are two types of state handlers with differing handler requirements:
 * **Routes** are called when an end-user input matches an intent and/or some condition on the session status is met. A route with an intent requirement is also called an intent route. A route with only a condition requirement is also called a condition route.
 * **Event handlers** are called when an event is invoked. Some built-in events are triggered when unexpected end-user input is received, or when a webhook error occurs. You can also define custom events that you invoke when something happens outside the conversation.
 
+## [Example](#example)
+
+For this example, we will create a small chatbot that gives you the meteo of a given city. 
+
+First, go on the Dialog ES console and create a new intent. In the training phrases, add some phrases of someone who wants to know the weather in a specific region. For example, `What will` be the weather tomorrow morning in Zurich?`. Once you press enter, the system will automatically understand where are the parameters. It should detect the date, the time, and the city. 
+
+![example_01](./images/example_01.png)
+
+Remember that the more phrases you add, the more precise your chatbot will be.
+
+Now, save your intent and try it in the upper right corner. Let's say that you want to know the weather in London next Friday. Simply ask the agent and see how it answers. 
+
+![example_02](./images/example_02.png)
+
+Here you can see that there are no answers because we haven't told yet how the bot should answer. However, we can see which parameter it has extracted from the question. The bot understood that the city was London and got the correct date. 
+
+Finally, to integrate your chatbot, click on fulfillment and enable the inline editor. It will give you the Google Cloud Function for your Node.js code. In our example, here is the code:
+
+~~~~javascript
+// See https://github.com/dialogflow/dialogflow-fulfillment-nodejs
+// for Dialogflow fulfillment library docs, samples, and to report issues
+'use strict';
+ 
+const functions = require('firebase-functions');
+const {WebhookClient} = require('dialogflow-fulfillment');
+const {Card, Suggestion} = require('dialogflow-fulfillment');
+ 
+process.env.DEBUG = 'dialogflow:debug'; // enables lib debugging statements
+ 
+exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, response) => {
+  const agent = new WebhookClient({ request, response });
+  console.log('Dialogflow Request headers: ' + JSON.stringify(request.headers));
+  console.log('Dialogflow Request body: ' + JSON.stringify(request.body));
+ 
+  function welcome(agent) {
+    agent.add(`Welcome to my agent!`);
+  }
+ 
+  function fallback(agent) {
+    agent.add(`I didn't understand`);
+    agent.add(`I'm sorry, can you try again?`);
+  }
+
+  // // Uncomment and edit to make your own intent handler
+  // // uncomment `intentMap.set('your intent name here', yourFunctionHandler);`
+  // // below to get this function to be run when a Dialogflow intent is matched
+  // function yourFunctionHandler(agent) {
+  //   agent.add(`This message is from Dialogflow's Cloud Functions for Firebase editor!`);
+  //   agent.add(new Card({
+  //       title: `Title: this is a card title`,
+  //       imageUrl: 'https://developers.google.com/actions/images/badges/XPM_BADGING_GoogleAssistant_VER.png',
+  //       text: `This is the body text of a card.  You can even use line\n  breaks and emoji! 💁`,
+  //       buttonText: 'This is a button',
+  //       buttonUrl: 'https://assistant.google.com/'
+  //     })
+  //   );
+  //   agent.add(new Suggestion(`Quick Reply`));
+  //   agent.add(new Suggestion(`Suggestion`));
+  //   agent.setContext({ name: 'weather', lifespan: 2, parameters: { city: 'Rome' }});
+  // }
+
+  // // Uncomment and edit to make your own Google Assistant intent handler
+  // // uncomment `intentMap.set('your intent name here', googleAssistantHandler);`
+  // // below to get this function to be run when a Dialogflow intent is matched
+  // function googleAssistantHandler(agent) {
+  //   let conv = agent.conv(); // Get Actions on Google library conv instance
+  //   conv.ask('Hello from the Actions on Google client library!') // Use Actions on Google library
+  //   agent.add(conv); // Add Actions on Google library responses to your agent's response
+  // }
+  // // See https://github.com/dialogflow/fulfillment-actions-library-nodejs
+  // // for a complete Dialogflow fulfillment library Actions on Google client library v2 integration sample
+
+  // Run the proper function handler based on the matched Dialogflow intent name
+  let intentMap = new Map();
+  intentMap.set('Default Welcome Intent', welcome);
+  intentMap.set('Default Fallback Intent', fallback);
+  // intentMap.set('your intent name here', yourFunctionHandler);
+  // intentMap.set('your intent name here', googleAssistantHandler);
+  agent.handleRequest(intentMap);
+});
+~~~~
 
 # [Your turn](#your-turn-1)
 
