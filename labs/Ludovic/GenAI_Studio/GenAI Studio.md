@@ -19,6 +19,7 @@ This is a summary of the content:
 			* [Text-to-speech](#text-to-speech)
 			* [Speech-to-text](#speech-to-text) 
 	* [Pricing](#pricing)
+	* [Text Embeddings](#text-embeddings)
 * [Your turn](#your-turn)
 
 # [What is Generative AI?](#what-is-generative-ai)
@@ -145,6 +146,39 @@ Now, all these operations have a cost. When you first sign up for GCP, you have 
 
 To approximate the costs of real-case use of the platform, Google has developed a price calculator that you can find [here](https://cloud.google.com/products/calculator?hl=en). You can choose which model you are using and specify how you will use it. It will then give you an approximate price per month for your application. 
 
+## [Text Embeddings](#text-embeddings)
+To go further, you can directly get the embedding of text and multimodal data. You cand have a look a the documentation [here](https://cloud.google.com/vertex-ai/docs/generative-ai/embeddings/get-text-embeddings?hl=en)
+
+In Python, you can use this code to get an embedding of a text. 
+
+~~~~python
+from vertexai.language_models import TextEmbeddingModel
+
+
+def text_embedding() -> list:
+    """Text embedding with a Large Language Model."""
+    model = TextEmbeddingModel.from_pretrained("textembedding-gecko@001")
+    embeddings = model.get_embeddings(["What is life?"])
+    for embedding in embeddings:
+        vector = embedding.values
+        print(f"Length of Embedding Vector: {len(vector)}")
+    return vector
+
+
+if __name__ == "__main__":
+    text_embedding()
+~~~~
+
+For multimodal applications, you will need to [install Google Cloud CLI](https://cloud.google.com/vertex-ai/docs/generative-ai/embeddings/get-multimodal-embeddings?hl=en#prereqs).
+
+Then in Python, you will just need to specify where your image file and your text are and give the ID of your project. You can run the following command in your terminal to retrieve the embeddings. 
+
+~~~~python
+python3 predict_request_gapic.py \
+  --image_file 'IMAGE_FILE' \
+  --text 'TEXT' \
+  --project "PROJECT_ID"
+~~~~
 
 
 # [Your turn](#your-turn)
