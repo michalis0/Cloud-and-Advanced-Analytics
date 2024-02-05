@@ -92,7 +92,7 @@ There are different ways of prompting:
 
 To perform one-shot and few-shot prompting, click on the upper-right case *STRUCTURED*. 
 
-![prompt2](/images/prompt_02.png)
+![prompt2](images/prompt_02.png)
 
 You can input here your example to fine-tune the model on how you want it to respond. 
 
