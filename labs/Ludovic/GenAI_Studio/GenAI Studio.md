@@ -70,7 +70,7 @@ Here you can type your prompt and get an answer. You can also play with the para
 ##### Temperature
 Temperature controls the degree of randomness in token selection. Lower temperatures are good for prompts that expect a true or correct response, while higher temperatures can lead to more diverse or unexpected results. With a temperature of 0 the highest probability token is always selected.
 
-![temp](/images/temperature.png)
+![temp](images/temperature.png)
 
 ##### Token limit
 Token limit determines the maximum amount of text output from one prompt. A token is approximately four characters.
@@ -83,7 +83,7 @@ Top-k changes how the model selects tokens for output. A top-k of 1 means the se
 ##### Top-P
 Top-p changes how the model selects tokens for output. Tokens are selected from most probable to least until the sum of their probabilities equals the top-p value. For example, if tokens A, B, and C have a probability of .3, .2, and .1 and the top-p value is .5, then the model will select either A or B as the next token (using temperature).
 
-![temp](/images/topp.png)
+![temp](images/topp.png)
 
 There are different ways of prompting:
 * Zero-shot prompting:  Providing a single command to the model without any example.
@@ -107,7 +107,7 @@ Finally, we can play with fine-tuning the LLM in order to have better-generated 
 
 First, click on *TUNE AND DISTILL*, and select *CREATE TUNE MODEL*.
 
-![tune](/images/tune01.png)
+![tune](images/tune01.png)
 
 Enter the different model details such as name, base model, region, and the output directory. 
 Then, add a [JSON Lines](https://jsonlines.org/) file that contains the input and expected output of your model. You can find an example of such a dataset [here](data/peft_train_sample.jsonl). Some rules have to be taken into account when creating these datasets. You can have more information on the [documentation](https://cloud.google.com/vertex-ai/docs/generative-ai/models/tune-text-models-supervised?authuser=1&hl=en#prepare_a_supervised_tuning_dataset).
