@@ -59,11 +59,11 @@ Here you can choose between a lot of products from Google and its AI.
 #### [Promp design](#prompt-design)
 We will first try to generate a text based on a prompt just like you would use ChatGPT. Select Language on the left tab, and then choose *TEXT PROMPT*.
 
-![language](/images/language.png)
+![language](images/language.png)
 
 You should arrive on this page:
 
-![prompt](/images/prompt_01.png)
+![prompt](images/prompt_01.png)
 
 Here you can type your prompt and get an answer. You can also play with the parameters of the model or change the model. 
 
