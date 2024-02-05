@@ -78,7 +78,7 @@ Token limit determines the maximum amount of text output from one prompt. A toke
 ##### Top-K
 Top-k changes how the model selects tokens for output. A top-k of 1 means the selected token is the most probable among all tokens in the model's vocabulary (also called greedy decoding), while a top-k of 3 means that the next token is selected from among the 3 most probable tokens (using temperature).
 
-![temp](/images/topk.png)
+![temp](images/topk.png)
 
 ##### Top-P
 Top-p changes how the model selects tokens for output. Tokens are selected from most probable to least until the sum of their probabilities equals the top-p value. For example, if tokens A, B, and C have a probability of .3, .2, and .1 and the top-p value is .5, then the model will select either A or B as the next token (using temperature).
