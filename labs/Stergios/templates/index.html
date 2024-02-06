@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cloud Advanced Analytics</title>
+</head>
+ 
+<body>
+    <h2>Welcome to the Flask Server</h2>
+    <h3>Cloud Advanced Analytics</h3>
+    <img src="static/images/star-wars-obi-wan-kenobi.gif">
+
+    <h4>If you see this page your server is running !</h4>
+
+    <h4>Here are some links to get you started:</h4>
+    <ul>
+        <li><a href="/sendECO2ToServer?co2=0">./sendECO2ToServer</a></li>
+        <ul>
+            <li>An endpoint that receives co2 data; arguments= "co2": float; type: POST</li>
+        </ul>
+        You can connect this one to your m5stack to send data to the server.
+
+        <br>
+        <br>
+        <li><a href="getWeatherData">./getWeatherData</a></li>
+        <ul>
+            <li>An endpoint to retreive weather data; arguments: None; type: GET</li>
+        </ul>
+        You can connect this one to your m5stack to retreive weather data from the server.
+        The temperature is in celcius and the CO2 is in ppm.<br>
+        The temperature is taken from the open-meteo API and the CO2 is taken from the m5stack.
+      </ul>
+    <h4>Here is the code files for the m5 stacks devices:</h4>
+    <p>Do not forget to change the url values</p>
+    <ul>
+        <li>Outdoors device: sends co2 data to the server:</li>
+        <ul>
+            <li><a href="/downloadOutdoors">Download.</a></li>
+        </ul>
+        <li>Indoors device: retrieves data from the flask server (temperature from open weather and co2 form outdoors sensor)</li>
+        <ul>
+            <li><a href="/downloadIndoors">Download.</a></li>
+        </ul>
+    </ul>
+    <h4>Exercise 1:</h4>
+    <p>In groups of two, try to execute the provided outdoors code to one of the m5stack devices.</p>
+    <p>Then try to retrieve the data from the server and display it on the other m5stack device.</p>
+
+    <h4>Exercise 2:</h4>
+    <p>Complete the abstract method sendTvocToServer() so that TVOC data can be retrieved similarly to co2 data.</p>
+    <p>Complete the savetemp() method to ensure that the TVOC values can be returned.</p>
+    <p>Then update the m5stacks devices so that they can send and receive said data.</p>
+
+
+    <h4>Exercise 3:</h4>
+    <p>Store the co2, TVOC and temperature data by connecting your big querry table to the flask</p>
+    <p>Then create a new endpoint that retrieves the co2, TVOC and temperature data from the big querry table</p>
+
+
+
+</body>
+</html>
