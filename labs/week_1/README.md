@@ -61,9 +61,9 @@ We will be using the TMDB (The Movie DataBase) website to fetch information abou
 
 **Hints (in case you get stuck):**
 
-<img width="400" alt="TMDB Profile" src="https://github.com/alexerne-git/Coding-Journey/assets/43532600/f39edbfe-67a8-4313-9be3-d41842145df5">
-<img width="400" alt="TMDB API Key" src="https://github.com/alexerne-git/Coding-Journey/assets/43532600/f3ad3b48-c8a7-49ec-ba79-b4d00578bd05">
-<img width="200" alt="Example Request" src="https://github.com/alexerne-git/Coding-Journey/assets/43532600/b6154763-e669-421b-b7eb-54a3930d05df">
+<img width="400" alt="TMDB Profile" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/9eba5cb3-d082-4a19-9efe-c1a375339f27">
+<img width="400" alt="TMDB API Key" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/e6e46ffa-c4a1-4dc6-b1ea-49242d7f2ff0">
+<img width="400" alt="Example Request" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/fcafddb1-d7b8-41be-a553-df8563b2370a">
 
 
 -----------------------------------
@@ -81,12 +81,12 @@ This exercise aims to familiarize you with Google Cloud Functions. You'll create
 
 **Hints to 2. Deploy the function on Google Cloud Platform (in case you get stuck) :**
 * From the side menu, go to _View all products_ > _Serverless_ > _Cloud Functions_, or search for _Cloud Functions_ in the Search bar at the top.
-* <img width="680" alt="Google Cloud Function" src="https://github.com/alexerne-git/Coding-Journey/assets/43532600/c4cfc7a9-0612-494f-9bfe-35766bc9f779">
+*<img width="680" alt="Google Cloud Function" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/df6e4750-3129-48e3-967e-4584db23dd4a">
 * Create a simple Python function that can be triggered over HTTP. Make sure to pick the "Allow unauthenticated invocations" option.
-* <img width="400" alt="Unothenticated" src="https://github.com/alexerne-git/Coding-Journey/assets/43532600/037de5f6-dc5b-4b35-85cf-53749707e3ab">
+*<img width="400" alt="Unothenticated" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/535ec37a-459c-425a-962e-f4d6e00f17e9">
 * You can now copy paste the code from the Notebook (by uncommenting the 3 lines and adding the packages in the requirements.txt)
 * Please do not forget to put the same entry point as the function name:
-* <img width="400" alt="Entry point" src="https://github.com/alexerne-git/Coding-Journey/assets/43532600/e27fd839-b1fb-4363-8b52-b66e4933398b">
+* <img width="400" alt="Entry point" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/7c7da4d2-a24f-4787-8ac6-4992afb173b3">
 * After having deployed your function, call it using its URL, trying different values for the Movie IDs (CF notebook)
 
 
@@ -106,7 +106,7 @@ This exercise aims to familiarize you with Google Cloud Functions. You'll create
 - Please download streamlit: pip(3) install streamlit
 - Add the two URLs from Google Cloud and Run your App and run the following command: Streamlit run app.py
 - You should be able to see something like this.
-- <img width="520" alt="Streamlit" src="https://github.com/alexerne-git/Coding-Journey/assets/43532600/3447bb61-c3d9-4dd9-be50-2c909ea89c80">
+- <img width="520" alt="Streamlit" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/1cfe2cb0-eb0b-4a55-b678-747810ed96fa">
 
 **Step 2:** Dockerize the Web-Application and deploy it on Google Cloud Run: 
 - Recall: Docker is a platform and toolset for developing, deploying, and running applications in lightweight, portable containers, facilitating consistent and reproducible software environments across different systems.
@@ -119,8 +119,8 @@ This exercise aims to familiarize you with Google Cloud Functions. You'll create
 - Wait 2-3 minutes
 Done ! You should have access to an URL allowing you to access your website from the Cloud ! 
 
+<img width="744" alt="final" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/0f0736d9-dfb3-48c0-9da0-701342bb6680">
 
-<img width="744" alt="final" src="https://github.com/alexerne-git/Coding-Journey/assets/43532600/a1295330-51a5-4a59-b390-92759726c12f">
 
 
 
