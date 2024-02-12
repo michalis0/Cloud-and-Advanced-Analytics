@@ -44,10 +44,8 @@ You'll be working on three exercises for this lab:
 
 ## Table of contents 
 * [Exercise 1 TMDB API Key](#step-1-TMDB-API-Key)
-* [Exercise 2 API Request](#step-2-import-the-dataset)
-* [Exercise 3 Google Cloud Function with API Key](#step-3-data-cleaning)
-* [Exercise 4 Streamlit App](#hour-2-data-visualization)
-* [Exercise 5 Connection of backend with Streamlit and Deploy](#step-5-export-the-dataset)
+* [Exercise 2 Google Cloud Function with API Key](#step-3-data-cleaning)
+* [Exercise 3 Streamlit App and Deploying on Google Cloud Run](#hour-2-data-visualization)
 
 -----------------------------------
 ### **Exercise 1: TMDB API Key**
