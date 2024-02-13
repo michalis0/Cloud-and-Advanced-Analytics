@@ -51,6 +51,15 @@ In this exercise we will look on how to create a bucket in Cloud Storage in Goog
 * You can now go to the folder of this project and download the "movie.csv" dataset, we will use this for our cloud storage ! 
 * Please select "UPLOAD FILES" and upload the given CSV file
 
+**Hints (in case you get stuck)**
+
+<img width="300" alt="Cloud Storage 1" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/a3f9f550-fd42-4fc6-ad50-047a720aa941">
+<img width="400" alt="bucket" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/5f140d33-a6ae-4ae3-9883-17f34216236a">
+<img width="300" alt="Screenshot 2024-02-13 at 07 49 05" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/e87f8c65-2849-40ce-8c5b-7a8afcfe621c">
+
+-----------------------------------
+
+
 **Step 2: Fetching the bucket keys:**
 
 * On powerful aspect of Google Cloud is that we can access this file from any website, and this is what we will try to do ! To do so, please following the steps:
@@ -58,8 +67,16 @@ In this exercise we will look on how to create a bucket in Cloud Storage in Goog
 - Step 2: "Create Service Account" and enter a name i.e: Movie-Dataset-CSV-Database-Access and add ad service access "Storage Admin"
 - Step 3: Once created, click on the created service account and generate Keys, and download them
 
-**Step 3: Python code and connection:**
+**Hints (in case you get stuck)**
 
+<img width="320" alt="Screenshot 2024-02-13 at 07 56 30" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/5f7921e1-c66b-4ed8-b3e8-af4b673a7b18">
+<img width="320"   alt="Admin" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/13c253dd-b710-4176-b575-5f6577a45c89">
+<img width="320" alt="keys1" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/eb21692d-5547-40fa-9ab1-3dab8c75d0af">
+
+-----------------------------------
+
+
+**Step 3: Python code and connection:**
 - Step 1: Download the python code in the folder - **streamlit-google-cloud-storage**
 - Download the code and install the packages : !pip install google-cloud-storage,  !pip install pandas, !pip install streamlit, pip install --upgrade google-cloud-speech
 - Run the command line: streamlit run streamlit-google-cloud-storage.py, you should be able to see a simple title ! 
@@ -67,20 +84,15 @@ In this exercise we will look on how to create a bucket in Cloud Storage in Goog
     - Copy the path (RELATIVE Path) and paste it into the "Key path", please also put the bucket name and the file_name
 - Run the command line: streamlit run streamlit-google-cloud-storage.py, you should be able to see this ! Done. 
 
+**Hints (in case you get stuck)**
 
+<img width="400" alt="initial" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/f7fbe869-a36a-4246-bcee-312c365ed55a">
+<img width="400" alt="final_2" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/5b276ef3-714a-4bb0-b444-0af999596710">
 
+-----------------------------------
+### **Exercise 2: Big Query**
+-----------------------------------
 
-
-
-
-
-
-
-- Step 3: Add "bucket storage" to grand this service account access 
-
-Click the "Create Service Account" button.
-Enter a name for the service account, set a role (e.g., Storage > Storage Object Admin if you need access to Cloud Storage), and click "Continue."
-Click "Done" to skip granting additional permissions (you can do this later if needed).
 
 
 
