@@ -62,7 +62,10 @@ def sendDataToServer():
     if co2 == None:
         return """{"status": "error", "message": "no co2 value provided"}"""
     saveco2val(co2)
-    return """{"status": "success", "data": %s}""" % (getco2val())
+    return """{
+        "status": "success",
+        "data": %s
+        }""" % (getco2val())
 
 
 #This part controls the getter for the weather data
