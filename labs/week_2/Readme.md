@@ -94,6 +94,36 @@ In this exercise we will look on how to create a bucket in Cloud Storage in Goog
 -----------------------------------
 
 
+**Step 1: Creation of the database:**
+
+In this section, we will essentially focus on Big Query ! To do so, you can first download this [dataset](https://github.com/michalis0/Cloud-and-Advanced-Analytics/tree/main/labs/week_2/data). Now you can follow these steps:
+- Step 1: On the left pannel, select **Big Query**
+- Step 2: Select the **Add** Button
+- Step 3: Click on **Local File**
+- Step 4: Change the File format to CSV and import the "Teams.csv"
+- Step 5: Click on Dataset and add a Dataset ID, i.e: "world_cup_dataset"
+- Step 5: Put "Teams" as the table name
+- Step 6: Select "Auto Detect", then click on "CREATE TABLE"
+- Step 7: You can create another table by clicking the three dots next to the dataset and import Players.csv. As before, please select the correct file format (CSV) and Auto Detect !
 
 
 * **Hints (in case you get stuck)**
+
+<img width="400" alt="Big Query" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/0fa7ed55-1e90-4eca-b8e1-9c678acb019d">
+<img width="400" alt="add" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/3f053f6c-0625-42d9-a192-8f6293be4e26">
+
+<img width="400" alt="Lcoa" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/7d1e3da5-55f6-4ab9-a726-957041cb91a0">
+<img width="400" alt="world" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/726510f9-6680-4b84-b891-595eff210924">
+
+<img width="400" alt="f" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/d1f99c1d-472b-452d-83cf-7fc5957768da">
+<img width="400" alt="data" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/57a93cc5-94a7-4eed-9587-59a2b5355165">
+
+
+**Step 2: Query of the dataset:**
+
+In this section, we will essentially query the dataset that you just created ! Please follow the guidelines on [this Notebook]()
+
+
+-----------------------------------
+
+
