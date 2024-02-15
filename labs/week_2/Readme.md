@@ -131,7 +131,7 @@ In this section, we will essentially focus on Big Query ! To do so, you can firs
 
 **Step 2: Query of the dataset:**
 
-In this section, we will essentially query the dataset that you just created ! Please follow the guidelines on [this Notebook]()
+In this section, we will essentially query the dataset that you just created ! Please follow the guidelines on [this Notebook](https://github.com/michalis0/Cloud-and-Advanced-Analytics/blob/main/labs/week_2/data/week_02_exercises_big_query.ipynb)
 
 **Final Note:** While we are using sanitized datasets, please keep in mind that when working with large CSV some preprocessing might be necessary to allow the use of SQL queries in your uploaded datasets. 
 
