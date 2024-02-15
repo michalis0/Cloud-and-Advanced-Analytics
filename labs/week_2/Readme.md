@@ -16,7 +16,7 @@ Welcome to this week's lab where we will delve into Google Storage and BigQuery.
 By the end of this lab, you will be able to:
 - Understand the functionalities and navigation of Google BigQuery and Cloud Storage
 - Upload and explore data in BigQuery
-- Query public datasets in BigQuery to reinforce your SQL skills
+- Query datasets in BigQuery to reinforce your SQL skills
 
 ## Introduction
 Google BigQuery is a highly scalable and serverless data warehouse provided by Google that allows for rapid SQL queries and data analysis. It supports the analysis of large datasets in real-time, using the robust infrastructure of Google.
@@ -29,19 +29,17 @@ The service uses standard SQL. Its seamless integration with other Google Cloud 
 ## Lab Walkthrough
 In this lab, TAs will demonstrate the following on the Google Console:
 * Cloud Storage and buckets 
-* Exploring Google Cloud Console features, specifically Billing, Storage, Big Query, AI, Cloud Functions
-* Introduction to serverless backend with Cloud Functions 
-
+* Exploring Google Cloud Console features
 
 ## Table of contents 
-* [Exercise 1 Cloud Storage and Buckets](#step-1-TMDB-API-Key)
-* [Exercise 2 Big Query](#step-3-data-cleaning)
+* [Exercise 1 Cloud Storage and Buckets](#exercise-1-cloud-storage-and-buckets)
+* [Exercise 2 Big Query](#exercise-2-big-query)
 
 -----------------------------------
 ### **Exercise 1: Cloud Storage and Buckets**
 -----------------------------------
 
-In this exercise we will look on how to create a bucket in Cloud Storage in Google Cloud and later we will see how we can call this file to compute SQL queries.
+In this exercise we will look on how to create a bucket in Cloud Storage and later we will see how we can call this file to compute SQL queries.
 
 **Step 1: Creation of the Bucket:**
 
