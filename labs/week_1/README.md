@@ -51,7 +51,7 @@ If you need help, consult the [Google Cloud Documentation](https://cloud.google.
 ## Table of contents for exercises: 
 * [Exercise 1 TMDB API Key](#exercise-1-tmdb-api-key)
 * [Exercise 2 Google Cloud Function with API Key](#exercise-2-google-cloud-function-with-api-key)
-* [Exercise 3 Streamlit App and Deploying on Google Cloud Run](#hour-2-data-visualization)
+* [Exercise 3 Streamlit App and Deploying on Google Cloud Run](#exercise-3-streamlit-app-and-deploying-on-google-cloud-run)
 
 -----------------------------------
 ### Exercise 1: TMDB API Key
@@ -96,16 +96,17 @@ This exercise aims to familiarize yourself with Google Cloud Functions. You'll c
 * <img width="400" alt="Entry point" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/7c7da4d2-a24f-4787-8ac6-4992afb173b3">
 * After having deployed your function, call it using its URL, trying different values for the Movie IDs (CF notebook)
 
-
-
 -----------------------------------
-### **Exercise 3: Streamlit / Dockerizing and Deploy on Cloud Run**
+### **Exercise 3 Streamlit App and Deploying on Google Cloud Run**
 -----------------------------------
 
 **The steps are as follows:**
 1. Create a Streamlit Project and call the two Google Cloud Functions
 2. Dockerize the project
 3. Deploy the App on Cloud Run !
+
+---
+
 
 **Step 1:** Download the Skeleton code and try out your functions! 
 - Recall: Streamlit is an open-source Python library that enables rapid creation of interactive web applications for data science and machine learning with minimal code.
@@ -115,37 +116,62 @@ This exercise aims to familiarize yourself with Google Cloud Functions. You'll c
 - You should be able to see something like this.
 - <img width="520" alt="Streamlit" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/1cfe2cb0-eb0b-4a55-b678-747810ed96fa">
 
+---
+
+
 **Step 2:** Two possibilities: Dockerize the Web-Application and deploy it on Google Cloud Run: 
 - Recall: Docker is a platform and toolset for developing, deploying, and running applications in lightweight, portable containers, facilitating consistent and reproducible software environments across different systems.
+
+
 
 **Step 2.1:** 
 - Go to Cloud Storage and create a new bucket, called: "my-streamlit-website" and select a region in Europe
 - Once your Bucket is created, you can import the project folder with your JSON key and all the configurations done before ! 
 - Then please select "Activate Cloud Shell" on the top right corner
 - Once the shell is open, please copy paste this line: This allows to access the project you just imported on Cloud Storage ! 
-- gsutil cp -r gs://BUCKET_NAME/FOLDER_NAME ~/
-- cd ~/FOLDER_NAME
+-   ```bash
+    gsutil cp -r gs://BUCKET_NAME/FOLDER_NAME ~/
+-   ```bash
+    cd ~/FOLDER_NAME
 - Type ls to make sure all the files are present in your directory 
-- Build the docker image using: docker build -t gcp-api-website .
-- gcloud builds submit --tag gcr.io/PROJECTID/gcp-api-website
-- Deploy the app: gcloud run deploy --image gcr.io/PROJECTID/gcp-api-website --region europe-west1 --allow-unauthenticated
+- Build the docker image using:
+-   ```bash
+    docker build -t gcp-api-website .
+- Push Docker image to Google Container Registry (GCR).
+-  ```bash
+    gcloud builds submit --tag gcr.io/PROJECTID/gcp-api-website
+- Deploy the app:
+-  ```bash
+   gcloud run deploy --image gcr.io/PROJECTID/gcp-api-website --region europe-west1 --allow-unauthenticated
 - You should now see an URL which allows you to access your deployed website ! 
 
-<img width="428" alt="bucket_2" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/9b3d6701-14e0-44a7-a733-86a2d7d5ad4d">
-<img width="504" alt="bucket_3" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/ded3b8f8-04a0-4407-b2b3-a37bcb1f2b90">
-<img width="557" alt="bucket_4" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/fb84b2b6-e190-473b-b47a-4c2dc6c20614">
-<img width="660" alt="cloud shell" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/39595a10-d2a2-4ce7-bb70-62caac904827">
+
+**Step by Step Guide: In case you get stuck:**
+
+<img width="400" alt="bucket_2" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/9b3d6701-14e0-44a7-a733-86a2d7d5ad4d">
+<img width="400" alt="bucket_3" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/ded3b8f8-04a0-4407-b2b3-a37bcb1f2b90">
+
+<img width="400" alt="bucket_4" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/fb84b2b6-e190-473b-b47a-4c2dc6c20614">
+<img width="400" alt="cloud shell" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/39595a10-d2a2-4ce7-bb70-62caac904827">
+
+
+---
+
 
 
 **Step 2.2: (more challenging!)** 
 - Please connect to the Google Cloud from your code editor: **gcloud auth login**
 - Once logged in, now get the project name: **gcloud config get-value project**, copy your project name
-- docker build -t gcr.io/YOUR_PROJECT_NAME/streamlit-website:latest .
-- docker push gcr.io/YOUR_PROJECT_NAME/streamlit-website:latest
-- gcloud run deploy streamlit-website-deployed --image gcr.io/YOUR_PROJECT_NAME/streamlit-website:latest --platform managed
+- ```bash
+     docker build -t gcr.io/YOUR_PROJECT_NAME/streamlit-website:latest .
+- ```bash
+  docker push gcr.io/YOUR_PROJECT_NAME/streamlit-website:latest
+- ```bash
+  gcloud run deploy streamlit-website-deployed --image gcr.io/YOUR_PROJECT_NAME/streamlit-website:latest --platform managed
+  
 **Note** you can select a deployment server in Europe, i.e: number 13: [13] europe-central2
-- Wait 2-3 minutes
-Done ! You should have access to an URL allowing you to access your website from the Cloud ! 
+
+Wait 2-3 minutes and Done ! You should have access to an URL allowing you to access your website from the Cloud ! 
 
 <img width="744" alt="final" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/0f0736d9-dfb3-48c0-9da0-701342bb6680">
 
