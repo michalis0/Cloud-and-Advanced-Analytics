@@ -43,7 +43,7 @@ If you need help, consult the [Google Cloud Documentation](https://cloud.google.
 You'll be working on three exercises for this lab: 
 
 ## Table of contents 
-* [Exercise 1 test API Key](#exercise-1-test-api-key)
+* [Exercise 1 TMDB API Key](#exercise-1-tmdb-api-key)
 * [Exercise 2 Google Cloud Function with API Key](#step-3-data-cleaning)
 * [Exercise 3 Streamlit App and Deploying on Google Cloud Run](#hour-2-data-visualization)
 
@@ -54,7 +54,7 @@ You'll be working on three exercises for this lab:
 
 
 -----------------------------------
-### Exercise 1: test API Key
+### Exercise 1: TMDB API Key
 -----------------------------------
 
 We will be using the TMDB (The Movie DataBase) website to fetch information about movies, TV shows and actors, including details such as cast, ratings and user reviews. To do so, we will need to set up an API key to fetch this information. In this step we will focus on the creation of the account to get access to the API key. This can be done following this [link](https://www.themoviedb.org/signup)
