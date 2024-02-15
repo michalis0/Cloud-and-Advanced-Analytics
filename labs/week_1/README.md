@@ -39,19 +39,19 @@ Make sure to create your account by the end of this week. Thereafter, familiariz
 
 If you need help, consult the [Google Cloud Documentation](https://cloud.google.com/docs). This resource offers a comprehensive guide on using their services, alongside numerous code examples.
 
-## Exercises
-You'll be working on three exercises for this lab: 
+## Requirements
 
-## Table of contents 
+- [ ] GitHub account
+- [ ] Google Cloud Account (with credits / credit card activated)
+- [ ] Python Installed
+- [ ] Code editor (Visual Studio Code)
+
+--------------
+
+## Table of contents for exercises: 
 * [Exercise 1 TMDB API Key](#exercise-1-tmdb-api-key)
-* [Exercise 2 Google Cloud Function with API Key](#step-3-data-cleaning)
+* [Exercise 2 Google Cloud Function with API Key](#exercise-2-google-cloud-function-with-api-key)
 * [Exercise 3 Streamlit App and Deploying on Google Cloud Run](#hour-2-data-visualization)
-
-
-
-
-
-
 
 -----------------------------------
 ### Exercise 1: TMDB API Key
@@ -59,7 +59,7 @@ You'll be working on three exercises for this lab:
 
 We will be using the TMDB (The Movie DataBase) website to fetch information about movies, TV shows and actors, including details such as cast, ratings and user reviews. To do so, we will need to set up an API key to fetch this information. In this step we will focus on the creation of the account to get access to the API key. This can be done following this [link](https://www.themoviedb.org/signup)
 
-**Next:** 
+**Main Steps:** 
 1. Go to the profile and get the API Key using this [link](https://www.themoviedb.org/settings/api/request)
 2. Select Developper - Accept the terms and conditions
 3. You should now be able to see your API key (copy your API key for later use)
@@ -67,29 +67,30 @@ We will be using the TMDB (The Movie DataBase) website to fetch information abou
 
 **Hints (in case you get stuck):**
 
-<img width="400" alt="TMDB Profile" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/9eba5cb3-d082-4a19-9efe-c1a375339f27">
-<img width="400" alt="TMDB API Key" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/e6e46ffa-c4a1-4dc6-b1ea-49242d7f2ff0">
-<img width="400" alt="Example Request" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/fcafddb1-d7b8-41be-a553-df8563b2370a">
+<img width="300" alt="TMDB Profile" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/9eba5cb3-d082-4a19-9efe-c1a375339f27">
+<img width="300" alt="TMDB API Key" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/e6e46ffa-c4a1-4dc6-b1ea-49242d7f2ff0">
+<img width="300" alt="Example Request" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/fcafddb1-d7b8-41be-a553-df8563b2370a">
 
 
 -----------------------------------
-### **Exercise 2: Google Cloud Functions**
+### **Exercise 2: Google Cloud Function with API Key**
 -----------------------------------
 
-This exercise aims to familiarize you with Google Cloud Functions. You'll create a cloud function to retrieve different movies and specific movie posters using the API.
+This exercise aims to familiarize yourself with Google Cloud Functions. You'll create a cloud function to retrieve different movies and specific movie posters using the API.
 
-**The steps are as follows:**
+**Then General Steps are as follows:**
+
 0. Check to see that the API key works correctly
 1. Write a function on GCP in Python
 2. Deploy the function on Google Cloud Platform
-3. Call the function from a Notebook (either in Colab or in Jupyter).
+3. Call the function from a Notebook (using Google Colab). 
 4. Please repeat those steps for the second function on the Notebook
 
-**Hints to 2. Deploy the function on Google Cloud Platform (in case you get stuck) :**
+**Step by Step Guide: In case you get stuck:**
 * From the side menu, go to _View all products_ > _Serverless_ > _Cloud Functions_, or search for _Cloud Functions_ in the Search bar at the top.
-*<img width="680" alt="Google Cloud Function" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/df6e4750-3129-48e3-967e-4584db23dd4a">
+* <img width="680" alt="Google Cloud Function" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/df6e4750-3129-48e3-967e-4584db23dd4a">
 * Create a simple Python function that can be triggered over HTTP. Make sure to pick the "Allow unauthenticated invocations" option.
-*<img width="400" alt="Unothenticated" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/535ec37a-459c-425a-962e-f4d6e00f17e9">
+* <img width="400" alt="Unothenticated" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/535ec37a-459c-425a-962e-f4d6e00f17e9">
 * You can now copy paste the code from the Notebook (by uncommenting the 3 lines and adding the packages in the requirements.txt)
 * Please do not forget to put the same entry point as the function name:
 * <img width="400" alt="Entry point" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/7c7da4d2-a24f-4787-8ac6-4992afb173b3">
