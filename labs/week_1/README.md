@@ -48,6 +48,13 @@ If you need help, consult the [Google Cloud Documentation](https://cloud.google.
 
 --------------
 
+
+## The General Pipeline:
+
+<img width="924" alt="pipeline" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/16ded3bf-7d53-4136-8f46-0dd3e343ebb9">
+
+--------------
+
 ## Table of contents for exercises: 
 * [Exercise 1 TMDB API Key](#exercise-1-tmdb-api-key)
 * [Exercise 2 Google Cloud Function with API Key](#exercise-2-google-cloud-function-with-api-key)
