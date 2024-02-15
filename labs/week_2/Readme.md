@@ -60,10 +60,10 @@ In this exercise we will look on how to create a bucket in Cloud Storage and lat
 
 **Step 2: Fetching the bucket keys:**
 
-* On powerful aspect of Google Cloud is that we can access this file from any website, and this is what we will try to do ! To do so, please following the steps:
-- Step 1: Navigate to IAM & Admin
-- Step 2: "Create Service Account" and enter a name i.e: Movie-Dataset-CSV-Database-Access and add ad service access "Storage Admin"
-- Step 3: Once created, click on the created service account and generate Keys, and download them
+* One powerful aspect of Google Cloud is that we can access this file from any website, and this is what we will try to do ! To do so, please following the steps:
+- **Step 1:** Navigate to IAM & Admin and click on "Service accounts"
+- **Step 2:** "Create Service Account" and enter a name i.e: Movie-Dataset-CSV-Database-Access and add ad service access "Storage Admin"
+- **Step 3:** Once created, click on the created service account and generate Keys, and download them
 
 **Hints (in case you get stuck)**
 
@@ -75,12 +75,21 @@ In this exercise we will look on how to create a bucket in Cloud Storage and lat
 
 
 **Step 3: Python code and connection:**
-- Step 1: Download the python code in the folder - **streamlit-google-cloud-storage**
-- Download the code and install the packages : !pip install google-cloud-storage,  !pip install pandas, !pip install streamlit, pip install --upgrade google-cloud-speech
-- Run the command line: streamlit run streamlit-google-cloud-storage.py, you should be able to see a simple title ! 
+- **1.** Download the python code in the folder - **streamlit-google-cloud-storage** and open it in your code editor
+- **2.** Install the packages :
+- ```bash
+  !pip install google-cloud-storage
+  !pip install pandas
+  !pip install streamlit
+  !pip install --upgrade google-cloud-speech
+- Run the command line: you should be able to see a simple title !  (CF Image)
+- ```bash
+  streamlit run streamlit-google-cloud-storage.py
 - Now you can upload the JSON keys inside the project and change the following paths:
     - Copy the path (RELATIVE Path) and paste it into the "Key path", please also put the bucket name and the file_name
-- Run the command line: streamlit run streamlit-google-cloud-storage.py, you should be able to see this ! Done. 
+- Run the command line:
+- ```bash
+  streamlit run streamlit-google-cloud-storage.py
 
 **Hints (in case you get stuck)**
 
@@ -91,18 +100,21 @@ In this exercise we will look on how to create a bucket in Cloud Storage and lat
 ### **Exercise 2: Big Query**
 -----------------------------------
 
+**NOTE:** In order to connect to the Big Query Database created, you will need to use your Project ID, this can be found by clicking on the Google Cloud Logo and you can simply copy your project ID as shown below:
+<img width="651" alt="Screenshot 2024-02-15 at 11 51 24" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/f7b5fe40-ec10-4306-9259-1c39d3364555">
 
 **Step 1: Creation of the database:**
 
 In this section, we will essentially focus on Big Query ! To do so, you can first download this [dataset](https://github.com/michalis0/Cloud-and-Advanced-Analytics/tree/main/labs/week_2/data). Now you can follow these steps:
-- Step 1: On the left pannel, select **Big Query**
-- Step 2: Select the **Add** Button
-- Step 3: Click on **Local File**
-- Step 4: Change the File format to CSV and import the "Teams.csv"
-- Step 5: Click on Dataset and add a Dataset ID, i.e: "world_cup_dataset"
-- Step 5: Put "Teams" as the table name
-- Step 6: Select "Auto Detect", then click on "CREATE TABLE"
-- Step 7: You can create another table by clicking the three dots next to the dataset and import Players.csv. As before, please select the correct file format (CSV) and Auto Detect !
+- **Step 1:** On the left pannel, select **Big Query**
+- **Step 2:** Select the **Add** Button
+- **Step 3:** Click on **Local File**
+- **Step 4:** Change the File format to CSV and import the "Teams.csv"
+- **Step 5:** Click on Dataset and add a Dataset ID, i.e: "world_cup" and select Multi-region: EU
+- **Step 5:** Put "teams" as the table name
+- **Step 6:** Select "Auto Detect", then click on "CREATE TABLE"
+- **Step 7:** Now please create another table by clicking the **three dots** next to the dataset and import Players.csv, following the exact same steps as before. Note, as before, please select the correct file format (CSV), Auto Detect and call the table name players (lowercase!).
+- **Step 8:** Now please do the same process for the csv PlayersExt.csv and call it as players_and_teams. 
 
 
 * **Hints (in case you get stuck)**
@@ -121,6 +133,7 @@ In this section, we will essentially focus on Big Query ! To do so, you can firs
 
 In this section, we will essentially query the dataset that you just created ! Please follow the guidelines on [this Notebook]()
 
+**Final Note:** While we are using sanitized datasets, please keep in mind that when working with large CSV some preprocessing might be necessary to allow the use of SQL queries in your uploaded datasets. 
 
 -----------------------------------
 
