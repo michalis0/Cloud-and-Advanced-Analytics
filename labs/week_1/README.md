@@ -19,19 +19,20 @@ Welcome to the first lab of Cloud and Advanced Analytics! In this week, we'll in
 In this lab, TAs will demonstrate the following on the Google Console:
 * Google Cloud account setup
 * Exploring Google Cloud Console features, specifically Billing, Storage, Big Query, AI, Cloud Functions
-* Introduction to serverless backend with Cloud Functions 
+* Introduction to serverless backend with Cloud Functions
+* Deploying your first streamlit app in Google Cloud
 
 ### Pre-Lab Setup 
 Please follow these steps to prepare for this week's lab:
 
 1. **Communication**:
-    - Join our workspace on [Slack](https://join.slack.com/t/cloud-and-analytics23/shared_invite/zt-1oh2n2asy-l70~dhXVmgy34cqgvRLheg). This will serve as our primary mode of communication.
+    - Join our workspace on [Slack]([https://join.slack.com/t/cloud-and-analytics23/shared_invite/zt-1oh2n2asy-l70~dhXVmgy34cqgvRLheg](https://join.slack.com/t/cloudadvanced-kyj1491/shared_invite/zt-2carw20n5-u6bD1CC1mHRq4vI~RRR6_Q)). This will serve as our primary mode of communication.
 2. **Google Cloud Setup**:
     - Create a Google account with your academic email address (if you do not already have one) on [Google Cloud](https://cloud.google.com). This needs to be a Google account.
     - Please do NOT activate your free $300 trial on Google Cloud yet. We will utilize this for a project later in the course. Instead, we'll start with a voucher.
 3. **Voucher Redemption**:
     - Redeem the student voucher code we provided, using your .unil or .epfl account. See instructions in Moodle.
-    - Verify that the $50 voucher code has been applied to your account by checking the [billing tab](https://console.cloud.google.com/billing/01B32E-AE678C-E613F9?organizationId=0).
+    - Verify that the $50 voucher code has been applied to your account by checking the billing tab on your Google Cloud Profile.
     - Important note: For the Google Cloud account, the student code will give you a free $50 credit. Once you've exhausted this, you'll need to enter your credit card information (you won't be charged). This simply verifies that you are not a bot. At this point, you'll receive a free $300 credit valid for 3 months. More details are available [here](https://edu.google.com/programs/students/?modal_active=none).
 
 Make sure to create your account by the end of this week. Thereafter, familiarize yourself with various Google Cloud features. 
@@ -41,14 +42,19 @@ If you need help, consult the [Google Cloud Documentation](https://cloud.google.
 ## Exercises
 You'll be working on three exercises for this lab: 
 
-
 ## Table of contents 
-* [Exercise 1 TMDB API Key](#step-1-TMDB-API-Key)
+* [Exercise 1 test API Key](#exercise-1-test-api-key)
 * [Exercise 2 Google Cloud Function with API Key](#step-3-data-cleaning)
 * [Exercise 3 Streamlit App and Deploying on Google Cloud Run](#hour-2-data-visualization)
 
+
+
+
+
+
+
 -----------------------------------
-### **Exercise 1: TMDB API Key**
+### Exercise 1: test API Key
 -----------------------------------
 
 We will be using the TMDB (The Movie DataBase) website to fetch information about movies, TV shows and actors, including details such as cast, ratings and user reviews. To do so, we will need to set up an API key to fetch this information. In this step we will focus on the creation of the account to get access to the API key. This can be done following this [link](https://www.themoviedb.org/signup)
@@ -108,8 +114,29 @@ This exercise aims to familiarize you with Google Cloud Functions. You'll create
 - You should be able to see something like this.
 - <img width="520" alt="Streamlit" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/1cfe2cb0-eb0b-4a55-b678-747810ed96fa">
 
-**Step 2:** Dockerize the Web-Application and deploy it on Google Cloud Run: 
+**Step 2:** Two possibilities: Dockerize the Web-Application and deploy it on Google Cloud Run: 
 - Recall: Docker is a platform and toolset for developing, deploying, and running applications in lightweight, portable containers, facilitating consistent and reproducible software environments across different systems.
+
+**Step 2.1:** 
+- Go to Cloud Storage and create a new bucket, called: "my-streamlit-website" and select a region in Europe
+- Once your Bucket is created, you can import the project folder with your JSON key and all the configurations done before ! 
+- Then please select "Activate Cloud Shell" on the top right corner
+- Once the shell is open, please copy paste this line: This allows to access the project you just imported on Cloud Storage ! 
+- gsutil cp -r gs://BUCKET_NAME/FOLDER_NAME ~/
+- cd ~/FOLDER_NAME
+- Type ls to make sure all the files are present in your directory 
+- Build the docker image using: docker build -t gcp-api-website .
+- gcloud builds submit --tag gcr.io/PROJECTID/gcp-api-website
+- Deploy the app: gcloud run deploy --image gcr.io/PROJECTID/gcp-api-website --region europe-west1 --allow-unauthenticated
+- You should now see an URL which allows you to access your deployed website ! 
+
+<img width="428" alt="bucket_2" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/9b3d6701-14e0-44a7-a733-86a2d7d5ad4d">
+<img width="504" alt="bucket_3" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/ded3b8f8-04a0-4407-b2b3-a37bcb1f2b90">
+<img width="557" alt="bucket_4" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/fb84b2b6-e190-473b-b47a-4c2dc6c20614">
+<img width="660" alt="cloud shell" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/39595a10-d2a2-4ce7-bb70-62caac904827">
+
+
+**Step 2.2: (more challenging!)** 
 - Please connect to the Google Cloud from your code editor: **gcloud auth login**
 - Once logged in, now get the project name: **gcloud config get-value project**, copy your project name
 - docker build -t gcr.io/YOUR_PROJECT_NAME/streamlit-website:latest .
@@ -120,6 +147,8 @@ This exercise aims to familiarize you with Google Cloud Functions. You'll create
 Done ! You should have access to an URL allowing you to access your website from the Cloud ! 
 
 <img width="744" alt="final" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/0f0736d9-dfb3-48c0-9da0-701342bb6680">
+
+
 
 
 
