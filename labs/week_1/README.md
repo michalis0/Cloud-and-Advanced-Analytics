@@ -59,7 +59,7 @@ If you need help, consult the [Google Cloud Documentation](https://cloud.google.
 * [Exercise 1 TMDB API Key](#exercise-1-tmdb-api-key)
 * [Exercise 2 Google Cloud Function with API Key](#exercise-2-google-cloud-function-with-api-key)
 * [Exercise 3 Streamlit App and Deploying on Google Cloud Run](#exercise-3-streamlit-app-and-deploying-on-google-cloud-run)
-
+* [Additional links:]
 -----------------------------------
 ### Exercise 1: TMDB API Key
 -----------------------------------
@@ -125,62 +125,47 @@ This exercise aims to familiarize yourself with Google Cloud Functions. You'll c
 
 ---
 
+**Step 2:** Dockerize the Web-Application and deploy it on Google Cloud Run: 
 
-**Step 2:** Two possibilities: Dockerize the Web-Application and deploy it on Google Cloud Run: 
-- Recall: Docker is a platform and toolset for developing, deploying, and running applications in lightweight, portable containers, facilitating consistent and reproducible software environments across different systems.
-
-
-
-**Step 2.1:** 
-- Go to Cloud Storage and create a new bucket, called: "my-streamlit-website" and select a region in Europe
-- Once your Bucket is created, you can import the project folder with your JSON key and all the configurations done before ! 
-- Then please select "Activate Cloud Shell" on the top right corner
-- Once the shell is open, please copy paste this line: This allows to access the project you just imported on Cloud Storage ! 
--   ```bash
-    gsutil cp -r gs://BUCKET_NAME/FOLDER_NAME ~/
--   ```bash
-    cd ~/FOLDER_NAME
-- Type ls to make sure all the files are present in your directory 
-- Build the docker image using:
--   ```bash
-    docker build -t gcp-api-website .
-- Push Docker image to Google Container Registry (GCR).
--  ```bash
-    gcloud builds submit --tag gcr.io/PROJECTID/gcp-api-website
-- Deploy the app:
--  ```bash
-   gcloud run deploy --image gcr.io/PROJECTID/gcp-api-website --region europe-west1 --allow-unauthenticated
-- You should now see an URL which allows you to access your deployed website ! 
+- Go to Google Cloud and activate cloud shell
+- ```bash
+  git clone https://github.com/YOUR_REPOSITORY/streamlit-app-repository
+- ```bash
+  ls and cd to access your project
+- You should be able to see the project you just cloned
+- Now you can build your docker
+- ```bash
+   docker build -t eu.gcr.io/PROJECT_ID/my_streamlit-app:latest .
+- ```bash
+  gcloud auth configure-docker
+- ```bash
+   docker push eu.gcr.io/PROJECT_ID/my_streamlit_app_new:latest
+-  Now you can go to **Container Registery**
+-  Select your repository: **my_streamlit_app_new**
+-  Select **Deploy to Cloud Run**
+-  Select your container image URL if it is not already selected
+-  Add **Allow unauthenticated invocations** and click **CREATE**
+- Wait 2-3 minutes and Done ! You should have access to an URL allowing you to access your website from the Cloud ! 
 
 
 **Step by Step Guide: In case you get stuck:**
 
-<img width="400" alt="bucket_2" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/9b3d6701-14e0-44a7-a733-86a2d7d5ad4d">
-<img width="400" alt="bucket_3" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/ded3b8f8-04a0-4407-b2b3-a37bcb1f2b90">
+- <img width="434" alt="Capture d'écran 2024-02-19 182001" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/37b207bc-1fff-46e7-a7bd-b4e9c4282a3e">
+- <img width="262" alt="Capture d'écran 2024-02-19 184325" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/0e041f11-ee8a-4dbd-b48a-2667b4675234">
+- <img width="505" alt="Capture d'écran 2024-02-19 184523" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/a54a757a-18ab-4f37-94cb-ffab8540d366">
+- <img width="417" alt="Capture d'écran 2024-02-19 184638" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/b75f1e18-570a-45df-88e2-b9b7a5d17cec">
+- <img width="744" alt="final" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/0f0736d9-dfb3-48c0-9da0-701342bb6680">
 
-<img width="400" alt="bucket_4" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/fb84b2b6-e190-473b-b47a-4c2dc6c20614">
-<img width="400" alt="cloud shell" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/39595a10-d2a2-4ce7-bb70-62caac904827">
+-----------------------------------
+### **Additional Links**
+-----------------------------------
 
+##### Difference between Cloud Run and Cloud Functions:
 
----
+- **Cloud Run:** Enables to deploy and run containerized applications. Cloud Run then manages scaling and the infrastructure.  
+- **Cloud Functions:** Handles individual functions which is then taken care by Google Cloud in terms of deployment, scaling and execution.
 
-
-
-**Step 2.2: (more challenging!)** 
-- Please connect to the Google Cloud from your code editor: **gcloud auth login**
-- Once logged in, now get the project name: **gcloud config get-value project**, copy your project name
-- ```bash
-     docker build -t gcr.io/YOUR_PROJECT_NAME/streamlit-website:latest .
-- ```bash
-  docker push gcr.io/YOUR_PROJECT_NAME/streamlit-website:latest
-- ```bash
-  gcloud run deploy streamlit-website-deployed --image gcr.io/YOUR_PROJECT_NAME/streamlit-website:latest --platform managed
-  
-**Note** you can select a deployment server in Europe, i.e: number 13: [13] europe-central2
-
-Wait 2-3 minutes and Done ! You should have access to an URL allowing you to access your website from the Cloud ! 
-
-<img width="744" alt="final" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/0f0736d9-dfb3-48c0-9da0-701342bb6680">
+More information on this [link](https://cloud.google.com/blog/products/serverless/cloud-run-vs-cloud-functions-for-serverless)
 
 
 
