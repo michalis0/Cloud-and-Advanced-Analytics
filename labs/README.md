@@ -27,10 +27,3 @@ Your Cloud and Advanced Analytics TAs
 
 1. [Intro to GCP](/labs/week_01)
 2. [BigQuery and SQL](/labs/week_02)
-3. [Intro to IoT](/labs/week_03_04_05) (hands-on). [Great tutorials here](https://www.youtube.com/playlist?list=PLgvIHLw9-cydbokzAKhi7lWcOVJ67RRTR)
-4. [Recommenders](/labs/week_06)
-5. [Webapps](/labs/week_07)
-6. [Elastic Cloud](/labs/week_09)
-7. [NetworkX](/labs/week_11)
-8. [GPT](/labs/week_12)
-9. [Docker](/labs/week_13)
