@@ -27,3 +27,9 @@ Your Cloud and Advanced Analytics TAs
 
 1. [Intro to GCP / Create a simple web app](/labs/week_1)
 2. [BigQuery and SQL](/labs/week_2)
+3. AutoML on GCP
+4. IoT + BigQuery
+5. Building a recommender system on GCP
+6. Elastic Search
+7. <font color='green'>Easter Holidays!</font>
+
