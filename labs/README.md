@@ -31,11 +31,11 @@ Your Cloud and Advanced Analytics TAs
 4. IoT + BigQuery
 5. Building a recommender system on GCP
 6. Elastic Search
-7. $${\text{\color{red}No lab - Easter Holidays!}}$$
+7. ${\text{\color{red}No lab - Easter Holidays!}}$
 8. Elastic Search + Python
 9. Graph Analytics in Python
 10. Continuous Integration GCP
 11. GenAI studio
-12. <span style='color: red;'>No lab - Ascension!</span>
+12. ${\text{\color{red}No lab - Ascension!}}$
 13. Chatbots on GCP
 
