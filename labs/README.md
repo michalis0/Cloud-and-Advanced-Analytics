@@ -25,5 +25,5 @@ Your Cloud and Advanced Analytics TAs
 
 ## Content
 
-1. [Intro to GCP](/labs/week_01)
-2. [BigQuery and SQL](/labs/week_02)
+1. [Intro to GCP / Create a simple web app](/labs/week_1)
+2. [BigQuery and SQL](/labs/week_2)
