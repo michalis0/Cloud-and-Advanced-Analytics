@@ -127,7 +127,8 @@ This exercise aims to familiarize yourself with Google Cloud Functions. You'll c
       requests==2.31.0
     - 6.6. Click **DEPLOY** and wait another 2 minutes and copy the URL. **NOTE** If you open the URL directly on the browser it will not work, because the functions expects a parameter / placeholder {movieID} for a specific movie ID. So if you open directly the link, you will get an **Internal server error**, which is expected. 
     - 6.7. Go back to the Notebook, paste your URL and execute the cell.
- 
+
+ - **Step 7.** Save the two URLs for later !
 
 **Step by Step Guide: In case you get stuck:**
 
@@ -143,27 +144,46 @@ This exercise aims to familiarize yourself with Google Cloud Functions. You'll c
 -----------------------------------
 
 **The steps are as follows:**
-1. Create a Streamlit Project and call the two Google Cloud Functions
+1. Create a Streamlit Project and call the two Google Cloud Functions (created previously)
 2. Dockerize the project
 3. Deploy the App on Cloud Run !
 
----
-
-
-**Step 1:** Download the Skeleton code and try out your functions! 
-- Recall: Streamlit is an open-source Python library that enables rapid creation of interactive web applications for data science and machine learning with minimal code.
-- You can find attached a folder called **streamlit_app**, this folder contains three files: app.py, requirements.txt and Dockerfile
-- Please download streamlit: pip(3) install streamlit
-- Add the two URLs from Google Cloud and Run your App and run the following command: Streamlit run app.py
-- You should be able to see something like this.
-- <img width="520" alt="Streamlit" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/1cfe2cb0-eb0b-4a55-b678-747810ed96fa">
+**Recall:** Streamlit is an open-source Python library that enables rapid creation of interactive web applications for data science and machine learning with minimal code.
 
 ---
 
-**Step 2:** Dockerize the Web-Application and deploy it on Google Cloud Run: 
+**Step 1:** Download the Skeleton code from [github]() and try out your functions! 
+- 1.1. You can find attached a [folder](https://github.com/michalis0/Cloud-and-Advanced-Analytics/tree/main/labs/1-Intro-to-GCP/streamlit_app) called **streamlit_app**, this folder contains three files: app.py, requirements.txt and Dockerfile, please **Download** that folder and open it without your code editor (i.e. Visual Studio Code)
+- 1.2. Download streamlit:
+    - ```bash
+      pip install streamlit
+- 1.3. Add the two URLs from Google Cloud Functions and run your App and run the following command:
+    - ```bash
+      streamlit run app.py
+- 1.4. You should be able to see something like this.
+- <img width="300" height="500" alt="Streamlit" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/1cfe2cb0-eb0b-4a55-b678-747810ed96fa">
 
-- Go to Google Cloud and activate cloud shell
+---
+
+**Step 2:** Dockerize the Web Application and deploy it on Google Cloud Run: 
+
+
+- 2.1. Create a new Github repository **google-cloud-deploy-streamlit**, keep the code private, upload and push your code
+- 2.2. Go to Google Cloud and activate cloud shell
+- 2.3. Clone the Github repository from github to have access to the code 
 - ```bash
+  git clone https://github.com/michalis0/Cloud-and-Advanced-Analytics
+- ```bash
+  cd Cloud-and-Advanced-Analytics/
+  cd labs/
+  cd 1-Intro-to-GCP/
+  cd streamlit_app/
+
+
+  git clone https://github.com/exampleuser/example-repository.git
+
+https://github.com/michalis0/Cloud-and-Advanced-Analytics/tree/main/labs/1-Intro-to-GCP/streamlit_app.git
+
   git clone https://github.com/YOUR_REPOSITORY/streamlit-app-repository
 - ```bash
   ls and cd to access your project
@@ -185,7 +205,7 @@ This exercise aims to familiarize yourself with Google Cloud Functions. You'll c
 
 **Step by Step Guide: In case you get stuck:**
 
-- <img width="434" alt="Capture d'écran 2024-02-19 182001" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/37b207bc-1fff-46e7-a7bd-b4e9c4282a3e">
+- 2.1. <img width="434" alt="Capture d'écran 2024-02-19 182001" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/37b207bc-1fff-46e7-a7bd-b4e9c4282a3e">
 - <img width="262" alt="Capture d'écran 2024-02-19 184325" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/0e041f11-ee8a-4dbd-b48a-2667b4675234">
 - <img width="505" alt="Capture d'écran 2024-02-19 184523" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/a54a757a-18ab-4f37-94cb-ffab8540d366">
 - <img width="417" alt="Capture d'écran 2024-02-19 184638" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/b75f1e18-570a-45df-88e2-b9b7a5d17cec">
