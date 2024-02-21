@@ -169,38 +169,29 @@ This exercise aims to familiarize yourself with Google Cloud Functions. You'll c
 
 
 - 2.1. Create a new Github repository **google-cloud-deploy-streamlit**, keep the code private, upload and push your code
-- 2.2. Go to Google Cloud and activate cloud shell
+- 2.2. On your Github Account, go to Settings - Developer Settings - [Personal Access Token](https://github.com/settings/tokens) - Tokens (classic): **Generate new token**: copy your token to keep it somewhere safe
+- 2.3. Go to Google Cloud and activate cloud shell
 - 2.3. Clone the Github repository from github to have access to the code 
 - ```bash
-  git clone https://github.com/michalis0/Cloud-and-Advanced-Analytics
+  git clone https://github.com/YOUR_USERNAME/google-cloud-deploy-streamlit
+- 2.4. You will have to insert your **github username** and the **API KEY** as password
 - ```bash
-  cd Cloud-and-Advanced-Analytics/
-  cd labs/
-  cd 1-Intro-to-GCP/
   cd streamlit_app/
-
-
-  git clone https://github.com/exampleuser/example-repository.git
-
-https://github.com/michalis0/Cloud-and-Advanced-Analytics/tree/main/labs/1-Intro-to-GCP/streamlit_app.git
-
-  git clone https://github.com/YOUR_REPOSITORY/streamlit-app-repository
+- 2.5. Now you can build your docker, to do to copy your **PROJECT_ID** (can be found [here](https://console.cloud.google.com/))
 - ```bash
-  ls and cd to access your project
-- You should be able to see the project you just cloned
-- Now you can build your docker
-- ```bash
-   docker build -t eu.gcr.io/PROJECT_ID/my_streamlit-app:latest .
+   docker build -t eu.gcr.io/PROJECT_ID/my_streamlit_app:latest .
+- This should take about 1-2 minutes to execute
 - ```bash
   gcloud auth configure-docker
+- Do you want to continue, select: Y
 - ```bash
-   docker push eu.gcr.io/PROJECT_ID/my_streamlit_app_new:latest
--  Now you can go to **Container Registery**
+   docker push eu.gcr.io/PROJECT_ID/my_streamlit_app:latest
+-  2.7. Now you can go to **Container Registery** (search on your search bar: container registery)
 -  Select your repository: **my_streamlit_app_new**
--  Select **Deploy to Cloud Run**
+-  Select **DEPLOY** -> **Deploy to Cloud Run**
 -  Select your container image URL if it is not already selected
--  Add **Allow unauthenticated invocations** and click **CREATE**
-- Wait 2-3 minutes and Done ! You should have access to an URL allowing you to access your website from the Cloud ! 
+-  Select: Zurich as the region, add **Allow unauthenticated invocations** and click **CREATE**
+- Wait 1-2 minutes and Done ! You should have access to an URL allowing you to access your website from the Cloud ! Click on the URL to show your app deployed on the Web. 
 
 
 **Step by Step Guide: In case you get stuck:**
