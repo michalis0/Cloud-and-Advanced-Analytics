@@ -32,7 +32,8 @@ Please follow these steps to prepare for this week's lab:
     - Please do NOT activate your free $300 trial on Google Cloud yet. We will utilize this for a project later in the course. Instead, we'll start with a voucher.
 3. **Voucher Redemption**:
     - Redeem the student voucher code we provided, using your .unil or .epfl account. See instructions in Moodle.
-    - Verify that the $50 voucher code has been applied to your account by checking the billing tab on your Google Cloud Profile.
+    - Redeem the voucher and add it in your Google Cloud Account using this [link](https://console.cloud.google.com/edu?_ga=2.76628693.1729908852.1708547866-247021585.1677676382), more information [here](https://cloud.google.com/billing/docs/how-to/edu-grants)
+    - Verify that the $50 voucher code has been applied to your account by checking the billing tab on your Google Cloud Profile. 
     - Important note: For the Google Cloud account, the student code will give you a free $50 credit. Once you've exhausted this, you'll need to enter your credit card information (you won't be charged). This simply verifies that you are not a bot. At this point, you'll receive a free $300 credit valid for 3 months. More details are available [here](https://edu.google.com/programs/students/?modal_active=none).
 
 Make sure to create your account by the end of this week. Thereafter, familiarize yourself with various Google Cloud features. 
@@ -169,7 +170,7 @@ This exercise aims to familiarize yourself with Google Cloud Functions. You'll c
 
 
 - 2.1. Create a new Github repository **google-cloud-deploy-streamlit**, keep the code private, upload and push your code
-- 2.2. On your Github Account, go to Settings - Developer Settings - [Personal Access Token](https://github.com/settings/tokens) - Tokens (classic): **Generate new token**: copy your token to keep it somewhere safe
+- 2.2. On your Github Account, go to Settings - Developer Settings - [Personal Access Token](https://github.com/settings/tokens) - Tokens (classic): **Generate new token** and select: **write:packages, delete:packages, user, delete_repo** : copy your token to keep it somewhere safe
 - 2.3. Go to Google Cloud and activate cloud shell
 - 2.3. Clone the Github repository from github to have access to the code 
 - ```bash
@@ -195,8 +196,11 @@ This exercise aims to familiarize yourself with Google Cloud Functions. You'll c
 
 
 **Step by Step Guide: In case you get stuck:**
+-  2.1.<img width="500" alt="Screenshot 2024-02-21 at 17 11 02" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/ca1b7ffb-70ab-428b-aa9e-e102b5bf6407">
+- <img width="500" alt="Screenshot 2024-02-21 at 17 11 07" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/92b85b48-a157-4fe0-a536-60cc8ea56586">
 
-- 2.1. <img width="434" alt="Capture d'écran 2024-02-19 182001" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/37b207bc-1fff-46e7-a7bd-b4e9c4282a3e">
+- <img width="434" alt="Capture d'écran 2024-02-19 182001" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/37b207bc-1fff-46e7-a7bd-b4e9c4282a3e">
+
 - <img width="262" alt="Capture d'écran 2024-02-19 184325" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/0e041f11-ee8a-4dbd-b48a-2667b4675234">
 - <img width="505" alt="Capture d'écran 2024-02-19 184523" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/a54a757a-18ab-4f37-94cb-ffab8540d366">
 - <img width="417" alt="Capture d'écran 2024-02-19 184638" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/b75f1e18-570a-45df-88e2-b9b7a5d17cec">
