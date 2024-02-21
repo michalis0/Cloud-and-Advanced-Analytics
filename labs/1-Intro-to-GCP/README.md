@@ -64,11 +64,11 @@ If you need help, consult the [Google Cloud Documentation](https://cloud.google.
 ### Exercise 1: TMDB API Key
 -----------------------------------
 
-We will be using the TMDB (The Movie DataBase) website to fetch information about movies, TV shows and actors, including details such as cast, ratings and user reviews. To do so, we will need to set up an API key to fetch this information. In this step we will focus on the creation of the account to get access to the API key. This can be done following this [link](https://www.themoviedb.org/signup)
+We will be using the TMDB (The Movie DataBase) website to fetch information about movies, TV shows and actors, including details such as cast, ratings and user reviews. To do so, we will need to set up an API key to fetch this information. In this step we will focus on the creation of the account to get access to the API key. This can be done following this [link](https://www.themoviedb.org/signup) and create an account (click on Join TMDB). 
 
 **Main Steps:** 
 1. Go to the profile and get the API Key using this [link](https://www.themoviedb.org/settings/api/request)
-2. Select Developper - Accept the terms and conditions
+2. Select Developper - Accept the terms and conditions - Complete the required information (for URL: educational-course). 
 3. You should now be able to see your API key (copy your API key for later use)
 4. Now we can go back to the [API page](https://developer.themoviedb.org/reference/account-rated-movies) and you can play around to test the different requests i.e: GET / PUT / POST requests. An example could be the following: https://developer.themoviedb.org/reference/genre-movie-list - clicking on **Try it** you should receive the response from the request. 
 
@@ -87,21 +87,56 @@ This exercise aims to familiarize yourself with Google Cloud Functions. You'll c
 
 **Then General Steps are as follows:**
 
-0. Check to see that the API key works correctly
-1. Write a function on GCP in Python
-2. Deploy the function on Google Cloud Platform
-3. Call the function from a Notebook (using Google Colab). 
-4. Please repeat those steps for the second function on the Notebook
+- **Step 1:** Check to see that the API key works correctly.
+    - Download the notebook [here]() and open it on [Google Colab](https://colab.research.google.com/) (Upload - browse - select the file and upload it).
+ 
+- **Step 2.** Write and test a cloud Function in Python 
+    - In the Notebook, there are two fonctions: the first one allows to fetch the list of movies and the second one to fetch the poster of a specific movie ID. We will deploy them on Google Cloud Functions
+    - Verify that the function 1 executes correctly **with your api key** on the Notebook.
+
+- **Step 3.** Deploy the two functions on Google Cloud Functions
+    - 3.1. Go on [Google Cloud](https://cloud.google.com/)
+    - 3.2. From the side menu, go to _Cloud Functions_, or search for _Cloud Functions_ in the Search bar at the top.
+    - 3.3. Select **CREATE FUNCTION** 
+    - 3.4. On the setup screen, give a name to the function: **function_1_get_movie_list** and select Region - Zurich and select Allow unauthenticated invocations and click on **NEXT**.
+    - 3.5. You now have the access to the code editor on which you can write your function. Select **Python 3.12**. 
+
+- **Step 4.**
+
+    - 4.1. **Copy** the function 1 code from the notebook and **paste** it in Google Cloud Functions - **Don't forget to paster your API key inside**
+    - 4.2. **Change the entry point**: From **hello_http** to **get_movie_titles**
+    - 4.3. **Copy** the libraries and **paste** them in the **requirements.txt**
+    - ```bash
+      functions-framework==3.*
+      requests==2.31.0
+    - 4.4. Now select **DEPLOY**
+    - 4.5. Wait about two minutes, then your function should be deployed: click on the URL, you should be able to see a list of movie titles !
+
+- **Step 5.** Test the deployed function from the Notebook
+    - 5.1. **Copy** the URL of your newly deploy Google Cloud Function
+    - 5.2. Go back to the Notebook and **paste** the URL in **YOUR_URL** and run the cell. You should be able to see the list of movies.
+ 
+- **Step 6.** Repeat the same process as before but for function 2 (we recall the steps below)
+    - 6.1. **Copy** the function 2 code with your API key (code under Step 3-4. Deploy the two functions on Google Cloud Functions)
+    - 6.2. Go back to **Cloud Functions** and click **CREATE FUNCTION**
+    - 6.3. Call it **function_2_movie_posters** - select Zurich - Select Allow unauthenticated invocations and click on **NEXT**
+    - 6.4. Select Python 3.12, **Paste** the function 2 in the code editor on Google Cloud, and change the entry point to **get_movie_details**
+    - 6.5. **Copy** the libraries and **paste** them in the **requirements.txt**
+    - ```bash
+      functions-framework==3.*
+      requests==2.31.0
+    - 6.6. Click **DEPLOY** and wait another 2 minutes and copy the URL. **NOTE** If you open the URL directly on the browser it will not work, because the functions expects a parameter / placeholder {movieID} for a specific movie ID. So if you open directly the link, you will get an **Internal server error**, which is expected. 
+    - 6.7. Go back to the Notebook, paste your URL and execute the cell.
+ 
 
 **Step by Step Guide: In case you get stuck:**
-* From the side menu, go to _View all products_ > _Serverless_ > _Cloud Functions_, or search for _Cloud Functions_ in the Search bar at the top.
-* <img width="680" alt="Google Cloud Function" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/df6e4750-3129-48e3-967e-4584db23dd4a">
-* Create a simple Python function that can be triggered over HTTP. Make sure to pick the "Allow unauthenticated invocations" option.
-* <img width="400" alt="Unothenticated" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/535ec37a-459c-425a-962e-f4d6e00f17e9">
-* You can now copy paste the code from the Notebook (by uncommenting the 3 lines and adding the packages in the requirements.txt)
-* Please do not forget to put the same entry point as the function name:
-* <img width="400" alt="Entry point" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/7c7da4d2-a24f-4787-8ac6-4992afb173b3">
-* After having deployed your function, call it using its URL, trying different values for the Movie IDs (CF notebook)
+
+- 3.2. <img width="130" height="120" alt="Screenshot 2024-02-21 at 15 32 46" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/dd3b92d2-1d11-40c5-b0cc-1b1bb95b5caf">
+- 3.3. <img width="300" alt="Google Cloud Function" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/df6e4750-3129-48e3-967e-4584db23dd4a">
+- 3.4. <img width="300" alt="Screenshot 2024-02-21 at 15 38 51" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/bd53a08d-c798-42c6-b77b-6091599b52f5">
+- 4.5.<img width="400" alt="Screenshot 2024-02-21 at 15 49 45" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/240694ab-dcdd-4798-bb23-6dcf5fc939c3">
+ <img width="500" alt="Screenshot 2024-02-21 at 15 50 27" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/d169d8cd-eb07-4b55-900b-cd68eb1167bc">
+
 
 -----------------------------------
 ### **Exercise 3 Streamlit App and Deploying on Google Cloud Run**
