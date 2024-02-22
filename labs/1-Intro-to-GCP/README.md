@@ -169,7 +169,7 @@ This exercise aims to familiarize yourself with Google Cloud Functions. You'll c
 **Step 2:** Dockerize the Web Application and deploy it on Google Cloud Run: 
 
 
-- 2.1. Create a new Github repository **google_cloud_deploy_streamlit**, keep the code private, upload and push your code
+- 2.1. Create a new Github repository **google_cloud_deploy_streamlit**, keep the code private, add a readme.md file and create the repository. Then upload the streamlit_app folder and push your code
 - 2.2. On your Github Account, go to Settings - Developer Settings - [Personal Access Token](https://github.com/settings/tokens) - Tokens (classic): **Generate new token** and select: **write:packages, delete:packages, user, delete_repo** : copy your token to keep it somewhere safe
 - 2.3. Go to Google Cloud and activate cloud shell
 - 2.3. Clone the Github repository from github to have access to the code 
