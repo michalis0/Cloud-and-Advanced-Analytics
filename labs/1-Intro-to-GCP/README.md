@@ -120,7 +120,7 @@ This exercise aims to familiarize yourself with Google Cloud Functions. You'll c
 - **Step 6.** Repeat the same process as before but for function 2 (we recall the steps below)
     - 6.1. **Copy** the function 2 code with your API key (code under Step 3-4. Deploy the two functions on Google Cloud Functions)
     - 6.2. Go back to **Cloud Functions** and click **CREATE FUNCTION**
-    - 6.3. Call it **function_2_movie_posters** - select Zurich - Select Allow unauthenticated invocations and click on **NEXT**
+    - 6.3. Call it **get_movie_details** - select Zurich - Select Allow unauthenticated invocations and click on **NEXT**
     - 6.4. Select Python 3.12, **Paste** the function 2 in the code editor on Google Cloud, and change the entry point to **get_movie_details**
     - 6.5. **Copy** the libraries and **paste** them in the **requirements.txt**
     - ```bash
