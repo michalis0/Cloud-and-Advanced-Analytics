@@ -170,7 +170,12 @@ This exercise aims to familiarize yourself with Google Cloud Functions. You'll c
 
 
 - 2.1. Create a new Github repository **google_cloud_deploy_streamlit**, keep the code private, add a readme.md file and create the repository. Then upload the streamlit_app folder and push your code
-- 2.2. On your Github Account, go to Settings - Developer Settings - [Personal Access Token](https://github.com/settings/tokens) - Tokens (classic): **Generate new token** and select: **write:packages, delete:packages, user, delete_repo** : copy your token to keep it somewhere safe
+- 2.2. On your Github Account, go to Settings - Developer Settings - [Personal Access Token](https://github.com/settings/tokens) - Tokens (classic): **Generate new token** and select:
+    - **write:packages**
+    - **delete:packages**
+    - **user**
+    - **delete_repo**
+- copy your token to keep it somewhere safe
 - 2.3. Go to Google Cloud and activate cloud shell
 - 2.3. Clone the Github repository from github to have access to the code 
 - ```bash
@@ -196,8 +201,9 @@ This exercise aims to familiarize yourself with Google Cloud Functions. You'll c
 
 
 **Step by Step Guide: In case you get stuck:**
-- <img width="434" alt="Capture d'écran 2024-02-19 182001" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/37b207bc-1fff-46e7-a7bd-b4e9c4282a3e">
+- 2.2 <img width="600" alt="Screenshot 2024-02-22 at 10 06 43" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/3875387e-9d47-46af-ac6b-6c1ae2df707a">
 
+- <img width="434" alt="Capture d'écran 2024-02-19 182001" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/37b207bc-1fff-46e7-a7bd-b4e9c4282a3e">
 - <img width="262" alt="Capture d'écran 2024-02-19 184325" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/0e041f11-ee8a-4dbd-b48a-2667b4675234">
 - <img width="505" alt="Capture d'écran 2024-02-19 184523" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/a54a757a-18ab-4f37-94cb-ffab8540d366">
 - <img width="417" alt="Capture d'écran 2024-02-19 184638" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/b75f1e18-570a-45df-88e2-b9b7a5d17cec">
