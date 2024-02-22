@@ -44,7 +44,7 @@ If you need help, consult the [Google Cloud Documentation](https://cloud.google.
 
 - [ ] GitHub account
 - [ ] Google Cloud Account (with credits / credit card activated)
-- [ ] Python Installed
+- [ ] Python Installed (python3 -V or python -V)
 - [ ] Code editor (Visual Studio Code)
 
 --------------
