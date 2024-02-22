@@ -89,7 +89,7 @@ This exercise aims to familiarize yourself with Google Cloud Functions. You'll c
 **Then General Steps are as follows:**
 
 - **Step 1:** Check to see that the API key works correctly.
-    - Download the notebook [here]() and open it on [Google Colab](https://colab.research.google.com/) (Upload - browse - select the file and upload it).
+    - Download the notebook [here](https://github.com/michalis0/Cloud-and-Advanced-Analytics/blob/main/labs/1-Intro-to-GCP/Lab_1_Notebook.ipynb) and open it on [Google Colab](https://colab.research.google.com/) (Upload - browse - select the file and upload it).
  
 - **Step 2.** Write and test a cloud Function in Python 
     - In the Notebook, there are two fonctions: the first one allows to fetch the list of movies and the second one to fetch the poster of a specific movie ID. We will deploy them on Google Cloud Functions
