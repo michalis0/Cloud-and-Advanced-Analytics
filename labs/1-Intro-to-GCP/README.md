@@ -153,7 +153,7 @@ This exercise aims to familiarize yourself with Google Cloud Functions. You'll c
 
 ---
 
-**Step 1:** Download the Skeleton code from [github]() and try out your functions! 
+**Step 1:** Download the Skeleton code from [github](https://github.com/michalis0/Cloud-and-Advanced-Analytics/tree/main/labs/1-Intro-to-GCP/streamlit_app) and try out your functions! 
 - 1.1. You can find attached a [folder](https://github.com/michalis0/Cloud-and-Advanced-Analytics/tree/main/labs/1-Intro-to-GCP/streamlit_app) called **streamlit_app**, this folder contains three files: app.py, requirements.txt and Dockerfile, please **Download** that folder and open it without your code editor (i.e. Visual Studio Code)
 - 1.2. Download streamlit:
     - ```bash
