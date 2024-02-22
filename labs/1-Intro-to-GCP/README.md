@@ -182,6 +182,7 @@ This exercise aims to familiarize yourself with Google Cloud Functions. You'll c
   git clone https://github.com/YOUR_USERNAME/google_cloud_deploy_streamlit
 - 2.4. You will have to insert your **github username** and the **API KEY** as password
 - ```bash
+  cd google_cloud_deploy_streamlit/
   cd streamlit_app/
 - 2.5. Now you can build your docker, to do to copy your **PROJECT_ID** (can be found [here](https://console.cloud.google.com/))
 - ```bash
