@@ -196,9 +196,6 @@ This exercise aims to familiarize yourself with Google Cloud Functions. You'll c
 
 
 **Step by Step Guide: In case you get stuck:**
--  2.1.<img width="500" alt="Screenshot 2024-02-21 at 17 11 02" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/ca1b7ffb-70ab-428b-aa9e-e102b5bf6407">
-- <img width="500" alt="Screenshot 2024-02-21 at 17 11 07" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/92b85b48-a157-4fe0-a536-60cc8ea56586">
-
 - <img width="434" alt="Capture d'écran 2024-02-19 182001" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/37b207bc-1fff-46e7-a7bd-b4e9c4282a3e">
 
 - <img width="262" alt="Capture d'écran 2024-02-19 184325" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/0e041f11-ee8a-4dbd-b48a-2667b4675234">
