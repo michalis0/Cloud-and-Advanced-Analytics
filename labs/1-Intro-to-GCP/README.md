@@ -176,7 +176,7 @@ This exercise aims to familiarize yourself with Google Cloud Functions. You'll c
     - **user**
     - **delete_repo**
 - copy your token to keep it somewhere safe
-- 2.3. Go to Google Cloud and activate cloud shell
+- 2.3. Go to [Google Cloud](https://console.cloud.google.com/) and activate cloud shell
 - 2.3. Clone the Github repository from github to have access to the code 
 - ```bash
   git clone https://github.com/YOUR_USERNAME/google_cloud_deploy_streamlit
