@@ -44,7 +44,7 @@ In this exercise we will look on how to create a bucket in Cloud Storage and lat
 **Step 1: Creation of the Bucket:**
 
 * In the Navigation panel, please click on "Cloud Storage" and on "Buckets"
-* Click on the "Create" button
+* Click on the **"Create"** button
 * Enter a name for the bucket, i.e: "cloud_analytics_bucket" and select all default parameters and click "CREATE"
 * You can now go to the folder of this project and download the "movie.csv" dataset, we will use this for our cloud storage ! 
 * Please select "UPLOAD FILES" and upload the given CSV file
