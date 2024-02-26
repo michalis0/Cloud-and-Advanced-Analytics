@@ -66,10 +66,9 @@ In this exercise we will look on how to **create a bucket in Cloud Storage** and
 ----
 
 **Hints (in case you get stuck)**
-![Capture d'écran 2024-02-26 102156](https://github.com/)
 
 * <img width="500" alt="Cloud Storage 1" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/68726c3d-4979-4939-a4be-0eff530bb6da">
-* <img width="500" alt="Cloud Storage 1" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/88b4acc9-5edd-4d6a-ae9a-9a1e46b52943" >
+* <img width="500" alt="Cloud Storage 1" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/fa8b2b13-6414-464f-98d2-b47bbd023dd4" >
 
 -----------------------------------
 
