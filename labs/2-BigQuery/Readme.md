@@ -34,107 +34,175 @@ In this lab, TAs will demonstrate the following on the Google Console:
 ## Table of contents 
 * [Exercise 1 Cloud Storage and Buckets](#exercise-1-cloud-storage-and-buckets)
 * [Exercise 2 Big Query](#exercise-2-big-query)
+* [Exercise 3 Hints for Assignment 1](#exercise-3-hints-for-assignment-1)
 
 -----------------------------------
 ### **Exercise 1: Cloud Storage and Buckets**
 -----------------------------------
 
-In this exercise we will look on how to create a bucket in Cloud Storage and later we will see how we can call this file to compute SQL queries.
+In this exercise we will look on how to **create a bucket in Cloud Storage** and later we will see how we can call this file to **compute SQL queries**.
 
-**Step 1: Creation of the Bucket:**
+**Step 1: Creation of the Bucket on Google Cloud:**
 
-* In the Navigation panel, please click on "Cloud Storage" and on "Buckets"
-* Click on the **"Create"** button
-* Enter a name for the bucket, i.e: "cloud_analytics_bucket" and select all default parameters and click "CREATE"
-* You can now go to the folder of this project and download the "movie.csv" dataset, we will use this for our cloud storage ! 
-* Please select "UPLOAD FILES" and upload the given CSV file
+* **1.1** Please go to your [Google Cloud Console](https://console.cloud.google.com)
+* **1.2** In the Navigation panel, please click on **"Cloud Storage"** and on **"Buckets"** (you can also search for "Buckets" in the search bar)
+* **1.3** Click on the **"Create"** button
+* **1.4** Enter a name for the bucket, i.e: **"big_scale_analytics_bucket"**, change the Location type to **region** and select **europe-west6 (Zurich)** and keep other default parameters. Now you can click **"CREATE"**
+* **1.5** You can now go to the folder of this project and download the [file](https://github.com/alexerne-git/big_scale_analytics_2024/blob/main/labs/2-BigQuery/movies.csv) **"movies.csv"** dataset, we will use this for our cloud storage ! (**Hint:** To make it easier for future labs, you can clone the project on a private repository and pull each week. In this specific case, you can also download directly the file on Github - Go on the file and click on Download raw file <img width="20" alt="Download" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/e152ee70-4b27-4ce7-843d-d3c51e00778d"/>)
+* **1.6** Now you can go back to your **bucket** select **"UPLOAD FILES"** and upload the given CSV file (movies.csv) - you should be able to see it in your uploaded files)
+
+----
+
+**Done! Recap of what was done**
+- You imported your first file on Google Cloud Storage
+- This facilitates access and storage to data on the cloud - in particular large files
+- As a comparison, this would be much more interesting to share csv dataset files through Cloud Storage compared to Github.
+- Github as a maximum individual file size of 100MB while google cloud storage accepts files up to 5TB
+- Google Cloud Storage could also be used as backup for files. 
+
+**A few words on movies.csv:** This dataset contains three columns: movieId, title and genres and has a total of 27'278 rows
+* <img width="450" alt="movies.csv" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/7bfce60b-8e18-4a8e-b9f7-34befb8b38a3">
+
+----
 
 **Hints (in case you get stuck)**
+![Capture d'écran 2024-02-26 102156](https://github.com/)
 
-<img width="300" alt="Cloud Storage 1" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/a3f9f550-fd42-4fc6-ad50-047a720aa941">
-<img width="400" alt="bucket" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/5f140d33-a6ae-4ae3-9883-17f34216236a">
-<img width="300" alt="Screenshot 2024-02-13 at 07 49 05" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/e87f8c65-2849-40ce-8c5b-7a8afcfe621c">
+* <img width="500" alt="Cloud Storage 1" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/68726c3d-4979-4939-a4be-0eff530bb6da">
+* <img width="500" alt="Cloud Storage 1" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/88b4acc9-5edd-4d6a-ae9a-9a1e46b52943" >
 
 -----------------------------------
 
 
-**Step 2: Fetching the bucket keys:**
+**Step 2: Fetching the bucket keys:** One powerful aspect of Google Cloud is that we can access this file from any website, and this is what we will try to do ! 
 
-* One powerful aspect of Google Cloud is that we can access this file from any website, and this is what we will try to do ! To do so, please following the steps:
-- **Step 1:** Navigate to IAM & Admin and click on "Service accounts"
-- **Step 2:** "Create Service Account" and enter a name i.e: Movie-Dataset-CSV-Database-Access and add ad service access "Storage Admin"
-- **Step 3:** Once created, click on the created service account and generate Keys, and download them
+**Recall:** Why do we need keys ? 
+  - Secure files by controlling access to them.
+  - Authenticate and authorize specific users to access and manipulate the files
+
+To generate authentification keys, please following the steps:
+- **2.1:** Navigate to IAM & Admin and click on **"Service accounts"** (you can also search in the search bar for **Service account**)
+- **2.2:** **"Create Service Account"** and enter a name i.e: **movie_dataset_csv_bucket**. You now need to grant this service account access to the bucket files. To do so, click on **Select a role** and select **Storage Admin** and click **CREATE**
+- **2.3** Once created, click on the **created service account** should look like something like *movie-dataset-csv-bucket@your_project_name.iam.gserviceaccount.com*, click on the three dots <img width="10"   alt="Admin" src="https://github.com/alexerne-git/big_scale_analytics_2024/assets/43532600/bb94d38b-d0fc-49a2-9425-4bc70fd1320c"> select **manage keys**.
+- **2.4** Click on **ADD KEY** - **Create new key** - **key type: JSON** and click on **CREATE**
 
 **Hints (in case you get stuck)**
 
-<img width="320" alt="Screenshot 2024-02-13 at 07 56 30" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/5f7921e1-c66b-4ed8-b3e8-af4b673a7b18">
-<img width="320"   alt="Admin" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/13c253dd-b710-4176-b575-5f6577a45c89">
-<img width="320" alt="keys1" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/eb21692d-5547-40fa-9ab1-3dab8c75d0af">
+<img width="320" alt="key_1" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/427f88e6-92e9-4e95-9ab8-8d062402b40f">
+<img width="320" alt="key_2" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/c2679a98-9cc9-483f-8096-4f0888f711de">
+<img width="320" alt="key_3" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/44100bec-fb20-4e52-8403-67ee98a7b14f">
+
+- **Please check everything is working correctly !** By running this [Notebook]() (you can import it directly on Google Colab - open from Github - select your repository and notebook Keys-verification-cloud-storage.ipynb - then open it, you can then edit it and push it (file - save a copy on Github). 
+
 
 -----------------------------------
 
 
 **Step 3: Python code and connection:**
-- **1.** Download the python code in the folder - **streamlit-google-cloud-storage** and open it in your code editor
-- **2.** Install the packages :
+- **1.** Download the python code in the folder - [**streamlit_google_cloud_storage**]() and open it in your code editor
+- **2.** Install the packages/libraries :
 - ```bash
-  !pip install google-cloud-storage
-  !pip install pandas
-  !pip install streamlit
-  !pip install --upgrade google-cloud-speech
-- Run the command line: you should be able to see a simple title !  (CF Image)
+  pip install streamlit 
+  pip install google-cloud-storage
+  pip install pandas
+  pip install seaborn
+  pip install matplotlib
+  **If you are having error with google-cloud-storage** pip install --upgrade google-cloud-speech
+- Run the command line: you should be able to see a **simple title** and an error **because the keys are still not imported** !  (CF Image)
 - ```bash
-  streamlit run streamlit-google-cloud-storage.py
-- Now you can upload the JSON keys inside the project and change the following paths:
-    - Copy the path (RELATIVE Path) and paste it into the "Key path", please also put the bucket name and the file_name
+  streamlit run streamlit_google_cloud_storage.py
+- Now you can **upload the JSON keys** inside the project and change the following paths:
+    - Copy the path (RELATIVE Path) and paste it into the **"big-scale-analytics-YOUR_PATH.json"**, please also put the **bucket_name** and the **file_name**
 - Run the command line:
 - ```bash
-  streamlit run streamlit-google-cloud-storage.py
+  streamlit run streamlit_google_cloud_storage.py
 
 **Hints (in case you get stuck)**
 
 <img width="400" alt="initial" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/f7fbe869-a36a-4246-bcee-312c365ed55a">
 <img width="400" alt="final_2" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/5b276ef3-714a-4bb0-b444-0af999596710">
 
+**Done! Recap of what was done**
+- You imported the movie.csv dataset on Google Cloud Storage
+- You create keys to access that file stored on Google Cloud
+- You called that file using a function and imported it using a pandas dataframe
+- You then displayed that csv file using streamlit !
+- If you feel motivated, you can deploy the app on Google Cloud Run (as we did on Lab 1)
+
+<img width="400" alt="final_2" src="https://github.com/alexerne-git/big_scale_analytics_2024/assets/43532600/6ff63272-269f-4b87-86d2-2cd8be100078">
+
+
 -----------------------------------
 ### **Exercise 2: Big Query**
 -----------------------------------
 
-**NOTE:** In order to connect to the Big Query Database created, you will need to use your Project ID, this can be found by clicking on the Google Cloud Logo and you can simply copy your project ID as shown below:
+**What is Big Query and why do we use it ?**
+- BigQuery allows to handle large datasets (in different formats, i.e: CSV) and complex SQL queries from your datasets
+- It manages the infrastructure for you
+- Provides easy integrations to websites or other Google Cloud services
+
+**Pre-requirements:** In order to connect to the Big Query Database, you will need to use your Project ID, this can be found by clicking on the Google Cloud Logo and you can simply copy your project ID as shown below:
 <img width="651" alt="Screenshot 2024-02-15 at 11 51 24" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/f7b5fe40-ec10-4306-9259-1c39d3364555">
+
+-----------------------------------
 
 **Step 1: Creation of the database:**
 
-In this section, we will essentially focus on Big Query ! To do so, you can first download this [dataset](https://github.com/michalis0/Cloud-and-Advanced-Analytics/tree/main/labs/week_2/data). Now you can follow these steps:
-- **Step 1:** On the left pannel, select **Big Query**
-- **Step 2:** Select the **Add** Button
-- **Step 3:** Click on **Local File**
-- **Step 4:** Change the File format to CSV and import the "Teams.csv"
-- **Step 5:** Click on Dataset and add a Dataset ID, i.e: "world_cup" and select Multi-region: EU
-- **Step 5:** Put "teams" as the table name
-- **Step 6:** Select "Auto Detect", then click on "CREATE TABLE"
-- **Step 7:** Now please create another table by clicking the **three dots** next to the dataset and import Players.csv, following the exact same steps as before. Note, as before, please select the correct file format (CSV), Auto Detect and call the table name players (lowercase!).
-- **Step 8:** Now please do the same process for the csv PlayersExt.csv and call it as players_and_teams. 
+In this section, we will essentially focus on Big Query ! To do so, you can first download this [dataset](https://github.com/michalis0/Cloud-and-Advanced-Analytics/tree/main/labs/week_2/data). 
 
+<img width="800" alt="Screenshot 2024-02-15 at 11 51 24" src="https://github.com/alexerne-git/big_scale_analytics_2024/assets/43532600/32848b9f-84c0-4646-ae56-3d6efe6244f1">
+
+
+Now you can follow these steps:
+- **1.1** On the left pannel, select **Big Query** or type **Big Query** in the search bar
+- **1.2** We are now going to create our first **table** Select the **Add** Button
+- **1.3** Click on **Local File**
+- **1.4** **BROWSE** file and select **Teams.csv**
+- **1.5** Click on **Dataset** and **CREATE A NEW DATASET**. In the **Dataset ID** add **world_cup** and select **Region**, put Zurich (or europe-west6) and click **CREATE DATASET**
+- **1.6** Under **Table** insert the table name, in our case **players** (lowercase!) and select for the **Schema** -> **Auto detect** and click **CREATE TABLE**
+- **1.7** You just created your first table ! you can click on the table and then on the plus symbol (<img width="20" alt="Screenshot 2024-02-15 at 11 51 24" src="https://github.com/alexerne-git/big_scale_analytics_2024/assets/43532600/1c36f97e-70bf-4adc-8b11-f3653b8e12f5"/>). This opens an editor window, on which you can do SQL queries. Copy and paste the following SQL query to get all the teams from the table players in the database world_cup
+- ```
+    SELECT team FROM `YOUR_PROJECT_ID.world_cup.players` 
+
+- **1.8** On the left menu, you can select the three dots next to **world_cup** and select **Create table**
+- **1.9** As before, select **Create table from** and select **Upload**, then import **Browse** - select file **Teams.csv**,call the table **teams** (lowercase), select **Schema** -> **Auto detect** and click **CREATE TABLE**
+- **1.10** Finally, do the same for the last table. Select **Create table from** and select **Upload**, then import **Browse** - select file **PlayersExt.csv**,call the table **players_and_teams** (lowercase), select **Schema** -> **Auto detect** and click **CREATE TABLE**
+- **1.10** Done ! You just created your first Big Query Database
 
 * **Hints (in case you get stuck)**
 
-<img width="400" alt="Big Query" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/0fa7ed55-1e90-4eca-b8e1-9c678acb019d">
-<img width="400" alt="add" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/3f053f6c-0625-42d9-a192-8f6293be4e26">
+<img width="400" alt="Big Query" src="https://github.com/alexerne-git/big_scale_analytics_2024/assets/43532600/8edb671f-a272-4848-9aff-e75aa7b99043">
+<img width="400" alt="Big Query" src="https://github.com/alexerne-git/big_scale_analytics_2024/assets/43532600/fa7b0466-9cc0-4d29-b071-2e1ce64af060">
 
-<img width="400" alt="Lcoa" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/7d1e3da5-55f6-4ab9-a726-957041cb91a0">
-<img width="400" alt="world" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/726510f9-6680-4b84-b891-595eff210924">
-
-<img width="400" alt="f" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/d1f99c1d-472b-452d-83cf-7fc5957768da">
-<img width="400" alt="data" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/57a93cc5-94a7-4eed-9587-59a2b5355165">
-
+-----------------------------------
 
 **Step 2: Query of the dataset:**
 
 In this section, we will essentially query the dataset that you just created ! Please follow the guidelines on [this Notebook](https://github.com/michalis0/Cloud-and-Advanced-Analytics/blob/main/labs/week_2/data/week_02_exercises_big_query.ipynb)
 
-**Final Note:** While we are using sanitized datasets, please keep in mind that when working with large CSV some preprocessing might be necessary to allow the use of SQL queries in your uploaded datasets. 
 
 -----------------------------------
+### **Exercise 3: Hints for Assignment 1**
+-----------------------------------
+
+**Note:** While here we are using sanitized datasets, please keep in mind that when working with large CSV some preprocessing might be necessary to allow the use of SQL queries in your uploaded datasets. For example, let's try to import a larger dataset.
+
+For your information, the datasets we imported now were of size:
+- **Players.csv:** 23.2 KB
+- **Teams.csv:** 963 Bytes
+- **PlayersExt.csv:** 34.3 KB
+But in practice, those files are much larger, and Google Cloud can handle those larger files.
+
+The dataset used for the assignment 1 - ratings.csv is **520 MB**. Therefore when importing it on Google Big Query you will receive this message **Local uploads are limited to 100MB. please use Google Cloud Storage**
+
+Therefore, we will follow this suggestion using the following steps:
+- Create a new bucket, i.e: **big_rating_dataset**
+- Select **Region** - **Zurich** and click on **CREATE**
+- **Click** on upload files and upload the dataset and wait for the upload to complete
+- **Go back to Big Query** and create a new table, but this time instead of selecting **Upload** select **Google Cloud Storage** and **BROWSE** and select the CSV file in your bucket
+
+**Hints (in case you get stuck)**
+
+<img width="400" alt="Big Query" src="https://github.com/alexerne-git/big_scale_analytics_2024/assets/43532600/c7a3ad51-347c-4770-ad02-9598f2c38aa5">
 
 
