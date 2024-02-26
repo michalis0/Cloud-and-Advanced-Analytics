@@ -92,14 +92,14 @@ To generate authentification keys, please following the steps:
 <img width="320" alt="key_2" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/c2679a98-9cc9-483f-8096-4f0888f711de">
 <img width="320" alt="key_3" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/44100bec-fb20-4e52-8403-67ee98a7b14f">
 
-- **Please check everything is working correctly !** By running this [Notebook]() (you can import it directly on Google Colab - open from Github - select your repository and notebook Keys-verification-cloud-storage.ipynb - then open it, you can then edit it and push it (file - save a copy on Github). 
+- **Please check everything is working correctly !** By running this [Notebook](https://github.com/michalis0/Cloud-and-Advanced-Analytics/blob/main/labs/2-BigQuery/Keys_verification_cloud_storage.ipynb) (you can import it directly on Google Colab - open from Github - select your repository and notebook Keys-verification-cloud-storage.ipynb - then open it, you can then edit it and push it (file - save a copy on Github). 
 
 
 -----------------------------------
 
 
 **Step 3: Python code and connection:**
-- **1.** Download the python code in the folder - [**streamlit_google_cloud_storage**]() and open it in your code editor
+- **1.** Download the python code in the folder - [**streamlit_google_cloud_storage**](https://github.com/michalis0/Cloud-and-Advanced-Analytics/blob/main/labs/2-BigQuery/streamlit_google_cloud_storage.py) and open it in your code editor
 - **2.** Install the packages/libraries :
 - ```bash
   pip install streamlit 
@@ -129,8 +129,7 @@ To generate authentification keys, please following the steps:
 - You then displayed that csv file using streamlit !
 - If you feel motivated, you can deploy the app on Google Cloud Run (as we did on Lab 1)
 
-<img width="400" alt="final_2" src="https://github.com/alexerne-git/big_scale_analytics_2024/assets/43532600/6ff63272-269f-4b87-86d2-2cd8be100078">
-
+<img width="400" alt="final_2" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/6b7d0315-523a-4338-a2ec-61c52aab3c14">
 
 -----------------------------------
 ### **Exercise 2: Big Query**
@@ -150,8 +149,8 @@ To generate authentification keys, please following the steps:
 
 In this section, we will essentially focus on Big Query ! To do so, you can first download this [dataset](https://github.com/michalis0/Cloud-and-Advanced-Analytics/tree/main/labs/week_2/data). 
 
-<img width="800" alt="Screenshot 2024-02-15 at 11 51 24" src="https://github.com/alexerne-git/big_scale_analytics_2024/assets/43532600/32848b9f-84c0-4646-ae56-3d6efe6244f1">
 
+![Capture d'écran 2024-02-26 135425](https://github.com)
 
 Now you can follow these steps:
 - **1.1** On the left pannel, select **Big Query** or type **Big Query** in the search bar
@@ -160,7 +159,7 @@ Now you can follow these steps:
 - **1.4** **BROWSE** file and select **Teams.csv**
 - **1.5** Click on **Dataset** and **CREATE A NEW DATASET**. In the **Dataset ID** add **world_cup** and select **Region**, put Zurich (or europe-west6) and click **CREATE DATASET**
 - **1.6** Under **Table** insert the table name, in our case **players** (lowercase!) and select for the **Schema** -> **Auto detect** and click **CREATE TABLE**
-- **1.7** You just created your first table ! you can click on the table and then on the plus symbol (<img width="20" alt="Screenshot 2024-02-15 at 11 51 24" src="https://github.com/alexerne-git/big_scale_analytics_2024/assets/43532600/1c36f97e-70bf-4adc-8b11-f3653b8e12f5"/>). This opens an editor window, on which you can do SQL queries. Copy and paste the following SQL query to get all the teams from the table players in the database world_cup
+- **1.7** You just created your first table ! you can click on the table and then on the plus symbol (<img width="20" alt="Screenshot 2024-02-15 at 11 51 24" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/9566de9f-7d28-4a33-87d6-9cb58bf82db5"/>). This opens an editor window, on which you can do SQL queries. Copy and paste the following SQL query to get all the teams from the table players in the database world_cup
 - ```
     SELECT team FROM `YOUR_PROJECT_ID.world_cup.players` 
 
@@ -171,8 +170,8 @@ Now you can follow these steps:
 
 * **Hints (in case you get stuck)**
 
-<img width="400" alt="Big Query" src="https://github.com/alexerne-git/big_scale_analytics_2024/assets/43532600/8edb671f-a272-4848-9aff-e75aa7b99043">
-<img width="400" alt="Big Query" src="https://github.com/alexerne-git/big_scale_analytics_2024/assets/43532600/fa7b0466-9cc0-4d29-b071-2e1ce64af060">
+<img width="400" alt="Big Query" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/83ef700a-b831-445d-97e4-1279b4cc1beb">
+<img width="400" alt="Big Query" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/623b28d8-be41-4ba4-8c71-9165ddd9bb2c">
 
 -----------------------------------
 
@@ -203,6 +202,6 @@ Therefore, we will follow this suggestion using the following steps:
 
 **Hints (in case you get stuck)**
 
-<img width="400" alt="Big Query" src="https://github.com/alexerne-git/big_scale_analytics_2024/assets/43532600/c7a3ad51-347c-4770-ad02-9598f2c38aa5">
+<img width="400" alt="Big Query" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/325c2320-b9b5-41bd-a29b-255e960cce78">
 
 
