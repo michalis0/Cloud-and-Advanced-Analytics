@@ -146,7 +146,7 @@ To generate authentification keys, please following the steps:
 
 **Step 1: Creation of the database:**
 
-In this section, we will essentially focus on Big Query ! To do so, you can first download this [dataset](https://github.com/michalis0/Cloud-and-Advanced-Analytics/tree/main/labs/week_2/data). 
+In this section, we will essentially focus on Big Query ! To do so, you can first download this [dataset](https://github.com/michalis0/Cloud-and-Advanced-Analytics/tree/main/labs/2-BigQuery/data). 
 
 <img width="651" alt="dataset" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/20c9e6f0-76ef-4920-9e34-d51e57cc1657">
 
@@ -176,7 +176,7 @@ Now you can follow these steps:
 
 **Step 2: Query of the dataset:**
 
-In this section, we will essentially query the dataset that you just created ! Please follow the guidelines on [this Notebook](https://github.com/michalis0/Cloud-and-Advanced-Analytics/blob/main/labs/week_2/data/week_02_exercises_big_query.ipynb)
+In this section, we will essentially query the dataset that you just created ! Please follow the guidelines on [this Notebook](https://github.com/michalis0/Cloud-and-Advanced-Analytics/blob/main/labs/2-BigQuery/data/week_02_exercises_big_query.ipynb)
 
 
 -----------------------------------
