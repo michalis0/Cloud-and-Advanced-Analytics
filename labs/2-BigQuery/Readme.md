@@ -81,7 +81,7 @@ In this exercise we will look on how to **create a bucket in Cloud Storage** and
 
 To generate authentification keys, please following the steps:
 - **2.1:** Navigate to IAM & Admin and click on **"Service accounts"** (you can also search in the search bar for **Service account**)
-- **2.2:** **"Create Service Account"** and enter a name i.e: **movie_dataset_csv_bucket**. You now need to grant this service account access to the bucket files. To do so, click on **Select a role** and select **Storage Admin** and click **CREATE**
+- **2.2:** **"Create Service Account"** and enter a name e.g., **movie_dataset_csv_bucket**. You now need to grant this service account access to the bucket files. To do so, click on **Select a role** and select **Storage Admin** and click **CREATE**
 - **2.3** Once created, click on the **created service account** should look like something like *movie-dataset-csv-bucket@your_project_name.iam.gserviceaccount.com*, click on the three dots <img width="10"   alt="Admin" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/74805f93-ff4c-4b08-a946-a6e89efb4f7e"> select **manage keys**.
 - **2.4** Click on **ADD KEY** - **Create new key** - **key type: JSON** and click on **CREATE**
 
