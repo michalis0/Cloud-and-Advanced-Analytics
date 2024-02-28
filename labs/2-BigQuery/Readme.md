@@ -97,7 +97,10 @@ To generate authentification keys, please following the steps:
 -----------------------------------
 
 
-**Step 3: Python code and connection:**
+**Step 3: Python code and connection: (Optional / Advanced)**
+
+**!Disclaimer!** The keys that you have generated and tested before can be used in a Streamlit website to import the Google Cloud Storage file ! If you would like to execute the code below and create the streamlit app, please make sure to have the different libraries installed - if you have any questions please refer the [python documentation](https://packaging.python.org/en/latest/tutorials/installing-packages/) or to [stack overflow](https://stackoverflow.com/).
+
 - **1.** Download the python code in the folder - [**streamlit_google_cloud_storage**](https://github.com/michalis0/Cloud-and-Advanced-Analytics/blob/main/labs/2-BigQuery/streamlit_google_cloud_storage.py) and open it in your code editor
 - **2.** Install the packages/libraries :
 - ```bash
@@ -106,7 +109,6 @@ To generate authentification keys, please following the steps:
   pip install pandas
   pip install seaborn
   pip install matplotlib
-  **If you are having error with google-cloud-storage** pip install --upgrade google-cloud-speech
 - Run the command line: you should be able to see a **simple title** and an error **because the keys are still not imported** !  (CF Image)
 - ```bash
   streamlit run streamlit_google_cloud_storage.py
