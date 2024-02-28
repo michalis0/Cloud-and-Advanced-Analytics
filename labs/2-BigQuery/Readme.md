@@ -55,9 +55,9 @@ In this exercise we will look on how to **create a bucket in Cloud Storage** and
 
 **Done! Recap of what was done**
 - You imported your first file on Google Cloud Storage
-- This facilitates access and storage to data on the cloud - in particular large files
-- As a comparison, this would be much more interesting to share csv dataset files through Cloud Storage compared to Github.
-- Github as a maximum individual file size of 100MB while google cloud storage accepts files up to 5TB
+- This facilitates access and storage of data on the cloud - in particular large files
+- It is much more effective to store csv dataset files in Cloud Storage compared to Github.
+- Github has a maximum individual file size of 100MB while google cloud storage accepts files up to 5TB.
 - Google Cloud Storage could also be used as backup for files. 
 
 **A few words on movies.csv:** This dataset contains three columns: movieId, title and genres and has a total of 27'278 rows
