@@ -178,7 +178,7 @@ Now you can follow these steps:
 
 **Step 2: Query of the dataset:**
 
-In this section, we will essentially query the dataset that you just created ! Please follow the guidelines on [this Notebook](https://github.com/michalis0/Cloud-and-Advanced-Analytics/blob/main/labs/2-BigQuery/data/week_02_exercises_big_query.ipynb)
+In this section, we will essentially query the dataset that you just created ! Please follow the guidelines on [this Notebook](notebooks/week_02_exercises_big_query.ipynb)
 
 
 -----------------------------------
