@@ -48,7 +48,7 @@ In this exercise we will look on how to **create a bucket in Cloud Storage** and
 * **1.2** In the Navigation panel, please click on **"Cloud Storage"** and on **"Buckets"** (you can also search for "Buckets" in the search bar)
 * **1.3** Click on the **"Create"** button
 * **1.4** Enter a name for the bucket, i.e: **"caa-bucket"**, change the Location type to **region** and select **europe-west6 (Zurich)** and keep other default parameters. Now you can click **"CREATE"**
-* **1.5** You can now go to the folder of this project and download the [file]('./data/movies.csv') **"movies.csv"** dataset, we will use this for our cloud storage ! (**Hint:** To make it easier for future labs, you can clone the project on a private repository and pull each week. In this specific case, you can also download directly the file on Github - Go on the file and click on Download raw file <img width="20" alt="Download" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/e152ee70-4b27-4ce7-843d-d3c51e00778d"/>)
+* **1.5** You can now go to the folder of this project and download the [file]('data/movies.csv') **"movies.csv"** dataset, we will use this for our cloud storage ! (**Hint:** To make it easier for future labs, you can clone the project on a private repository and pull each week. In this specific case, you can also download directly the file on Github - Go on the file and click on Download raw file <img width="20" alt="Download" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/e152ee70-4b27-4ce7-843d-d3c51e00778d"/>)
 * **1.6** Now you can go back to your **bucket** select **"UPLOAD FILES"** and upload the given CSV file (movies.csv) - you should be able to see it in your uploaded files)
 
 ----
