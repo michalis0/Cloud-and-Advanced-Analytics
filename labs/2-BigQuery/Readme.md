@@ -91,7 +91,7 @@ To generate authentification keys, please following the steps:
 <img width="320" alt="key_2" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/c2679a98-9cc9-483f-8096-4f0888f711de">
 <img width="320" alt="key_3" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/44100bec-fb20-4e52-8403-67ee98a7b14f">
 
-- **Please check everything is working correctly !** By running this [Notebook](https://github.com/michalis0/Cloud-and-Advanced-Analytics/blob/main/labs/2-BigQuery/Keys_verification_cloud_storage.ipynb) (you can import it directly on Google Colab - open from Github - select your repository and notebook Keys-verification-cloud-storage.ipynb - then open it, you can then edit it and push it (file - save a copy on Github). 
+- **Please check everything is working correctly !** By running this [Notebook](notebooks/Keys_verification_cloud_storage.ipynb) (you can import it directly on Google Colab - open from Github - select your repository and notebook Keys-verification-cloud-storage.ipynb - then open it, you can then edit it and push it (file - save a copy on Github). 
 
 
 -----------------------------------
