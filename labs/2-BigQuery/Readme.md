@@ -12,7 +12,7 @@
 
 Welcome to this week's lab where we will delve into Google Storage and BigQuery. We will learn to leverage this powerful tool within our notebooks and enhance our SQL knowledge.
 
-## Learning Goals
+## Learning Goals:
 By the end of this lab, you will be able to:
 - Understand the functionalities and navigation of Google BigQuery and Cloud Storage
 - Upload and explore data in BigQuery
