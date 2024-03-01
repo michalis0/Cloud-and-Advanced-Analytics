@@ -18,7 +18,7 @@ By the end of this lab, you will be able to:
 - Upload and explore data in BigQuery
 - Query datasets in BigQuery to reinforce your SQL skills
 
-## Introduction
+## Introduction:
 Google BigQuery is a highly scalable and serverless data warehouse provided by Google that allows for rapid SQL queries and data analysis. It supports the analysis of large datasets in real-time, using the robust infrastructure of Google.
 
 BigQuery is designed to make data analysis simple and cost-effective by eliminating the need for database administration and infrastructure management. It provides a convenient interface for loading, querying, and visualizing data.
