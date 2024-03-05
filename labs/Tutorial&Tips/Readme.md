@@ -32,7 +32,7 @@ By the end of this tutorial, you will understand how setup the environment to al
     brew install git
     brew upgrade git
     git --version
-- If you encounter [errors](https://stackoverflow.com/questions/75509911/fatal-couldnt-find-remote-ref-refs-heads-master):
+- If you encounter errors:
 - ```bash
     brew tap --repair
     brew cleanup
