@@ -108,7 +108,7 @@ In this exercise we will look on how to **create a Notebook** that we will use f
     gcs_source = gcs_path)
 
 **Hints in case you get stuck:**
-* **1.2** <img width="500" alt="Screenshot 2024-03-05 at 16 56 42" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/180231ea-06ec-400e-850d-cbffb531fb6f">
+* **1.2** <img width="500" alt="Screenshot 2024-03-05 at 16 56 42" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/2befb9bb-d482-4367-8f94-d830881aa762">
 
 --------------------------------------------
 ### **Exercise 2 Deploy and Train a model and make a prediction**
@@ -145,8 +145,8 @@ In this exercise we will look on how to **create a Notebook** that we will use f
 * **1.2.6** Disable model monitoring for this endpoint and click on **Deploy** (This should take about 
 
 **Hints in case you get stuck:**
-* **1.2.2** <img width="372" alt="Screenshot 2024-03-05 at 16 56 42" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/22596dea-15fe-4e8b-a927-dd9dba920d61">
-* **1.2.6**  <img width="372" alt="Screenshot 2024-03-05 at 16 56 42" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/422ac210-85d2-4ced-8aa2-8f933e1d73d6">
+* **1.2.2** <img width="372" alt="Screenshot 2024-03-05 at 16 56 42" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/9256c218-882d-42cb-b0fd-3613ad68f346">
+* **1.2.6**  <img width="372" alt="Screenshot 2024-03-05 at 16 56 42" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/df801c31-d1bd-4ff2-8296-05d0230fd591">
 
 **Step 2: Make a prediction:**
 
@@ -167,5 +167,5 @@ You're now ready to use the test data to make a prediction request. The predicti
 
 
 **Hints in case you get stuck:**
-* **2.2** <img width="372" alt="Screenshot 2024-03-05 at 16 56 42" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/37e95296-99eb-43f1-95bf-dbe86fb0449f">
+* **2.2** <img width="372" alt="Screenshot 2024-03-05 at 16 56 42" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/6c33165c-924c-47c3-93cf-6b9421505f74">
 
