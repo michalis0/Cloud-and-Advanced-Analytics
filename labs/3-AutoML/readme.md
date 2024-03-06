@@ -45,7 +45,7 @@ In this exercise we will look on how to **create a Notebook** that we will use f
 * **1.3** In the left-navigation pane, under **Tools**, **Notebooks**, choose **Workbench**.
 * **1.4** Click **User-managed notebooks**
 * **1.5** You will need to create a new Notebook - click on **CREATE NEW** and select as **environment** select **Python 3 (with Intel MKL)** and click **Create** (you can also change the region to europe-west (Switzerland) ).
-* **1.6** Once the Notebook was created, click on the instance, and **wait it to privision** (about 1-2 minutes), then select **Open JupyerLab** - this will open an instance of **jupyterlab**.
+* **1.6** Once the Notebook was created, click on the instance, and **wait it to be provisioned** (about 1-2 minutes), then select **Open JupyerLab** - this will open an instance of **jupyterlab**.
 * **1.7** Install the Vertex AI SDK for Python and its dependent SDKs by adding this following code at the top of your notebook and run it. To do so, please select **Python 3 (Local)** in **Notebook**, and paste the following code in a cell of the notebook and run it:
 * ``` python
   !pip install --upgrade --quiet google-cloud-aiplatform
@@ -92,7 +92,7 @@ In this exercise we will look on how to **create a Notebook** that we will use f
       gcs_path = f"{BUCKET_NAME}/{IMPORT_FILE}"
     ```
 
-* **2.4** Initialize the AI plateform and create the dataset in AutoML by adding these lines to the same notebook.
+* **2.4** Initialize the AI platform and create the dataset in AutoML by adding these lines to the same notebook.
 
 * ```python
   #import necessary libraries
@@ -169,3 +169,9 @@ You're now ready to use the test data to make a prediction request. The predicti
 **Hints in case you get stuck:**
 * **2.2** <img width="372" alt="Screenshot 2024-03-05 at 16 56 42" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/6c33165c-924c-47c3-93cf-6b9421505f74">
 
+
+--------------------------------------------
+### **Exercise 3 Important - disable the trained model**
+--------------------------------------------
+
+**Step 1:** It is important that you remove your instance from running, or else you will be charged continuously even if you are not using it anymore. To do so, you can go to model Registery, find your deployed model and undeploy it ! Please **do not forget this step**, or else you will be charged and you will not have enough credits for the end of the class ! 
