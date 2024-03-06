@@ -24,7 +24,7 @@ Vertex AI examines the source data type and feature values and infers how it wil
 ## Table of contents for exercises: 
 * [Exercise 1 Notebook Setup and Initialization](#exercise-1-notebook-setup-and-initialization)
 * [Exercise 2 Deploy and Train a model and make a prediction](#exercise-2-deploy-and-train-a-model-and-make-a-prediction)
-
+* [Exercise 3 Important disable the deployed model](#exercise-3-important-disable-the-deployed-model)
   
 ### Pre-Lab Setup 
 
@@ -171,7 +171,7 @@ You're now ready to use the test data to make a prediction request. The predicti
 
 
 --------------------------------------------
-### **Exercise 3 Important - disable the trained model**
+### **Exercise 3 Important disable the deployed model**
 --------------------------------------------
 
 **Step 1:** It is important that you remove your instance from running, or else you will be charged continuously even if you are not using it anymore. To do so, you can go to model Registery, find your deployed model and undeploy it ! Please **do not forget this step**, or else you will be charged and you will not have enough credits for the end of the class ! 
