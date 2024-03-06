@@ -64,17 +64,20 @@ In this exercise we will look on how to **create a Notebook** that we will use f
     ```
 **Done!** You just initialized your Jupyer Notebook in Vertex AI !
 
+
+
 **Hints in case you get stuck:**
-* **1.2** <img width="200" alt="Workbench" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics_private/assets/43532600/ef4963e4-8d8f-4c2b-a772-09894569b600">
-* **1.3** <img width="200" alt="Workbench" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics_private/assets/43532600/797df0ff-8dce-428c-82dd-6bb8498a257d">
-* **1.5** <img width="200" alt="Workbench" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics_private/assets/43532600/599d5b05-c43e-47cf-92a9-b0f87ed93d45">
-* **1.7** <img width="200" alt="Workbench" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics_private/assets/43532600/98ffff1a-296b-4b09-a271-c6de1b254d6e"> <img width="400" alt="Workbench" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics_private/assets/43532600/fba8a72f-8ac2-4ecf-bc43-3702d7dd1165">
+* **1.2** <img width="200" alt="Workbench" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/ef4963e4-8d8f-4c2b-a772-09894569b600">
+* **1.3** <img width="200" alt="Workbench" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/797df0ff-8dce-428c-82dd-6bb8498a257d">
+* **1.5** <img width="200" alt="Workbench" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/599d5b05-c43e-47cf-92a9-b0f87ed93d45">
+* **1.7** <img width="200" alt="Workbench" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/98ffff1a-296b-4b09-a271-c6de1b254d6e"> <img width="400" alt="Workbench" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/fba8a72f-8ac2-4ecf-bc43-3702d7dd1165">
 
 -------
 
 **Step 2: Adding a training dataset in AutoML:** Here, you are still working in the same Jupyter Notebook. 
 
-* **2.1** As done in the previous lab, please create a bucket in the Google Cloud Storage and add a name, i.e: vertex_ai_bucket_storage and select **Region** Zurich, then click on **CREATE**. You can now go in **CONFIGURATION** and copy the **gsutil URI** - we will need it in the next step. You can now download the dataset found [here](https://github.com/michalis0/Cloud-and-Advanced-Analytics_private/blob/main/2024/Week3-AutoML/data/train_data.csv) and upload it in you bucket. 
+* **2.1** As done in the previous lab, please create a bucket in the Google Cloud Storage and add a name, i.e: vertex_ai_bucket_storage and select **Region** Zurich, then click on **CREATE**. You can now go in **CONFIGURATION** and copy the **gsutil URI** - we will need it in the next step. You can now download the dataset found [here](https://github.com/michalis0/Cloud-and-Advanced-Analytics/blob/main/labs/3-AutoML/data/train_data.csv) and upload it in you bucket.
+
 
 * **2.2** Now you can copy the code below and insert your: project ID, the gsutil URI and the REGION "europe-west-6".
 
@@ -106,7 +109,7 @@ In this exercise we will look on how to **create a Notebook** that we will use f
     gcs_source = gcs_path)
 
 **Hints in case you get stuck:**
-* **1.2** <img width="500" alt="Screenshot 2024-03-05 at 16 56 42" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics_private/assets/43532600/180231ea-06ec-400e-850d-cbffb531fb6f">
+* **1.2** <img width="500" alt="Screenshot 2024-03-05 at 16 56 42" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/180231ea-06ec-400e-850d-cbffb531fb6f">
 
 --------------------------------------------
 ### **Exercise 2 Deploy and Train a model and make a prediction**
@@ -143,8 +146,8 @@ In this exercise we will look on how to **create a Notebook** that we will use f
 * **1.2.6** Disable model monitoring for this endpoint and click on **Deploy** (This should take about 
 
 **Hints in case you get stuck:**
-* **1.2.2** <img width="372" alt="Screenshot 2024-03-05 at 16 56 42" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics_private/assets/43532600/22596dea-15fe-4e8b-a927-dd9dba920d61">
-* **1.2.6**  <img width="372" alt="Screenshot 2024-03-05 at 16 56 42" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics_private/assets/43532600/422ac210-85d2-4ced-8aa2-8f933e1d73d6">
+* **1.2.2** <img width="372" alt="Screenshot 2024-03-05 at 16 56 42" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/22596dea-15fe-4e8b-a927-dd9dba920d61">
+* **1.2.6**  <img width="372" alt="Screenshot 2024-03-05 at 16 56 42" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/422ac210-85d2-4ced-8aa2-8f933e1d73d6">
 
 **Step 2: Make a prediction:**
 
@@ -165,5 +168,5 @@ You're now ready to use the test data to make a prediction request. The predicti
 
 
 **Hints in case you get stuck:**
-* **2.2** <img width="372" alt="Screenshot 2024-03-05 at 16 56 42" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics_private/assets/43532600/37e95296-99eb-43f1-95bf-dbe86fb0449f">
+* **2.2** <img width="372" alt="Screenshot 2024-03-05 at 16 56 42" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/37e95296-99eb-43f1-95bf-dbe86fb0449f">
 
