@@ -65,12 +65,11 @@ In this exercise we will look on how to **create a Notebook** that we will use f
 **Done!** You just initialized your Jupyer Notebook in Vertex AI !
 
 
-
 **Hints in case you get stuck:**
-* **1.2** <img width="200" alt="Workbench" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/ef4963e4-8d8f-4c2b-a772-09894569b600">
-* **1.3** <img width="200" alt="Workbench" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/797df0ff-8dce-428c-82dd-6bb8498a257d">
-* **1.5** <img width="200" alt="Workbench" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/599d5b05-c43e-47cf-92a9-b0f87ed93d45">
-* **1.7** <img width="200" alt="Workbench" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/98ffff1a-296b-4b09-a271-c6de1b254d6e"> <img width="400" alt="Workbench" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/fba8a72f-8ac2-4ecf-bc43-3702d7dd1165">
+* **1.2** <img width="200" alt="Workbench" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/a8f0168b-2e02-4c6b-84b6-d0d08cd3f6e2">
+* **1.3** <img width="200" alt="Workbench" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/c340778f-e3eb-4b0a-a1a1-785f0e3d64e7">
+* **1.5** <img width="200" alt="Workbench" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/3f13f202-4c60-44a0-9992-293edb3bb34b">
+* **1.7** <img width="200" alt="Workbench" src="https://github.com/michalis00/Cloud-and-Advanced-Analytics/assets/43532600/bcbfa3b3-6d8b-4c49-8f11-34d574eed0aa"> <img width="400" alt="Workbench" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/bc23fe7a-78ce-4581-9fb6-bbee33b19dc6">
 
 -------
 
