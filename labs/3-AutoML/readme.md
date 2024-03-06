@@ -50,6 +50,7 @@ In this exercise we will look on how to **create a Notebook** that we will use f
 * ``` python
   !pip install --upgrade --quiet google-cloud-aiplatform
   !pip install --upgrade google-cloud-storage
+  !pip install protobuf
 
 * **1.8** Once these two packages are installed successfully, restart the kernel. You can restart the kernel by adding and running this code to your notebook. Click **OK** once you get the message pop-up. 
 
@@ -168,6 +169,55 @@ You're now ready to use the test data to make a prediction request. The predicti
 
 **Hints in case you get stuck:**
 * **2.2** <img width="372" alt="Screenshot 2024-03-05 at 16 56 42" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/6c33165c-924c-47c3-93cf-6b9421505f74">
+
+**Note**: Since the training and the deployment of the model takes around 2 hours. We run the model for you before this lab so that you can test it directly using the sentences just above.
+* Copy paste this piece of code on your notebook:
+* ```python
+  from typing import Dict
+
+  from google.cloud import aiplatform
+  from google.protobuf import json_format
+  from google.protobuf.struct_pb2 import Value
+
+
+  def predict_tabular_classification_sample(
+      project: str,
+      endpoint_id: str,
+      instance_dict: Dict,
+      location: str = "us-central1",
+      api_endpoint: str = "us-central1-aiplatform.googleapis.com",
+  ):
+      # The AI Platform services require regional API endpoints.
+      client_options = {"api_endpoint": api_endpoint}
+      # Initialize client that will be used to create and send requests.
+      # This client only needs to be created once, and can be reused for multiple requests.
+      client = aiplatform.gapic.PredictionServiceClient(client_options=client_options)
+      # for more info on the instance schema, please use get_model_sample.py
+      # and look at the yaml found in instance_schema_uri
+      instance = json_format.ParseDict(instance_dict, Value())
+      instances = [instance]
+      parameters_dict = {}
+      parameters = json_format.ParseDict(parameters_dict, Value())
+      endpoint = client.endpoint_path(
+          project=project, location=location, endpoint=endpoint_id
+      )
+      response = client.predict(
+          endpoint=endpoint, instances=instances, parameters=parameters
+      )
+      print("response")
+      print(" deployed_model_id:", response.deployed_model_id)
+      # See gs://google-cloud-aiplatform/schema/predict/prediction/tabular_classification_1.0.0.yaml for the format of the predictions.
+      predictions = response.predictions
+      for prediction in predictions:
+          print(" prediction:", dict(prediction))
+* Execute this request in Python:
+* ```python
+  predict_tabular_classification_sample(
+    project="1035202819053",
+    endpoint_id="3471353921958576128",
+    location="us-central1",
+    instances=[{ "sentence": "YOUR_SENTENCE"}, {...}] # You can add many inputs to the model
+  )
 
 
 --------------------------------------------
