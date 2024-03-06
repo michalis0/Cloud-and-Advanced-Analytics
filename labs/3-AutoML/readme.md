@@ -69,7 +69,7 @@ In this exercise we will look on how to **create a Notebook** that we will use f
 * **1.2** <img width="200" alt="Workbench" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/a8f0168b-2e02-4c6b-84b6-d0d08cd3f6e2">
 * **1.3** <img width="200" alt="Workbench" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/c340778f-e3eb-4b0a-a1a1-785f0e3d64e7">
 * **1.5** <img width="200" alt="Workbench" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/3f13f202-4c60-44a0-9992-293edb3bb34b">
-* **1.7** <img width="200" alt="Workbench" src="https://github.com/michalis00/Cloud-and-Advanced-Analytics/assets/43532600/bcbfa3b3-6d8b-4c49-8f11-34d574eed0aa"> <img width="400" alt="Workbench" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/bc23fe7a-78ce-4581-9fb6-bbee33b19dc6">
+* **1.7** <img width="200" alt="Workbench" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/bcbfa3b3-6d8b-4c49-8f11-34d574eed0aa"> <img width="400" alt="Workbench" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/bc23fe7a-78ce-4581-9fb6-bbee33b19dc6">
 
 -------
 
