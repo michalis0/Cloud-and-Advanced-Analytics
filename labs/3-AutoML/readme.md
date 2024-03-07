@@ -216,7 +216,7 @@ You're now ready to use the test data to make a prediction request. The predicti
     project="1035202819053",
     endpoint_id="3471353921958576128",
     location="us-central1",
-    instances={ "sentence": "YOUR_SENTENCE"} # You can pass many inputs to the model
+    instance_dict={ "sentence": "YOUR_SENTENCE"} # You can pass many inputs to the model
   )
 
 
