@@ -4,7 +4,8 @@ from google.cloud import bigquery
 import requests
 from datetime import datetime
 
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "/Users/aajalloe/Cloud-and-Advanced-Analytics_private/2024/test-caa-labs-c22347b520c9.json"
+# You only need to uncomment the line below if you want to run your flask app locally.
+# os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "path-to-service-account-key-json"
 client = bigquery.Client(project="test-caa-labs")
 
 
