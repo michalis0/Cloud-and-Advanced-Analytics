@@ -4,12 +4,9 @@ from google.cloud import bigquery
 import requests
 from datetime import datetime
 
-# os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "../caa-assignment1-174340d34e37.json"
-client = bigquery.Client(project="caa-assignment1")
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "/Users/aajalloe/Cloud-and-Advanced-Analytics_private/2024/test-caa-labs-c22347b520c9.json"
+client = bigquery.Client(project="test-caa-labs")
 
-weather_api_key = "0c3c6755519a484ccf2c0741bedc8ebd" #YOUR_API_KEY
-weather_url = f'http://api.openweathermap.org/data/2.5/weather?appid={weather_api_key}'
-kelvin_sub = 273.15
 
 # For authentication
 
@@ -20,7 +17,7 @@ app = Flask(__name__)
 # get the column names of the db
 # PROJECT_ID.DATASET_ID.weather-records
 q = """
-SELECT * FROM `caa-assignment1.Lab4_IoT_datasets.weather-records` LIMIT 10
+SELECT * FROM `test-caa-labs.lab4_dataset.weather-records` LIMIT 10
 """
 query_job = client.query(q)
 df = query_job.to_dataframe()
@@ -31,24 +28,13 @@ def send_to_bigquery():
         if request.get_json(force=True)["passwd"] != YOUR_HASH_PASSWD:
             raise Exception("Incorrect Password!")
         data = request.get_json(force=True)["values"]
-        # get the outdoor temp values
-        city = request.args['city']
-        response = requests.get(weather_url+f'&q={city}')
-        outdoor_temp = round(response.json()['main']['temp'] - kelvin_sub)
-        data["outdoor_temp"] = outdoor_temp
-        outdoor_humidity = round(response.json()['main']['humidity'])
-        data["outdoor_humidity"] = outdoor_humidity
-        outdoor_weather = response.json()['weather'][0]['description']
-        data["outdoor_weather"] = outdoor_weather
-        # extract the date and time
-        t = datetime.utcnow().timestamp()
-        # consider the timezone
-        t = datetime.fromtimestamp(t + response.json()['timezone'])
-        data["date"] = str(t.date())
-        data["time"] = f"{t.hour}:{t.minute}:00"
+        # For exercise 2: Call the openweatherapi and add the resulting 
+        # values to the `data` dictionary
+        # data["outdoor_temp"] = ...
+        # data["outdoor_humidity"] = ...
+        # data["weather"] = ...
         # building the query
-        # PROJECT_ID.DATASET_ID.weather-records
-        q = """INSERT INTO `caa-assignment1.Lab4_IoT_datasets.weather-records` 
+        q = """INSERT INTO `test-caa-labs.lab4_dataset.weather-records` 
         """
         names = """"""
         values = """"""
@@ -68,38 +54,13 @@ def send_to_bigquery():
     return {"status": "failed"}
         
 
-@app.route('/get_outdoor_weather', methods=['GET', 'POST'])
-def get_outdoor_weather():
-    if request.method == 'POST':
-        if request.get_json(force=True)["passwd"] != YOUR_HASH_PASSWD:
-            raise Exception("Incorrect Password!")
-        # get the latest outdoor temp values from the db
-        # PROJECT_ID.DATASET_ID.weather-records
-        q = """
-        select outdoor_temp, outdoor_humidity from `caa-assignment1.Lab4_IoT_datasets.weather-records`
-        order by date desc, time desc limit 1
-        """
-        query_job = client.query(q)
-        df = query_job.to_dataframe()
-        return df.iloc[0].to_dict()
-    return {}
-
-
-@app.route('/get_curr_time', methods=['GET'])
-def get_curr_time():
-    if request.method == 'GET':
-        # we need this to get the timezone!
-        city = request.args['city']
-        response = requests.get(weather_url+f'&q={city}')
-        dt_vals = {}
-        # extract the date and time
-        t = datetime.utcnow().timestamp()
-        # consider the timezone
-        t = datetime.fromtimestamp(t + response.json()['timezone'])
-        dt_vals["date"] = str(t.date())
-        dt_vals["time"] = f"{t.hour}:{t.minute}:00"
-        return dt_vals
-    return {}
+# For exercise 3: Complete the following endpoint.
+# @app.route('/get_outdoor_weather', methods=['GET', 'POST'])
+# def get_outdoor_weather():
+#     if request.method == 'POST':
+#         if request.get_json(force=True)["passwd"] != YOUR_HASH_PASSWD:
+#             raise Exception("Incorrect Password!")
+#         # get the latest outdoor temp values from the db
 
 
 if __name__ == '__main__':
