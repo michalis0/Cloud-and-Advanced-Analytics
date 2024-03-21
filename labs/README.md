@@ -31,7 +31,7 @@ Your Cloud and Advanced Analytics TAs
 2. [BigQuery and SQL](https://github.com/michalis0/Cloud-and-Advanced-Analytics/tree/b08293dd5570edb61ff276f5cd2ed73d37d73a69/labs/2-BigQuery)
 3. [AutoML on GCP](https://github.com/michalis0/Cloud-and-Advanced-Analytics/tree/main/labs/3-AutoML)
 4. [IoT + BigQuery](labs/4-IoT)
-5. Building a recommender system on GCP
+5. [Building a recommender system on GCP](labs/5-Recommendations)
 6. Elastic Search
 7. ${\text{\color{red}No lab - Easter Holidays!}}$
 8. Elastic Search + Python
