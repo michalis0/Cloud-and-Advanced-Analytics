@@ -124,4 +124,4 @@ This query's `SELECT` statement uses the following columns to generate recommend
 __Exercise:__ Can you craft a SQL query that takes the result of the above query and outputs a table with only the top 5 recommendations for each userId, i.e., the 5 top movies with the highest predicted rating confidence?
 
 ## 2- Test the trained BigQuery ML model in Python
-Follow the [eval_rec_sys](eval_rec_sys.ipynb) to be able to call the trained BigQuery ML model in python in order to evaluate the model or generate recommendations for a group of users.
+Follow the [eval_rec_sys](eval_rec_sys.ipynb) notebook to be able to call the trained BigQuery ML model in python in order to evaluate the model or generate recommendations for a group of users.
