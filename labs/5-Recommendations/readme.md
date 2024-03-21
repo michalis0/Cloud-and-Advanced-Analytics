@@ -30,8 +30,7 @@ This dataset contains ratings by the users on the [MovieLens](http://movielens.o
 
 ## Table of Contents
 1. [Building a recommendation model using BigQuery ML](#1--building-a-recommendation-model-using-bigquery-ml)
-2. [Test the trained BigQuery ML model in Python]()
-3. [Creating a simple web app to generate movie recommendations]()
+2. [Test the trained BigQuery ML model in Python](#2--test-the-trained-bigquery-ml-model-in-python)
 
 ----------
 ## 1- Building a recommendation model using BigQuery ML
@@ -123,3 +122,6 @@ This query's `SELECT` statement uses the following columns to generate recommend
     Each row of the table resulting from the above query shows the predicted rating confidence for a pair of userId and movieId.
 
 __Exercise:__ Can you craft a SQL query that takes the result of the above query and outputs a table with only the top 5 recommendations for each userId, i.e., the 5 top movies with the highest predicted rating confidence?
+
+## 2- Test the trained BigQuery ML model in Python
+Follow the [eval_rec_sys](eval_rec_sys.ipynb) to be able to call the trained BigQuery ML model in python in order to evaluate the model or generate recommendations for a group of users.
