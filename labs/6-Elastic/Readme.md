@@ -35,7 +35,7 @@ In this lab, we will not only cover the basics of setting up Elastic Cloud but a
 
 ---------------
 **Step 1 Elastic Search setup**
-- **1.1:** First create a free account on [elasic account](https://www.elastic.co/) (2 week account - no credit card required). Please make sure this account is the same used for Google Cloud. 
+- **1.1:** First create a free account on [elastic](https://www.elastic.co/) (2 week account - no credit card required). **Pick left side**. Login with Google using the same Google account that you use for Google Cloud. After the two 2 weeks, you can add one more free trial week.
 - **1.2:** Create a deployment to use the service. Save your **username** and **password** as we will be using it later on.
 - <img height="100%" width="300px" src="ReadmeImg/deployment.png">
 
