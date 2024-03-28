@@ -60,7 +60,8 @@ In this lab, we will not only cover the basics of setting up Elastic Cloud but a
 
 - **3.1:** You can navigate to the home page and click on **Upload a file**.
 - <img height="100%" width="300px" src="ReadmeImg/try.png">
-- **3.2:**  You can import the file present in the Github, named: **elastic_data_youtube_videos.csv** and drag and drop it inside. 
+- **3.2:**  You can import the file present in the Github, named: **elastic_data_youtube_videos.csv** and drag and drop it inside.
+- **NOTICE:** please make sure to be connected to your account, if you are connected as **Guest User** your import button will not be activated (you can check this on the top right corner)
 - **3.3:** Click **import** and add the index name: **trending_videos_youtube_elastic_data**, which will create an index for your data. Once completed, click on **View index in Discover** 
 - <img height="100%" width="300px" src="ReadmeImg/view.png">
 - **3.4:** You can go back to the menu and in **Analytics** click on **Dashboard** and click on **Create a dashboard** and **Create a visualization**
@@ -72,7 +73,7 @@ In this lab, we will not only cover the basics of setting up Elastic Cloud but a
 ------------------
 **Step 4: Query Elastic Search Engine:**
 
-- **4.1:** You can take a look at the txt file found [here](./ElasticSearch/DSL.txt) to execute queries to Elastic Search
+- **4.1:** You can take a look at the readme.md file found [here](./ElasticSearch/elastic_search.md) to execute queries to Elastic Search
 - **4.2:** To do so, go to the left menu and select Dev tools
 - <img height="100%" width="300px" src="ReadmeImg/search_1.png">
 - **4.3:** In the console, copy and paste: **GET kibana_sample_data_ecommerce/_search** and click on the green button to execute the query. 
