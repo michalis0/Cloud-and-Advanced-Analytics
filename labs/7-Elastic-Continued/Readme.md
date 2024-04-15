@@ -9,7 +9,7 @@
 <br>
 </div>
 
-This week you will continue to learn about elastic search. More precisely, we will have a look at search using embeddings - [ressource on vector embeddings](https://www.elastic.co/what-is/vector-embedding) . 
+This week you will continue to learn about elastic search. More precisely, we will have a look at search using embeddings - [resource on vector embeddings](https://www.elastic.co/what-is/vector-embedding) . 
 
 
 ## Introduction
@@ -18,7 +18,7 @@ Embeddings are representations of words or phrases in a multi-dimensional space 
 
 In this lab, you'll utilize embeddings and Elasticsearch to explore how they enhance search efficiency. During this lab, we will use the following two datasets:
 - **The first dataset** has been used in the previous lab, it has multiple trending youtube videos and can be found [here](./data/elastic_data_youtube_videos.csv)
-- **The second dataset** contains different sentences from different category, allowing you to test out those embeddings and have a more practical understanding on how it works. It can be found [here](./data/sentences.csv)
+- **The second dataset** contains different sentences from various categories, allowing you to test out those embeddings and have a more practical understanding on how it works. It can be found [here](./data/sentences.csv)
 
 ## Lab Walkthrough
 **Step 1:** Embedding Search using Big Query
