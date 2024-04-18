@@ -34,7 +34,7 @@ Your Cloud and Advanced Analytics TAs
 5. [Building a recommender system on GCP](labs/5-Recommendations)
 6. Elastic Search
 7. ${\text{\color{red}No lab - Easter Holidays!}}$
-8. Elastic Search + Python
+8. Big Query Embeddings
 9. Graph Analytics in Python
 10. Continuous Integration GCP
 11. GenAI studio
