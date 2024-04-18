@@ -32,10 +32,10 @@ Your Cloud and Advanced Analytics TAs
 3. [AutoML on GCP](https://github.com/michalis0/Cloud-and-Advanced-Analytics/tree/main/labs/3-AutoML)
 4. [IoT + BigQuery](labs/4-IoT)
 5. [Building a recommender system on GCP](labs/5-Recommendations)
-6. Elastic Search
+6. [Elastic Search](labs/6-Elastic)
 7. ${\text{\color{red}No lab - Easter Holidays!}}$
-8. Big Query Embeddings
-9. Graph Analytics in Python
+8. [Big Query Embeddings](labs/7-BigQuery-embeddings)
+9. [Graph Analytics in Python](labs/8-Graph-Analytics)
 10. Continuous Integration GCP
 11. GenAI studio
 12. ${\text{\color{red}No lab - Ascension!}}$
