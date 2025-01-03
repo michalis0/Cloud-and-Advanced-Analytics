@@ -37,7 +37,7 @@ Your Cloud and Advanced Analytics TAs
 8. [Big Query Embeddings](labs/8-BigQuery-embeddings)
 9. [Graph Analytics in Python](labs/9-Graph-Analytics)
 10. [Continuous Integration GCP](labs/10-GCP)
-11. GenAI studio
+11. [GenAI studio](labs/11-GenAI)
 12. ${\text{\color{red}No lab - Ascension!}}$
-13. Chatbots on GCP
+13. [Chatbots on GCP](labs/12-Chatbot)
 
