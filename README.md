@@ -5,8 +5,7 @@
 <h2 style="white-space: nowrap">Cloud and Advanced Analytics </h2></td>
 <hr style="clear:both">
 <p style="font-size:0.85em; margin:2px; text-align:justify">
-<br>
-<br>
+
 </div>
 
 In this course, we will learn how to use Google Cloud to deploy dockerized applications. We will also explore various other modern analytics.
