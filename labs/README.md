@@ -33,11 +33,9 @@ Your Cloud and Advanced Analytics TAs
 4. [IoT + BigQuery](labs/4-IoT)
 5. [Building a recommender system on GCP](labs/5-Recommendations)
 6. [Elastic Search](labs/6-Elastic)
-7. ${\text{\color{red}No lab - Easter Holidays!}}$
 8. [Big Query Embeddings](labs/8-BigQuery-embeddings)
 9. [Graph Analytics in Python](labs/9-Graph-Analytics)
 10. [Continuous Integration GCP](labs/10-GCP)
 11. [GenAI studio](labs/11-GenAI)
-12. ${\text{\color{red}No lab - Ascension!}}$
 13. [Chatbots on GCP](labs/12-Chatbot)
 
