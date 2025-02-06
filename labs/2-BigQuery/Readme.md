@@ -157,7 +157,7 @@ Now you can follow these steps:
 - **1.1** On the left pannel, select **Big Query** or type **Big Query** in the search bar
 - **1.2** We are now going to create our first **table** Select the **Add** Button
 - **1.3** Click on **Local File**
-- **1.4** **BROWSE** file and select **Teams.csv**
+- **1.4** **BROWSE** file and select **Players.csv**
 - **1.5** Click on **Dataset** and **CREATE A NEW DATASET**. In the **Dataset ID** add **world_cup** and select **Region**, put Zurich (or europe-west6) and click **CREATE DATASET**
 - **1.6** Under **Table** insert the table name, in our case **players** (lowercase!) and select for the **Schema** -> **Auto detect** and click **CREATE TABLE**
 - **1.7** You just created your first table ! you can click on the table and then on the plus symbol (<img width="20" alt="Screenshot 2024-02-15 at 11 51 24" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/9566de9f-7d28-4a33-87d6-9cb58bf82db5"/>). This opens an editor window, on which you can do SQL queries. Copy and paste the following SQL query to get all the teams from the table players in the database world_cup
