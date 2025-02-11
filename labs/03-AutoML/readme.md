@@ -86,11 +86,11 @@ In this exercise we will look on how to **create a Notebook** that we will use f
   PROJECT_ID = 'your_project_id' #from the above code you can get your project id
   BUCKET_NAME = 'gs://BUCKET_NAME' #you can set your own bucket name
   REGION = 'europe-west6' #change the region if different
-
+  ```
 * **2.3** You can now add this code, which will fetch the file (the training set) that you just imported. 
     ```python
-      IMPORT_FILE = 'train_data.csv'
-      gcs_path = f"{BUCKET_NAME}/{IMPORT_FILE}"
+    IMPORT_FILE = 'train_data.csv'
+    gcs_path = f"{BUCKET_NAME}/{IMPORT_FILE}"
     ```
 
 * **2.4** Initialize the AI platform and create the dataset in AutoML by adding these lines to the same notebook.
