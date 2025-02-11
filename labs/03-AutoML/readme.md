@@ -49,7 +49,7 @@ In this exercise we will look on how to **create a Notebook** that we will use f
 * **1.7** Install the Vertex AI SDK for Python and its dependent SDKs by adding this following code at the top of your notebook and run it. To do so, please select **Python 3 (Local)** in **Notebook**, and paste the following code in a cell of the notebook and run it:
 * ``` python
   !pip install --upgrade --quiet google-cloud-aiplatform
-  !pip install --upgrade google-cloud-storage
+  !pip install --upgrade google-cloud-storage # if you get an error, specifically choose version "pip install --upgrade google-cloud-storage==2.14.0"
   !pip install protobuf
 
 * **1.8** Once these two packages are installed successfully, restart the kernel. You can restart the kernel by adding and running this code to your notebook. Click **OK** once you get the message pop-up. 
