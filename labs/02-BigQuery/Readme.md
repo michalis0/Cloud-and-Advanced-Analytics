@@ -101,7 +101,7 @@ To generate authentification keys, please following the steps:
 
 **!Disclaimer!** The keys that you have generated and tested before can be used in a Streamlit website to import the Google Cloud Storage file ! If you would like to execute the code below and create the streamlit app, please make sure to have the different libraries installed - if you have any questions please refer the [python documentation](https://packaging.python.org/en/latest/tutorials/installing-packages/) or to [stack overflow](https://stackoverflow.com/).
 
-- **1.** Download the python code in the folder - [**streamlit_google_cloud_storage**](https://github.com/michalis0/Cloud-and-Advanced-Analytics/blob/main/labs/2-BigQuery/streamlit_google_cloud_storage.py) and open it in your code editor
+- **1.** Download the python code in the folder - [**streamlit_google_cloud_storage**](https://github.com/michalis0/Cloud-and-Advanced-Analytics/blob/main/labs/02-BigQuery/streamlit_google_cloud_storage.py) and open it in your code editor
 - **2.** Install the packages/libraries :
 - ```bash
   pip install streamlit 
@@ -148,7 +148,7 @@ To generate authentification keys, please following the steps:
 
 **Step 1: Creation of the database:**
 
-In this section, we will essentially focus on Big Query ! To do so, you can first download this [dataset](https://github.com/michalis0/Cloud-and-Advanced-Analytics/tree/main/labs/2-BigQuery/data). 
+In this section, we will essentially focus on Big Query ! To do so, you can first download this [dataset](https://github.com/michalis0/Cloud-and-Advanced-Analytics/tree/main/labs/02-BigQuery/data). 
 
 <img width="651" alt="dataset" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/20c9e6f0-76ef-4920-9e34-d51e57cc1657">
 
