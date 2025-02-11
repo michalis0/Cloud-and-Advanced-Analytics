@@ -135,7 +135,7 @@ In this exercise we will look on how to **create a Notebook** that we will use f
     disable_early_stopping = False)
 * **Note**: In this lab, we choose to perform the training on a small batch of the dataset to gain some time. **train_data.csv**. However, this is expected to take about 1 hours and 50 minutes.
 * **Note**: You can check the status of the training in **Google cloud console** under the **Vertex AI tool**. Go to **Training** under 
-**Model development**. You should see a new row that have as name : **training_lab3**
+**Model development**. You should see a new row that has as name : **training_lab3**
 
 * **1.2** Once training is done we will deploy our model using endpoint. Endpoint is one of the components of Vertex AI where you can deploy your model. We will use this endpoint to perform predictions later on. 
 * **1.2.1** Click on **model registery**, find your model (make sure to filter the correct region), then click on **training_lab3**
