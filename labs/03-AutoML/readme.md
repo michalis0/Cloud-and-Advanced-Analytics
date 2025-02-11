@@ -79,13 +79,13 @@ In this exercise we will look on how to **create a Notebook** that we will use f
 * **2.1** As done in the previous lab, please create a bucket in the Google Cloud Storage and add a name, i.e: vertex_ai_bucket_storage and select **Region** Zurich, then click on **CREATE**. You can now go in **CONFIGURATION** and copy the **gsutil URI** - we will need it in the next step. You can now download the dataset found [here](https://github.com/michalis0/Cloud-and-Advanced-Analytics/blob/main/labs/03-AutoML/data/train_data.csv) and upload it in you bucket.
 
 
-* **2.2** Now you can copy the code below and insert your: project ID, the gsutil URI and the REGION "europe-west-6".
+* **2.2** Now you can copy the code below and insert your: project ID, the gsutil URI and the REGION "europe-west6".
 
 * ```python
   #set project id, bucket name and region
   PROJECT_ID = 'your_project_id' #from the above code you can get your project id
   BUCKET_NAME = 'gs://BUCKET_NAME' #you can set your own bucket name
-  REGION = 'europe-west-6' #change the region if different
+  REGION = 'europe-west6' #change the region if different
 
 * **2.3** You can now add this code, which will fetch the file (the training set) that you just imported. 
     ```python
