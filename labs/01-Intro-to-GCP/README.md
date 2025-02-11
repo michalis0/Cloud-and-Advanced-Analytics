@@ -89,7 +89,7 @@ This exercise aims to familiarize yourself with Google Cloud Functions. You'll c
 **Then General Steps are as follows:**
 
 - **Step 1:** Check to see that the API key works correctly.
-    - Download the notebook [here](https://github.com/michalis0/Cloud-and-Advanced-Analytics/blob/main/labs/1-Intro-to-GCP/Lab_1_Notebook.ipynb) and open it on [Google Colab](https://colab.research.google.com/) (Upload - browse - select the file and upload it).
+    - Download the notebook [here](https://github.com/michalis0/Cloud-and-Advanced-Analytics/blob/main/labs/01-Intro-to-GCP/Lab_1_Notebook.ipynb) and open it on [Google Colab](https://colab.research.google.com/) (Upload - browse - select the file and upload it).
  
 - **Step 2.** Write and test a cloud Function in Python 
     - In the Notebook, there are two functions: the first one allows to fetch the list of movies and the second one to fetch the poster of a specific movie ID. We will deploy them on Google Cloud Functions
@@ -153,8 +153,8 @@ This exercise aims to familiarize yourself with Google Cloud Functions. You'll c
 
 ---
 
-**Step 1:** Download the Skeleton code from [github](https://github.com/michalis0/Cloud-and-Advanced-Analytics/tree/main/labs/1-Intro-to-GCP/streamlit_app) and try out your functions! 
-- 1.1. You can find attached a [folder](https://github.com/michalis0/Cloud-and-Advanced-Analytics/tree/main/labs/1-Intro-to-GCP/streamlit_app) called **streamlit_app**, this folder contains three files: app.py, requirements.txt and Dockerfile, please **Download** that folder and open it without your code editor (i.e. Visual Studio Code)
+**Step 1:** Download the Skeleton code from [github](https://github.com/michalis0/Cloud-and-Advanced-Analytics/tree/main/labs/01-Intro-to-GCP/streamlit_app) and try out your functions! 
+- 1.1. You can find attached a [folder](https://github.com/michalis0/Cloud-and-Advanced-Analytics/tree/main/labs/01-Intro-to-GCP/streamlit_app) called **streamlit_app**, this folder contains three files: app.py, requirements.txt and Dockerfile, please **Download** that folder and open it without your code editor (i.e. Visual Studio Code)
 - 1.2. Download streamlit:
     - ```bash
       pip install streamlit
