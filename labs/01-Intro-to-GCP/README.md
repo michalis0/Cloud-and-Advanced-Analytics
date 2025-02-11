@@ -180,7 +180,7 @@ This exercise aims to familiarize yourself with Google Cloud Functions. You'll c
 - 2.3. Clone the Github repository from github to have access to the code 
 - ```bash
   git clone https://github.com/YOUR_USERNAME/google_cloud_deploy_streamlit
-- 2.4. You will have to insert your **github username** and the **API KEY** as password
+- 2.4. You will have to insert your **github username** and the **Personal Access Token** as password
 - ```bash
   cd google_cloud_deploy_streamlit/
   cd streamlit_app/
