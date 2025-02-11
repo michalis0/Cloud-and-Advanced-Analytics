@@ -22,6 +22,9 @@ By the end of this lab you will learn:
 
 
 ## Table of contents for exercises: 
+
+[This notebook](https://github.com/michalis0/Cloud-and-Advanced-Analytics/blob/main/labs/04-IoT/WalkThrough.ipynb) will guide you through the following content.
+
 1. **Introduction and IOT devices:**
 
 2. **Setting up the weather sensor for measuring the indoor temperature and humidity**
