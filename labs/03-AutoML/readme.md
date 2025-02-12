@@ -143,7 +143,7 @@ In this exercise we will look on how to **create a Notebook** that we will use f
 * **1.2.3** Then , click on **Deploy to endpoint**
 * **1.2.4** Choose an endpoint name and keep the location and the access as it is by default and click on **Continue**
 * **1.2.5** For **Model settings**, change the machine_type to **n1-standard-4**. Also set **Feature attribution** instead of **No explainability** under **Explainability options** and click on **Continue**
-* **1.2.6** Disable model monitoring for this endpoint and click on **Deploy**. This might take a while.
+* **1.2.6** Disable model monitoring for this endpoint and click on **Deploy**. This might take a while (~30min).
 
 **Hints in case you get stuck:**
 * **1.2.2** <img width="372" alt="Screenshot 2024-03-05 at 16 56 42" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/9256c218-882d-42cb-b0fd-3613ad68f346">
