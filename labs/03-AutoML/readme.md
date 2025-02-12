@@ -36,7 +36,7 @@ Vertex AI examines the source data type and feature values and infers how it wil
 ### **Exercise 1 Notebook Setup and Initialization**
 -----------------------------------
 
-In this exercise we will look on how to **create a Notebook** that we will use for our Machine Learning algorithm later in. 
+In this exercise, we will look on how to **create a Notebook** that we will use for our Machine Learning algorithm later in. 
 
 **Step 1: Creation of Notebook:**
 
@@ -44,9 +44,9 @@ In this exercise we will look on how to **create a Notebook** that we will use f
 * **1.2** In Search enter **Vertex AI**, then press return - you will arrive on the Dashboard of Vertex AI, where you will need to **Enable all recommended APIs**
 * **1.3** In the left-navigation pane, under **Tools**, **Notebooks**, choose **Workbench**.
 * **1.4** Click **User-managed notebooks**
-* **1.5** You will need to create a new Notebook - click on **CREATE NEW** and select as **environment** select **Python 3 (with Intel MKL)** and click **Create** (you can also change the region to europe-west (Switzerland) ).
-* **1.6** Once the Notebook was created, click on the instance, and **wait it to be provisioned** (about 1-2 minutes), then select **Open JupyerLab** - this will open an instance of **jupyterlab**.
-* **1.7** Install the Vertex AI SDK for Python and its dependent SDKs by adding this following code at the top of your notebook and run it. To do so, please select **Python 3 (Local)** in **Notebook**, and paste the following code in a cell of the notebook and run it:
+* **1.5** You will need to create a new Notebook - click on **CREATE NEW** and as **environment** select **Python 3 (with Intel MKL)** and click **Create** (you can also change the region to europe-west (Switzerland) ).
+* **1.6** Once the Notebook was created, click on the instance, and **wait for it to be provisioned** (about 1-2 minutes), then select **Open JupyerLab** - this will open an instance of **jupyterlab**.
+* **1.7** Install the Vertex AI SDK for Python and its dependent SDKs by adding the following code at the top of your notebook and running it. To do so, please select **Python 3 (Local)** in **Notebook**, and paste the following code in a cell of the notebook and run it:
 * ``` python
   !pip install --upgrade --quiet google-cloud-aiplatform
   !pip install --upgrade google-cloud-storage # if you get an error, specifically choose version "pip install --upgrade google-cloud-storage==2.14.0"
@@ -63,7 +63,7 @@ In this exercise we will look on how to **create a Notebook** that we will use f
         app = IPython.Application.instance()
         app.kernel.do_shutdown(True)
     ```
-**Done!** You just initialized your Jupyer Notebook in Vertex AI !
+**Done!** You just initialized your Jupyter Notebook in Vertex AI!
 
 
 **Hints in case you get stuck:**
@@ -76,7 +76,7 @@ In this exercise we will look on how to **create a Notebook** that we will use f
 
 **Step 2: Adding a training dataset in AutoML:** Here, you are still working in the same Jupyter Notebook. 
 
-* **2.1** As done in the previous lab, please create a bucket in the Google Cloud Storage and add a name, i.e: vertex_ai_bucket_storage and select **Region** Zurich, then click on **CREATE**. You can now go in **CONFIGURATION** and copy the **gsutil URI** - we will need it in the next step. You can now download the dataset found [here](https://github.com/michalis0/Cloud-and-Advanced-Analytics/blob/main/labs/03-AutoML/data/train_data.csv) and upload it in you bucket.
+* **2.1** As done in the previous lab, please create a bucket in the Google Cloud Storage and add a name, i.e.: vertex_ai_bucket_storage, and select **Region** Zurich, then click on **CREATE**. You can now go into **CONFIGURATION** and copy the **gsutil URI** - we will need it in the next step. You can now download the dataset found [here](https://github.com/michalis0/Cloud-and-Advanced-Analytics/blob/main/labs/03-AutoML/data/train_data.csv) and upload it in your bucket.
 
 
 * **2.2** Now you can copy the code below and insert your: project ID, the gsutil URI and the REGION "europe-west6".
@@ -133,9 +133,9 @@ In this exercise we will look on how to **create a Notebook** that we will use f
     target_column = 'difficulty',
     model_display_name = 'training_lab3',
     disable_early_stopping = False)
-* **Note**: In this lab, we choose to perform the training on a small batch of the dataset to gain some time. **train_data.csv**. However, this is expected to take about 1 hours and 50 minutes.
+* **Note**: In this lab, we choose to perform the training on a small batch of the dataset to gain some time. **train_data.csv**. However, this is expected to take about 1 hour and 50 minutes.
 * **Note**: You can check the status of the training in **Google cloud console** under the **Vertex AI tool**. Go to **Training** under 
-**Model development**. You should see a new row that has as name : **training_lab3**
+**Model development**. You should see a new row that has as name: **training_lab3**
 
 * **1.2** Once training is done we will deploy our model using endpoint. Endpoint is one of the components of Vertex AI where you can deploy your model. We will use this endpoint to perform predictions later on. 
 * **1.2.1** Click on **model registery**, find your model (make sure to filter the correct region), then click on **training_lab3**
@@ -151,10 +151,10 @@ In this exercise we will look on how to **create a Notebook** that we will use f
 
 **Step 2: Make a prediction:**
 
-You're now ready to use the test data to make a prediction request. The prediction request invokes your model to predict what is the difficulty of a given sentence.
+You're now ready to use the test data to make a prediction request. The prediction request invokes your model to predict a given sentence's difficulty.
 
 * **2.1** Once you model is deployed, go to **Test your model** at the bottom of the page
-* **Note**: Remember that the model predict from a given french sentence the difficulty of that sentence (A1 or A2 or B1 or B2 or C1 or C2)
+* **Note**: Remember that the model predicts from a given French sentence the difficulty of that sentence (A1 or A2 or B1 or B2 or C1 or C2)
 
 * **2.2** Under value, give a sentence (in French) to see the predicted outcome and click on **Predict**.
 
@@ -174,4 +174,4 @@ You're now ready to use the test data to make a prediction request. The predicti
 ### **Exercise 3 Important disable the deployed model**
 --------------------------------------------
 
-**Step 1:** It is important that you remove your instance from running, or else you will be charged continuously even if you are not using it anymore. To do so, you can go to model Registery, find your deployed model and undeploy it ! Please **do not forget this step**, or else you will be charged and you will not have enough credits for the end of the class ! 
+**Step 1:** It is important that you remove your instance from running, or else you will be charged continuously even if you are not using it anymore. To do so, you can go to Model Registry, find your deployed model, and undeploy it! Please **do not forget this step**, or else you will be charged and you will not have enough credits for the end of the class! 
