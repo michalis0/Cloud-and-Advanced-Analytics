@@ -43,6 +43,9 @@ A zip of your git repository with your code (**zip of GitHub**). The `README.md`
 - If the URL does not work, you won’t receive any points for your code.
 - You will receive **one grade** for both Part 1 and Part 2 of the assignment, but we will give you textual feedback for Part 1.
 
+### Example Image
+![Assignement1 - diagram](https://github.com/michalis0/Cloud-and-Advanced-Analytics/blob/main/assignment1/images/assignment1-diagram.png)
+
 ### Steps to complete the assignment
 1. Download the dataset.
 2. Upload the movie dataset in **Google Cloud BigQuery**.
