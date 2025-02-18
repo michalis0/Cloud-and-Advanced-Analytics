@@ -16,14 +16,14 @@ Here’s a preview of how the movies and the rating tables look like respectivel
 #### Movies Table
 | movieId | title               | genres                   | tmdbId | language | release_year | country                  |
 |---------|---------------------|--------------------------|--------|----------|--------------|--------------------------|
-| 1502    | Kissed (1996)       | Drama|Romance           | 21626  | en       | 1996         | Canada                   |
+| 1502    | Kissed (1996)       | Drama\|Romance           | 21626  | en       | 1996         | Canada                   |
 | 4665    | Shocker (1989)      | Horror                   | 12521  | en       | 1989         | United States of America |
-| 3686    | Flatliners (1990)   | Horror|Sci-Fi|Thriller  | 1551   | en       | 1990         | United States of America |
-| 114062  | Motel Life, The (2012) | Drama|Mystery|Thriller | 80318  | en       | 2013         | United States of America |
+| 3686    | Flatliners (1990)   | Horror\|Sci-Fi\|Thriller  | 1551   | en       | 1990         | United States of America |
+| 114062  | Motel Life, The (2012) | Drama\|Mystery\|Thriller | 80318  | en       | 2013         | United States of America |
 | 129786  | Dhobi Ghat (2011)   | Drama                    | 54890  | hi       | 2010         | India                    |
 
 #### Ratings Table
-|  | userId | movieId | rating | timestamp   |
+|        | userId | movieId | rating | timestamp   |
 |--------|--------|---------|--------|------------|
 | **0**  | 1      | 2       | 3.5    | 1112486027 |
 | **1**  | 1      | 29      | 3.5    | 1112484676 |
