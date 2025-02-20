@@ -98,9 +98,9 @@ This exercise aims to familiarize yourself with Google Cloud Functions. You'll c
 - **Step 3.** Deploy the two functions on Google Cloud Functions
     - 3.1. Go on [Google Cloud](https://cloud.google.com/)
     - 3.2. From the side menu, go to _Cloud Run Functions_, or search for _Cloud Run Functions_ in the Search bar at the top.
-    - 3.3. Select **CREATE FUNCTION** 
-    - 3.4. On the setup screen, give a name to the function: **function_1_get_movie_list** and select Region - Zurich and select Allow unauthenticated invocations and click on **NEXT**.
-    - 3.5. You now have the access to the code editor on which you can write your function. Select **Python 3.12**. 
+    - 3.3. Select **WRITE FUNCTION** 
+    - 3.4. On the setup screen, give a name to the function: **function-1-get-movie-list**, select Region - Zurich, select Allow unauthenticated invocations and choose **Python 3.12** as the Runtime
+    - 3.5. Click on **CREATE** and enable the required APIs
 
 - **Step 4.**
 
