@@ -84,7 +84,7 @@ We will be using the TMDB (The Movie DataBase) website to fetch information abou
 **Hints (in case you get stuck):**
 
 <img width="300" alt="TMDB Profile" src="assets/apibefore1.png">
-<img width="300" alt="TMDB API Key" src="assets/apibefore1.png">
+<img width="300" alt="TMDB API Key" src="assets/api1.png">
 <img width="300" alt="Example Request" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/fcafddb1-d7b8-41be-a553-df8563b2370a">
 
 
