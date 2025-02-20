@@ -110,7 +110,7 @@ This exercise aims to familiarize yourself with Google Cloud Functions. You'll c
     - ```bash
       functions-framework==3.*
       requests==2.31.0
-    - 4.4. Now select **DEPLOY**
+    - 4.4. Now select **SAVE AND REDEPLOY**
     - 4.5. Wait about two minutes, then your function should be deployed: click on the URL, you should be able to see a list of movie titles !
 
 - **Step 5.** Test the deployed function from the Notebook
