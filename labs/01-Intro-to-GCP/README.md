@@ -68,10 +68,10 @@ If you need help, consult the [Google Cloud Documentation](https://cloud.google.
 We will be using the TMDB (The Movie DataBase) website to fetch information about movies, TV shows and actors, including details such as cast, ratings and user reviews. To do so, we will need to set up an API key to fetch this information. In this step we will focus on the creation of the account to get access to the API key. This can be done following this [link](https://www.themoviedb.org/signup) and create an account (click on Join TMDB). 
 
 **Main Steps:** 
-1. Go to the profile and get the API Key using this [link](https://www.themoviedb.org/settings/api/request)
+1. Go to the profile and get the API Read Access Token using this [link](https://www.themoviedb.org/settings/api/request)
 2. Select Developper - Accept the terms and conditions - Complete the required information (for URL: educational-course). 
-3. You should now be able to see your API key (copy your API key for later use)
-4. Now we can go back to the [API page](https://developer.themoviedb.org/reference/account-rated-movies) and you can play around to test the different requests i.e: GET / PUT / POST requests. An example could be the following: https://developer.themoviedb.org/reference/genre-movie-list - clicking on **Try it** you should receive the response from the request. 
+3. You should now be able to see your API Read Access Token (copy your API Read Access Token for later use)
+4. Now we can go back to the [API page](https://developer.themoviedb.org/reference/account-rated-movies) and you can play around to test the different requests i.e: GET / PUT / POST requests. An example could be the following: https://developer.themoviedb.org/reference/genre-movie-list - clicking on **Try it** you should receive the response from the request. Do not forget to enter your API Read Access Token in the "Credentials" section.  
 
 **Hints (in case you get stuck):**
 
