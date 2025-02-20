@@ -121,14 +121,14 @@ If ever there are any issues, verify the **LOGS** tab for potential errors.
  
 - **Step 6.** Repeat the same process as before but for function 2 (we recall the steps below)
     - 6.1. **Copy** the function 2 code with your API key (code under Step 3-4. Deploy the two functions on Google Cloud Functions)
-    - 6.2. Go back to **Cloud Run Functions** and click **CREATE FUNCTION**
-    - 6.3. Call it **function-2-get-movie-details** - select Zurich - Select Allow unauthenticated invocations and click on **NEXT**
-    - 6.4. Select Python 3.12, **Paste** the function 2 in the code editor on Google Cloud, and change the entry point to **get_movie_details**
+    - 6.2. Go back to **Cloud Run Functions** and click **WRITE FUNCTION**
+    - 6.3. Call it **function-2-get-movie-details** - select Zurich - Select Allow unauthenticated invocations and choose **Python 3.12** as the Runtime then select **CREATE**
+    - 6.4. **Paste** the function 2 in the code editor on Google Cloud, and change the entry point to **get_movie_details**
     - 6.5. **Copy** the libraries and **paste** them in the **requirements.txt**
     - ```bash
       functions-framework==3.*
       requests==2.31.0
-    - 6.6. Click **DEPLOY** and wait another 2 minutes and copy the URL. **NOTE** If you open the URL directly on the browser it will not work, because the functions expects a parameter / placeholder {movieID} for a specific movie ID. So if you open directly the link, you will get an **Internal server error**, which is expected. 
+    - 6.6. Click **SAVE AND REDEPLOY** and wait another 2 minutes and copy the URL. **NOTE** If you open the URL directly on the browser it will not work, because the functions expects a parameter / placeholder {movieID} for a specific movie ID. So if you open directly the link, you will get an **Internal server error**, which is expected. 
     - 6.7. Go back to the Notebook, paste your URL and execute the cell.
 
  - **Step 7.** Save the two URLs for later !
