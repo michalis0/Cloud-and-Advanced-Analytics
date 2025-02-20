@@ -113,6 +113,8 @@ This exercise aims to familiarize yourself with Google Cloud Functions. You'll c
     - 4.4. Now select **SAVE AND REDEPLOY**
     - 4.5. Wait about two minutes, then your function should be deployed: click on the URL, you should be able to see a list of movie titles !
 
+If ever there are any issues, verify the **LOGS** tab for potential errors.
+
 - **Step 5.** Test the deployed function from the Notebook
     - 5.1. **Copy** the URL of your newly deploy Google Cloud Function
     - 5.2. Go back to the Notebook and **paste** the URL in **YOUR_URL** and run the cell. You should be able to see the list of movies.
