@@ -57,10 +57,18 @@ If you need help, consult the [Google Cloud Documentation](https://cloud.google.
 --------------
 
 ## Table of contents for exercises: 
-* [Exercise 1 TMDB API Key](#exercise-1-tmdb-api-key)
-* [Exercise 2 Google Cloud Function with API Key](#exercise-2-google-cloud-function-with-api-key)
-* [Exercise 3 Streamlit App and Deploying on Google Cloud Run](#exercise-3-streamlit-app-and-deploying-on-google-cloud-run)
-* [Additional links:]
+- [Learning Goals](#learning-goals)
+- [Introduction](#introduction)
+- [Lab Walkthrough](#lab-walkthrough)
+  - [Pre-Lab Setup](#pre-lab-setup)
+- [Requirements](#requirements)
+- [The General Pipeline:](#the-general-pipeline)
+- [Table of contents for exercises:](#table-of-contents-for-exercises)
+  - [Exercise 1: TMDB API Key](#exercise-1-tmdb-api-key)
+  - [**Exercise 2: Google Cloud Function with API Key**](#exercise-2-google-cloud-function-with-api-key)
+  - [**Exercise 3 Streamlit App and Deploying on Google Cloud Run**](#exercise-3-streamlit-app-and-deploying-on-google-cloud-run)
+  - [**Additional Links**](#additional-links)
+      - [Difference between Cloud Run and Cloud Functions:](#difference-between-cloud-run-and-cloud-functions)
 -----------------------------------
 ### Exercise 1: TMDB API Key
 -----------------------------------
@@ -75,8 +83,8 @@ We will be using the TMDB (The Movie DataBase) website to fetch information abou
 
 **Hints (in case you get stuck):**
 
-<img width="300" alt="TMDB Profile" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/9eba5cb3-d082-4a19-9efe-c1a375339f27">
-<img width="300" alt="TMDB API Key" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/e6e46ffa-c4a1-4dc6-b1ea-49242d7f2ff0">
+<img width="300" alt="TMDB Profile" src="assets/apibefore1.png">
+<img width="300" alt="TMDB API Key" src="assets/apibefore1.png">
 <img width="300" alt="Example Request" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/fcafddb1-d7b8-41be-a553-df8563b2370a">
 
 
@@ -135,9 +143,9 @@ If ever there are any issues, verify the **LOGS** tab for potential errors.
 
 **Step by Step Guide: In case you get stuck:**
 
-- 3.2. <img width="130" height="120" alt="Screenshot 2024-02-21 at 15 32 46" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/dd3b92d2-1d11-40c5-b0cc-1b1bb95b5caf">
-- 3.3. <img width="300" alt="Google Cloud Function" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/df6e4750-3129-48e3-967e-4584db23dd4a">
-- 3.4. <img width="300" alt="Screenshot 2024-02-21 at 15 38 51" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/bd53a08d-c798-42c6-b77b-6091599b52f5">
+- 3.2. <img width="130" height="120" src="assets/cloud1.png">
+- 3.3. <img width="500" alt="Screenshot 2024-02-21 at 15 32 46" src="assets/cloud2.png">
+- 3.4. <img width="300" alt="Screenshot 2024-02-21 at 15 38 51" src="assets/cloud3.png">
 - 4.5.<img width="400" alt="Screenshot 2024-02-21 at 15 49 45" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/240694ab-dcdd-4798-bb23-6dcf5fc939c3">
  <img width="500" alt="Screenshot 2024-02-21 at 15 50 27" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/d169d8cd-eb07-4b55-900b-cd68eb1167bc">
 
