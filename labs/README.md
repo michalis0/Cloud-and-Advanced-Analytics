@@ -28,7 +28,7 @@ Your Cloud and Advanced Analytics TAs
 
 
 1. [Intro to GCP / Create a simple web app](https://github.com/michalis0/Cloud-and-Advanced-Analytics/tree/main/labs/01-Intro-to-GCP)
-2. [BigQuery and SQL](https://github.com/michalis0/Cloud-and-Advanced-Analytics/tree/main/labs)
+2. [BigQuery and SQL](02-BigQuery)
 3. AutoML on GCP
 4. IoT + BigQuery
 5. Building a recommender system on GCP
