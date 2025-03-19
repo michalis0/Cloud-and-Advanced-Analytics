@@ -39,11 +39,11 @@ In this section we will create a new BigQuery dataset and upload the [ratings](d
 - 1.1 Login to your Google Cloud Console. Following last week's lab instructions, create a new dataset in BigQuery and upload the ratings and links tables. Note that since the size of these two datasets is small, you can upload the csv files directly in BigQuery.
 - 1.2 In the BigQuery studio, run some sample queries on the ratings and links tables and check their content. For example:
 ```
-SELECT * from `test-caa-labs.lab5_dataset.ml-small-ratings` limit 10
+SELECT * from `PROJECT_ID.lab5_dataset.ml-small-ratings` limit 10
 ```
 - 1.3 Next, you create an implicit recommendations model using the ratings table that was loaded in step 1.1. The following GoogleSQL query is used to create the model that will be used to predict a confidence rating for every `userId`, `movieId` pair.
 ```
-CREATE OR REPLACE MODEL `test-caa-labs.lab5_dataset.first-MF-model`
+CREATE OR REPLACE MODEL `PROJECT_ID.lab5_dataset.first-MF-model`
 OPTIONS
   (model_type='matrix_factorization',
    feedback_type='IMPLICIT',
