@@ -21,9 +21,9 @@ Users will select multiple preferred movies, and after submission, the system wi
 ## Tasks
 
 1. **Data Upload to BigQuery**
-   - Upload **user ratings, links, and movies datasets** to BigQuery.
    - The datasets are from the **movielens-small dataset** (used in Week 5 recommender systems lab).
    - Retrieve datasets from the course's **GitHub repository**.
+   - Upload **user ratings, links, and movies datasets** to BigQuery.
 
 2. **Train a Recommender System**
    - Train a **matrix factorization** recommendation model using **BigQuery ML** (cf. Lab 5).
