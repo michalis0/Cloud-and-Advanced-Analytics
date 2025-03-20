@@ -16,8 +16,8 @@ In this course, we will learn how to use Google Cloud to deploy dockerized appli
 1. [Intro to GCP / Create a simple web app](https://github.com/michalis0/Cloud-and-Advanced-Analytics/tree/main/labs/01-Intro-to-GCP)
 2. [BigQuery and SQL](https://github.com/michalis0/Cloud-and-Advanced-Analytics/tree/main/labs/02-BigQuery)
 3. [AutoML on GCP](https://github.com/michalis0/Cloud-and-Advanced-Analytics/tree/main/labs/03-AutoML)
-4. IoT + BigQuery
-5. Building a recommender system on GCP
+4. [IoT + BigQuery](https://github.com/michalis0/Cloud-and-Advanced-Analytics/tree/main/labs/04-IoT)
+5. [Building a recommender system on GCP](https://github.com/michalis0/Cloud-and-Advanced-Analytics/tree/main/labs/05-Recommendations)
 6. Elastic Search
 8. Big Query Embeddings
 9. Graph Analytics in Python
