@@ -36,7 +36,7 @@ This dataset contains ratings by the users on the [MovieLens](http://movielens.o
 ## 1- Building a recommendation model using BigQuery ML
 In this section we will create a new BigQuery dataset and upload the [ratings](data/ml-small-ratings.csv) and the [links](data/ml-small-links.csv) table in it. Then we will build our first recommendation model using a SQL query.
 
-- 1.1 Login to your Google Cloud Console. Following last week's lab instructions, create a new dataset in BigQuery and upload the ratings and links tables. Note that since the size of these two datasets is small, you can upload the csv files directly in BigQuery.
+- 1.1 Login to your Google Cloud Console. Following last week's lab instructions, create a new dataset in BigQuery and upload the ratings and links tables. Note that since the size of these two datasets is small, you can upload the csv files directly in BigQuery. **SET THE REGION TO EU MULTIREGION**
 - 1.2 In the BigQuery studio, run some sample queries on the ratings and links tables and check their content. For example:
 ```
 SELECT * from `PROJECT_ID.lab5_dataset.ml-small-ratings` limit 10
