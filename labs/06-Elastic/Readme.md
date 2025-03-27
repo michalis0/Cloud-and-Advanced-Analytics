@@ -110,7 +110,7 @@ In this lab, we will not only cover the basics of setting up Elastic Cloud but a
       }
     }
     ```
-  - **Example query 2:** This simple query gets the text input and does  a search in the database (it returns the results with the title and videoDifficulty):
+  - **Example query 2 (To be done later in Colab):** This simple query gets the text input and does  a search in the database (it returns the results with the title and videoDifficulty):
   - ```bash
     response = client.search(index="trending_videos_youtube_elastic_data", q="Pourquoi")
     # Process search results
