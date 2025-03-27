@@ -37,7 +37,7 @@ In this lab, we will not only cover the basics of setting up Elastic Cloud but a
 **Step 1 Elastic Search setup**
 - **1.1:** Go to [elastic](https://www.elastic.co/elasticsearch) and **start free trial** (2 week account - no credit card required). Login with Google using the same Google account you use for Google Cloud and answer the questions. Choose as **use case** the most left option **Elasticsearch** (not elastic for observability or for security). After the two 2 weeks, you can add one more free trial week.
 - **1.2:** Create a deployment to use the service. Save your **username** and **password** as we will be using it later on.
-  
+
 <img width="928" alt="Screenshot 2025-03-27 at 16 31 08" src="https://github.com/user-attachments/assets/20945d30-b1c5-422c-b575-1d565a5fe9a2" />
 <img width="835" alt="Screenshot 2025-03-27 at 16 31 33" src="https://github.com/user-attachments/assets/82e09e7f-4292-4486-b16e-513efa4ebb50" />
 
@@ -47,16 +47,16 @@ In this lab, we will not only cover the basics of setting up Elastic Cloud but a
 - **2.2:** You should be now on the **Overview** page under Elasticsearch. Click on **Sample data**. Open **Other sample data sets** and choose the "Sample eCommerce orders" dataset by clicking on **Add data**.
 -  then on **Start Exploring**. Finally, under **Data visualization** please click on **Dashboards**.
 
-- <img src="https://github.com/user-attachments/assets/58ee0401-5162-4a3b-8ec6-f56090664218" alt="Elastic3" width="400px">
-- <img src="https://github.com/user-attachments/assets/4292bc8b-c86c-4b76-a44a-4b3787fa7424" alt="Elastic4" width="400px">
+<img width="777" alt="Screenshot 2025-03-27 at 16 32 54" src="https://github.com/user-attachments/assets/a6d3f917-63f1-459e-9f5f-077cdfed8032" />
+<img width="775" alt="Screenshot 2025-03-27 at 16 33 09" src="https://github.com/user-attachments/assets/5066236e-c9f4-46a0-932c-5009b9197f96" />
 
 - **2.3:** If you go now to Dashboards under Kibana, you will see that a dataset is added called **[eCommerce] Revenue Dashboard**. Click on it. This will open a Dashboard connected to a database with ecommerce information such as sales, revenue, items and much more! Have a look and play around with the Dashboard. Navigate to the plot called **breakdown by category**, select **womens's clothing**, click on the three small dots on the side and click on **Filter for** to filter.
 
-- <img src="https://github.com/user-attachments/assets/21233704-ab2c-44b6-84b8-97be641e0be3" alt="Elastic5" width="400px">
+<img width="780" alt="Screenshot 2025-03-27 at 16 34 30" src="https://github.com/user-attachments/assets/ca407e58-b196-4d1d-b4c8-b9af1c08e13c" />
 
 - **2.4:** You can now navigate back to the menu and select **Canvas** under **Other tools** and select **[eCommerce] Revenue Tracking**
-
-- <img src="https://github.com/user-attachments/assets/f9c75348-6a6b-4c2d-874d-4a55331a1b8f" alt="Elastic5" width="400px">
+  
+- <img width="229" alt="Screenshot 2025-03-27 at 16 34 40" src="https://github.com/user-attachments/assets/a375de98-f744-429f-ae4e-a61b06f8efa0" alt="Elastic5" width="400px">
 
 - **2.6:** You can also have a look at the menu and select **Graphs**  and select **Kibana Sample Data - eCommerce** 
 
@@ -111,7 +111,7 @@ In this lab, we will not only cover the basics of setting up Elastic Cloud but a
       }
     }
     ```
-  - **Example query 2 (To be done later in Colab):** This simple query gets the text input and does  a search in the database (it returns the results with the title and videoDifficulty):
+  - **Example query 2 (To be done later in Colab):** This simple query gets the text input and searches the database (it returns the results with the title and videoDifficulty):
   - ```bash
     response = client.search(index="trending_videos_youtube_elastic_data", q="Pourquoi")
     # Process search results
@@ -124,8 +124,8 @@ In this lab, we will not only cover the basics of setting up Elastic Cloud but a
 - In this section, we will perform autocomplete, by querying the dataset we created before. 
 - **5.1** To do so, you will first need to generate an API key to have access to the database from a Python file. You can navigate to **Overview** and click on **New** (see screenshot) 
 
-- <img src="https://github.com/user-attachments/assets/c6b00794-50e0-47cf-9009-e051c1231d46" alt="Elastic5" width="400px">
-- <img src="https://github.com/user-attachments/assets/97ee57e1-61ff-49b7-b9cc-388eb8cfdece" alt="Elastic5" width="400px">
+- <img width="814" alt="Screenshot 2025-03-27 at 16 37 12" src="https://github.com/user-attachments/assets/40ba15a4-649a-4e52-be51-cc2f097b0946" />
+- <img width="813" alt="Screenshot 2025-03-27 at 16 37 25" src="https://github.com/user-attachments/assets/ae03b6bd-205a-40c3-86d8-527df7e0a458" />
 
 - **5.2** You can name the key, i.e: connexion_key and click create API key, then copy the API key (all of it)
 - ```bash
