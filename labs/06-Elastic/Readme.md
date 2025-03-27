@@ -38,8 +38,8 @@ In this lab, we will not only cover the basics of setting up Elastic Cloud but a
 - **1.1:** Go to [elastic](https://www.elastic.co/elasticsearch) and **start free trial** (2 week account - no credit card required). Login with Google using the same Google account you use for Google Cloud and answer the questions. Choose as **use case** the most left option **Elasticsearch** (not elastic for observability or for security). After the two 2 weeks, you can add one more free trial week.
 - **1.2:** Create a deployment to use the service. Save your **username** and **password** as we will be using it later on.
 
-<img width="928" alt="Screenshot 2025-03-27 at 16 31 08" src="https://github.com/user-attachments/assets/20945d30-b1c5-422c-b575-1d565a5fe9a2" />
-<img width="835" alt="Screenshot 2025-03-27 at 16 31 33" src="https://github.com/user-attachments/assets/82e09e7f-4292-4486-b16e-513efa4ebb50" />
+- <img height="100%" width="400px" src="assets/06-1.png">
+- <img height="100%" width="400px" src="assets/06-2.png">
 
 ---------------
 **Step 2: Exploring Elastic Cloud and Kibana**
@@ -47,16 +47,16 @@ In this lab, we will not only cover the basics of setting up Elastic Cloud but a
 - **2.2:** You should be now on the **Overview** page under Elasticsearch. Click on **Sample data**. Open **Other sample data sets** and choose the "Sample eCommerce orders" dataset by clicking on **Add data**.
 -  then on **Start Exploring**. Finally, under **Data visualization** please click on **Dashboards**.
 
-<img width="777" alt="Screenshot 2025-03-27 at 16 32 54" src="https://github.com/user-attachments/assets/a6d3f917-63f1-459e-9f5f-077cdfed8032" />
-<img width="775" alt="Screenshot 2025-03-27 at 16 33 09" src="https://github.com/user-attachments/assets/5066236e-c9f4-46a0-932c-5009b9197f96" />
+- <img height="100%" width="400px" src="assets/06-3.png">
+- <img height="100%" width="400px" src="assets/06-4.png">
 
 - **2.3:** If you go now to Dashboards under Kibana, you will see that a dataset is added called **[eCommerce] Revenue Dashboard**. Click on it. This will open a Dashboard connected to a database with ecommerce information such as sales, revenue, items and much more! Have a look and play around with the Dashboard. Navigate to the plot called **breakdown by category**, select **womens's clothing**, click on the three small dots on the side and click on **Filter for** to filter.
 
-<img width="780" alt="Screenshot 2025-03-27 at 16 34 30" src="https://github.com/user-attachments/assets/ca407e58-b196-4d1d-b4c8-b9af1c08e13c" />
+- <img height="100%" width="400px" src="assets/06-5.png">
 
 - **2.4:** You can now navigate back to the menu and select **Canvas** under **Other tools** and select **[eCommerce] Revenue Tracking**
   
-- <img width="229" alt="Screenshot 2025-03-27 at 16 34 40" src="https://github.com/user-attachments/assets/a375de98-f744-429f-ae4e-a61b06f8efa0" alt="Elastic5" width="400px">
+- <img height="100%" width="400px" src="assets/06-6.png">
 
 - **2.6:** You can also have a look at the menu and select **Graphs**  and select **Kibana Sample Data - eCommerce** 
 
@@ -65,14 +65,14 @@ In this lab, we will not only cover the basics of setting up Elastic Cloud but a
 
 
 - **3.1:** You can navigate to the home page (Overview) and click on **Upload a file**.
-- <img src="https://github.com/user-attachments/assets/694c3e54-af29-4f03-a1f6-e7b90a53716d" alt="Elastic5" width="400px">
+- <img height="100%" width="400px" src="assets/06-7.png">
 - **3.2:**  You can import the file present in the Github, named: **elastic_data_youtube_videos.csv** and drag and drop it inside.
 - **NOTICE:** please make sure to be connected to your account, if you are connected as **Guest User** your import button will not be activated (you can check this on the top right corner)
 - **3.3:** Click **import** and add the index name: **trending_videos_youtube_elastic_data**, which will create an index for your data. Once completed, click on **View index in Discover** 
-- <img height="100%" width="300px" src="ReadmeImg/view.png">
+- <img height="100%" width="400px" src="assets/06-8.png">
 - **3.4:** You can go back to the menu and in **Analytics** click on **Dashboard** and click on **Create a dashboard** and **Create a visualization**
 - **3.5:** Create a nice Dashboard for the data, as a starting point, you can select **Bar** and select Like and Category ID and click on save to add it to your Dashboard. 
-- <img height="100%" width="300px" src="ReadmeImg/dashboard2.png">
+- <img height="100%" width="400px" src="assets/06-9.png">
 - **3.6**: Add a few graphs to create your Dashboard. Spend 10-15 minutes designing a Dashboard and we will select the best to present in the board. 
 
 
@@ -82,12 +82,12 @@ In this lab, we will not only cover the basics of setting up Elastic Cloud but a
 
 - **4.1:** You can take a look at the readme.md file found [here](./ElasticSearch/elastic_search.md) to execute queries to Elastic Search
 - **4.2:** To do so, go to the left menu and select Dev tools
-- <img height="100%" width="300px" src="ReadmeImg/search_1.png">
+- <img height="100%" width="400px" src="assets/06-10.png">
 - **4.3:** In the console, copy and paste the following query. Click on the green button to execute the query.
   ```
   GET kibana_sample_data_ecommerce/_search
   ```
-- <img height="100%" width="300px" src="ReadmeImg/search_2.png">
+- <img height="100%" width="400px" src="assets/06-11.png">
 - **NOTE** If you are not able to query, you can try to open [this](https://demo.elastic.co/app/dev_tools#/console) in a new tab and execute the queries from here
 - **4.4:** Follow the tutorial. 
 - **4.5:** You can also query the database we created before:
@@ -124,8 +124,8 @@ In this lab, we will not only cover the basics of setting up Elastic Cloud but a
 - In this section, we will perform autocomplete, by querying the dataset we created before. 
 - **5.1** To do so, you will first need to generate an API key to have access to the database from a Python file. You can navigate to **Overview** and click on **New** (see screenshot) 
 
-- <img width="814" alt="Screenshot 2025-03-27 at 16 37 12" src="https://github.com/user-attachments/assets/40ba15a4-649a-4e52-be51-cc2f097b0946" />
-- <img width="813" alt="Screenshot 2025-03-27 at 16 37 25" src="https://github.com/user-attachments/assets/ae03b6bd-205a-40c3-86d8-527df7e0a458" />
+- <img height="100%" width="400px" src="assets/06-12.png">
+- <img height="100%" width="400px" src="assets/06-13.png">
 
 - **5.2** You can name the key, i.e: connexion_key and click create API key, then copy the API key (all of it)
 - ```bash
