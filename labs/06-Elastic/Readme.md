@@ -37,9 +37,10 @@ In this lab, we will not only cover the basics of setting up Elastic Cloud but a
 **Step 1 Elastic Search setup**
 - **1.1:** Go to [elastic](https://www.elastic.co/elasticsearch) and **start free trial** (2 week account - no credit card required). Login with Google using the same Google account you use for Google Cloud and answer the questions. Choose as **use case** the most left option **Elasticsearch** (not elastic for observability or for security). After the two 2 weeks, you can add one more free trial week.
 - **1.2:** Create a deployment to use the service. Save your **username** and **password** as we will be using it later on.
+  
+<img width="928" alt="Screenshot 2025-03-27 at 16 31 08" src="https://github.com/user-attachments/assets/20945d30-b1c5-422c-b575-1d565a5fe9a2" />
+<img width="835" alt="Screenshot 2025-03-27 at 16 31 33" src="https://github.com/user-attachments/assets/82e09e7f-4292-4486-b16e-513efa4ebb50" />
 
-- <img src="https://github.com/user-attachments/assets/28e6a54e-c697-4487-99e4-815e8c33d744" alt="Elastic1" width="400px">
-- <img src="https://github.com/user-attachments/assets/f7c4b93a-ce74-46af-9eb5-df6076ad1569" alt="Elastic1" width="400px">
 ---------------
 **Step 2: Exploring Elastic Cloud and Kibana**
 - **2.1:** Once you have created your deployment, click on it to access it!
