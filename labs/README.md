@@ -30,12 +30,12 @@ Your Cloud and Advanced Analytics TAs
 1. [Intro to GCP / Create a simple web app](https://github.com/michalis0/Cloud-and-Advanced-Analytics/tree/main/labs/01-Intro-to-GCP)
 2. [BigQuery and SQL](02-BigQuery)
 3. [AutoML on GCP](03-AutoML)
-4. IoT + BigQuery
-5. Building a recommender system on GCP
-6. Elastic Search
-8. Big Query Embeddings
-9. Graph Analytics in Python
-10. Continuous Integration GCP
-11. GenAI studio
-13. Chatbots on GCP
+4. [IoT + BigQuery](04-IoT)
+5. [Building a recommender system on GCP](05-Recommendations)
+6. [Elastic Search](06-Elastic)
+7. Big Query Embeddings
+8. Graph Analytics in Python
+9. Continuous Integration GCP
+10. GenAI studio
+11. Chatbots on GCP
 
