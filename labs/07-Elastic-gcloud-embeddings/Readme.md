@@ -100,7 +100,7 @@ FROM VECTOR_SEARCH(
   top_k => 5, options => '{"fraction_lists_to_search": 0.01}')
 ```
 
-__Remark__: Note that for large datasets with more than 5000 rows, you can not directly apply the `VECTOR_SEARCH` on the generated table with the embeddings and you need to create a vector index. For more informaiton on this, check out the [documentation](https://cloud.google.com/bigquery/docs/vector-index-text-search-tutorial#create_a_vector_index)
+__Remark__: Note that for large datasets with more than 5000 rows, you can not directly apply the `VECTOR_SEARCH` on the generated table with the embeddings and you need to create a vector index. For more information on this, check out the [documentation](https://cloud.google.com/bigquery/docs/vector-index-text-search-tutorial#create_a_vector_index)
 ----------------
 
 
