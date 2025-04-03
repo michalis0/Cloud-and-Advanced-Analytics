@@ -58,7 +58,7 @@ __From the [documentation](https://cloud.google.com/bigquery/docs/vector-index)_
   ```
   CREATE OR REPLACE MODEL `DATASET_NAME.embedding_model`
   REMOTE WITH CONNECTION `eu.CONNECTION_ID`
-  OPTIONS (ENDPOINT = 'textembedding-gecko@003');
+  OPTIONS (ENDPOINT = 'text-embedding-005');
   ```
   **Note** in this case, the connection id is eu.VertexAI_connection_lab7
   
