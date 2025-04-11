@@ -35,7 +35,16 @@ By the end of this lab, you will be well-equipped to apply NetworkX to analyze a
   * Each node represents an anonymized facebook user that belongs to one of those ten friends lists.
   * Each edge corresponds to the friendship of two facebook users that belong to this network. In other words, two users must become friends on facebook in order for them to be connected in the particular network.
 
+
+<br>
+<br>
+<a target="_blank" href="https://colab.research.google.com/github/michalis0/Cloud-and-Advanced-Analytics/blob/main/labs/08-Graph-Analytics/nx_tutorial_text.ipynb">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Tutorial"/>
+</a>
+
 ### Answer the following questions exploring the dataset with NetworkX:
+
+
 - Visualize the dataset using networkX (consider using nx.spring_layout)
 - What’s the number of nodes? and edges?
 - What’s the average degree?
