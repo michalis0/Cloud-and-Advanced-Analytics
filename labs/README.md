@@ -33,9 +33,9 @@ Your Cloud and Advanced Analytics TAs
 4. [IoT + BigQuery](04-IoT)
 5. [Building a recommender system on GCP](05-Recommendations)
 6. [Elastic Search](06-Elastic)
-7. Data Embeddings
-8. Graph Analytics in Python
-9. Continuous Integration GCP
+7. [Data Embeddings](07-Elastic-gcloud-embeddings)
+8. [Graph Analytics in Python](08-Graph-Analytics)
+9. [Continuous Integration GCP](09-GCP)
 10. GenAI studio
 11. Chatbots on GCP
 
