@@ -36,6 +36,6 @@ Your Cloud and Advanced Analytics TAs
 7. [Data Embeddings](07-Elastic-gcloud-embeddings)
 8. [Graph Analytics in Python](08-Graph-Analytics)
 9. [Continuous Integration GCP](09-GCP)
-10. GenAI studio
-11. Chatbots on GCP
+10. [GenAI studio](10-GenAI)
+11. [Chatbots on GCP](11-Chatbot)
 

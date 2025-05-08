@@ -18,9 +18,9 @@ In this course, we will learn how to use Google Cloud to deploy dockerized appli
 3. [AutoML on GCP](https://github.com/michalis0/Cloud-and-Advanced-Analytics/tree/main/labs/03-AutoML)
 4. [IoT + BigQuery](https://github.com/michalis0/Cloud-and-Advanced-Analytics/tree/main/labs/04-IoT)
 5. [Building a recommender system on GCP](https://github.com/michalis0/Cloud-and-Advanced-Analytics/tree/main/labs/05-Recommendations)
-6. Elastic Search
-8. Big Query Embeddings
-9. Graph Analytics in Python
-10. Continuous Integration GCP
-11. GenAI studio
-13. Chatbots on GCP
+6. [Elastic Search](labs/06-Elastic/README.md)
+7. [Big Query Embeddings](labs\07-Elastic-gcloud-embeddings\Readme.md)
+8. [Graph Analytics in Python](labs\08-Graph-Analytics\readme.md)
+9. [Continuous Integration GCP](labs\09-GCP\Readme.md)
+10. [GenAI studio](labs\10-GenAI\README.md)
+11. [Chatbots on GCP](labs\11-Chatbot\README.md)
