@@ -65,9 +65,9 @@ If you need help, consult the [Google Cloud Documentation](https://cloud.google.
 - [The General Pipeline:](#the-general-pipeline)
 - [Table of contents for exercises:](#table-of-contents-for-exercises)
   - [Exercise 1: TMDB API Key](#exercise-1-tmdb-api-key)
-  - [**Exercise 2: Google Cloud Function with API Key**](#exercise-2-google-cloud-function-with-api-key)
-  - [**Exercise 3 Streamlit App and Deploying on Google Cloud Run**](#exercise-3-streamlit-app-and-deploying-on-google-cloud-run)
-  - [**Additional Links**](#additional-links)
+  - [Exercise 2: Google Cloud Function with API Key](#exercise-2-google-cloud-function-with-api-key)
+  - [Exercise 3 Streamlit App and Deploying on Google Cloud Run](#exercise-3-streamlit-app-and-deploying-on-google-cloud-run)
+  - [Additional Links](#additional-links)
       - [Difference between Cloud Run and Cloud Functions:](#difference-between-cloud-run-and-cloud-functions)
 -----------------------------------
 ### Exercise 1: TMDB API Key
@@ -77,9 +77,9 @@ We will be using the TMDB (The Movie DataBase) website to fetch information abou
 
 **Main Steps:** 
 1. Go to the profile and get the API Read Access Token using this [link](https://www.themoviedb.org/settings/api/request)
-2. Select Developper - Accept the terms and conditions - Complete the required information (for URL: educational-course). 
-3. You should now be able to see your API Read Access Token (copy your API Read Access Token for later use)
-4. Now we can go back to the [API page](https://developer.themoviedb.org/reference/account-rated-movies) and you can play around to test the different requests i.e: GET / PUT / POST requests. An example could be the following: https://developer.themoviedb.org/reference/genre-movie-list - clicking on **Try it** you should receive the response from the request. Do not forget to enter your API Read Access Token in the "Credentials" section.  
+2. Select Developer - Accept the terms and conditions - Complete the required information (for URL: educational-course). 
+3. You should now be able to see your **API Read Access Token** (copy your API Read Access Token for later use from this [link](https://www.themoviedb.org/settings/api))
+4. Now we can go to the [TMDB API reference page](https://developer.themoviedb.org/reference/account-rated-movies) and you can play around with it to test the different requests i.e: GET / PUT / POST requests. An example could be the following: https://developer.themoviedb.org/reference/genre-movie-list - clicking on **Try it** you should receive the response from the request. Do not forget to enter your [API Read Access Token](https://www.themoviedb.org/settings/api).  
 
 **Hints (in case you get stuck):**
 
@@ -94,10 +94,13 @@ We will be using the TMDB (The Movie DataBase) website to fetch information abou
 
 This exercise aims to familiarize yourself with Google Cloud Functions. You'll create a cloud function to retrieve different movies and specific movie posters using the API.
 
-**Then General Steps are as follows:**
+A Google Cloud Function is a serverless compute service that lets you run code snippets in the cloud without managing the underlying infrastructure or servers.
 
-- **Step 1:** Check to see that the API key works correctly.
-    - Download the notebook [here](https://github.com/michalis0/Cloud-and-Advanced-Analytics/blob/main/labs/01-Intro-to-GCP/Lab_1_Notebook.ipynb) and open it on [Google Colab](https://colab.research.google.com/) (Upload - browse - select the file and upload it).
+**The general steps are as follows and should be followed in parallel between the Google Colab notebook and GitHub:**
+
+- **Step 1:** Check to see that the API key works correctly. Use the API key this time, not the API Read Access Token.
+    - Open the notebook in your own environment using this [link](https://colab.research.google.com/github/michalis0/Cloud-and-Advanced-Analytics/blob/main/labs/01-Intro-to-GCP/Lab_1_Notebook.ipynb) and save it to your Google Drive (File -> Save a copy in Drive)
+    - (Alternatively, download the notebook [here](https://github.com/michalis0/Cloud-and-Advanced-Analytics/blob/main/labs/01-Intro-to-GCP/Lab_1_Notebook.ipynb) and open it on [Google Colab](https://colab.research.google.com/). (Upload -> Browse -> Select the file and upload it))
  
 - **Step 2.** Write and test a cloud Function in Python 
     - In the Notebook, there are two functions: the first one allows to fetch the list of movies and the second one to fetch the poster of a specific movie ID. We will deploy them on Google Cloud Functions
@@ -106,19 +109,23 @@ This exercise aims to familiarize yourself with Google Cloud Functions. You'll c
 - **Step 3.** Deploy the two functions on Google Cloud Functions
     - 3.1. Go on [Google Cloud](https://cloud.google.com/)
     - 3.2. From the side menu, go to _Cloud Run Functions_, or search for _Cloud Run Functions_ in the Search bar at the top.
-    - 3.3. Select **WRITE FUNCTION** 
-    - 3.4. On the setup screen, give a name to the function: **function-1-get-movie-list**, select Region - Zurich, select Allow unauthenticated invocations and choose **Python 3.12** as the Runtime
-    - 3.5. Click on **CREATE** and enable the required APIs
+    - 3.3. Select **"Write a function"** 
+    - 3.4. On the setup screen
+        - Function (service) name: **function-1-get-movie-list**
+        - Region: **Zurich**
+        - Runtime: **Python 3.13** 
+        - Allow unauthenticated invocations
+    - 3.5. Click on **Create** and **Enable** the required APIs
 
 - **Step 4.**
 
-    - 4.1. **Copy** the function 1 code from the notebook and **paste** it in Google Cloud Functions - **Don't forget to paster your API key inside**
+    - 4.1. **Copy** the function 1 code from the notebook and **paste** it in Google Cloud Functions - **Don't forget to paste your API key inside**
     - 4.2. **Change the entry point**: From **hello_http** to **get_movie_titles**
     - 4.3. **Copy** the libraries and **paste** them in the **requirements.txt**
     - ```bash
       functions-framework==3.*
-      requests==2.31.0
-    - 4.4. Now select **SAVE AND REDEPLOY**
+      requests==2.32.*
+    - 4.4. Now select **Save and redeploy**
     - 4.5. Wait about two minutes, then your function should be deployed: click on the URL, you should be able to see a list of movie titles !
 
 If ever there are any issues, verify the **LOGS** tab for potential errors.
@@ -129,15 +136,21 @@ If ever there are any issues, verify the **LOGS** tab for potential errors.
  
 - **Step 6.** Repeat the same process as before but for function 2 (we recall the steps below)
     - 6.1. **Copy** the function 2 code with your API key (code under Step 3-4. Deploy the two functions on Google Cloud Functions)
-    - 6.2. Go back to **Cloud Run Functions** and click **WRITE FUNCTION**
-    - 6.3. Call it **function-2-get-movie-details** - select Zurich - Select Allow unauthenticated invocations and choose **Python 3.12** as the Runtime then select **CREATE**
-    - 6.4. **Paste** the function 2 in the code editor on Google Cloud, and change the entry point to **get_movie_details**
-    - 6.5. **Copy** the libraries and **paste** them in the **requirements.txt**
+    - 6.2. Go back to **Cloud Run Functions** and click **Write a function**
+    - 6.3. Define the settings:
+        - Function (service) name: **function-2-get-movie-details**
+        - Region: **Zurich**
+        - Runtime: **Python 3.13** 
+        - Allow unauthenticated invocations
+    - 6.4. Click on **Create** and **Enable** the required APIs
+    - 6.5. **Paste** the function 2 in the code editor on Google Cloud, and change the entry point to **get_movie_details**
+    - 6.6. **Copy** the libraries and **paste** them in the **requirements.txt**
     - ```bash
       functions-framework==3.*
-      requests==2.31.0
-    - 6.6. Click **SAVE AND REDEPLOY** and wait another 2 minutes and copy the URL. **NOTE** If you open the URL directly on the browser it will not work, because the functions expects a parameter / placeholder {movieID} for a specific movie ID. So if you open directly the link, you will get an **Internal server error**, which is expected. 
-    - 6.7. Go back to the Notebook, paste your URL and execute the cell.
+      requests==2.32.*
+    - 6.7. Click **Save and redeploy** and wait another 2 minutes and copy the URL. 
+      - **NOTE** If you open the URL directly on the browser it will not work, because the functions expects a parameter / placeholder {movieID} for a specific movie ID. So if you open directly the link, you will get an **Internal server error**, which is expected. 
+    - 6.8. Go back to the Notebook, paste your URLs and execute the cells.
 
  - **Step 7.** Save the two URLs for later !
 
@@ -164,7 +177,10 @@ If ever there are any issues, verify the **LOGS** tab for potential errors.
 ---
 
 **Step 1:** Download the Skeleton code from [github](https://github.com/michalis0/Cloud-and-Advanced-Analytics/tree/main/labs/01-Intro-to-GCP/streamlit_app) and try out your functions! 
-- 1.0. You can find attached a [folder](https://github.com/michalis0/Cloud-and-Advanced-Analytics/tree/main/labs/01-Intro-to-GCP/streamlit_app) called **streamlit_app**, this folder contains three files: app.py, requirements.txt and Dockerfile, please **Download** that folder and open it within your code editor (i.e. Visual Studio Code)
+- 1.0. You can find attached a [folder](https://github.com/michalis0/Cloud-and-Advanced-Analytics/tree/main/labs/01-Intro-to-GCP/streamlit_app) called **streamlit_app**. Download that folder and open it within your code editor (i.e. Visual Studio Code). This folder contains three files: 
+  - app.py
+  - requirements.txt
+  - Dockerfile
 - 1.1. Start by adding your two Google Cloud functions URL in the `app.py` file.
 - 1.2. Download streamlit:
     - ```bash
@@ -180,39 +196,40 @@ If ever there are any issues, verify the **LOGS** tab for potential errors.
 **Step 2:** Dockerize the Web Application and deploy it on Google Cloud Run: 
 
 
-- 2.1. Create a [new Github repository](https://github.com/new) **google_cloud_deploy_streamlit**, keep the code private, add a readme.md file and create the repository. Then upload the streamlit_app folder and push your code
-- 2.2. On your Github Account, go to Settings - Developer Settings - [Personal Access Token](https://github.com/settings/tokens) - Tokens (classic): **Generate new token** and select:
+- 2.1. Create a [new GitHub repository](https://github.com/new) **google_cloud_deploy_streamlit**, keep the code private, add a readme.md file and create the repository. Then upload the streamlit_app folder and push your code
+- 2.2. On your GitHub Account - Profile - Settings - Developer settings - [Personal Access Token](https://github.com/settings/tokens) - Tokens (classic): **Generate new token (classic)** and select:
     - **write:packages**
     - **delete:packages**
     - **user**
     - **delete_repo**
 - copy your token to keep it somewhere safe
-- 2.3. Go to [Google Cloud](https://console.cloud.google.com/) and activate cloud shell
-- 2.3. Clone the Github repository from github to have access to the code 
+- 2.3. Go to [Google Cloud](https://console.cloud.google.com/) and activate cloud shell (Cloud Shell Editor)
+- 2.4. Clone the GitHub repository to have access to the code 
 - ```bash
   git clone https://github.com/YOUR_USERNAME/google_cloud_deploy_streamlit
-- 2.4. You will have to insert your **github username** and the **Personal Access Token** as password
+- 2.5. You will have to insert your **github username** and the **Personal Access Token** as password
 - ```bash
   cd google_cloud_deploy_streamlit/
   cd streamlit_app/
-- 2.5. Now you can build your docker, to do to copy your **PROJECT_ID** (can be found [here](https://console.cloud.google.com/))
+- 2.6 Enable the Artifact Registry API in the Google Cloud project (Only is required the first time for this course)
 - ```bash
-   docker build -t eu.gcr.io/PROJECT_ID/my_streamlit_app:latest .
+    gcloud services enable artifactregistry.googleapis.com
+- 2.7 Create an Artifact Registry repository (Only required once, or when creating a new repository)
+- ```bash
+  gcloud artifacts repositories create streamlit-repo --repository-format=docker --location=europe-west6 --description="Docker repository for Streamlit images"
+- 2.8. Now you can send the source code to Cloud Build, build the Docker image, and push it to Artifact Registry. (To copy your **PROJECT_ID** (can be found [here](https://console.cloud.google.com/)))
+- ```bash
+   gcloud builds submit --tag europe-west6-docker.pkg.dev/PROJECT_ID/streamlit-repo/my_streamlit_app:latest .
 - This should take about 1-2 minutes to execute
-- ```bash
-  gcloud auth configure-docker
-- Do you want to continue, select: Y
-- ```bash
-   docker push eu.gcr.io/PROJECT_ID/my_streamlit_app:latest
--  2.7. Now you can go to **Container Registery** (search on your search bar: container registery)
--  Select your repository: **my_streamlit_app_new**
--  Select **DEPLOY** -> **Deploy to Cloud Run**
--  Select your container image URL if it is not already selected
--  Select: Zurich as the region, add **Allow unauthenticated invocations** and click **CREATE**
-- Wait 1-2 minutes and Done ! You should have access to an URL allowing you to access your website from the Cloud ! Click on the URL to show your app deployed on the Web. 
+- 2.9. Now you can go to **Cloud Run**, and click on **Deploy a container**.
+  - In **Container image URL**, select your image: **my_streamlit_app**
+  - Select the right region (europe-west6) 
+  - Add **Allow unauthenticated invocations**
+  - Click **Create**
+  - Wait 1-2 minutes and Done! You should have access to an URL allowing you to access your website from the Cloud ! Click on the URL to show your app deployed on the Web. 
 
 
-**Step by Step Guide: In case you get stuck:**
+**Step-by-Step Guide: In case you get stuck:**
 - 2.2 <img width="600" alt="Screenshot 2024-02-22 at 10 06 43" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/3875387e-9d47-46af-ac6b-6c1ae2df707a">
 
 - <img width="434" alt="Capture d'écran 2024-02-19 182001" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/37b207bc-1fff-46e7-a7bd-b4e9c4282a3e">
