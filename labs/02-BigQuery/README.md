@@ -47,9 +47,10 @@ In this exercise we will look on how to **create a bucket in Cloud Storage** and
 * **1.1** Please go to your [Google Cloud Console](https://console.cloud.google.com)
 * **1.2** In the Navigation panel, please click on **"Cloud Storage"** and on **"Buckets"** (you can also search for "Buckets" in the search bar)
 * **1.3** Click on the **"Create"** button
-* **1.4** Enter a name for the bucket, i.e: **"caa-bucket"**, change the Location type to **region** and select **europe-west6 (Zurich)** and keep other default parameters. Now you can click **"CREATE"**
-* **1.5** You can now go to the folder of this project and download the [file](data/movies.csv) **"movies.csv"** dataset, we will use this for our cloud storage ! (**Hint:** To make it easier for future labs, you can clone the project on a private repository and pull each week. In this specific case, you can also download directly the file on Github - Go on the file and click on Download raw file <img width="20" alt="Download" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/e152ee70-4b27-4ce7-843d-d3c51e00778d"/>)
-* **1.6** Now you can go back to your **bucket** select **"UPLOAD FILES"** and upload the given CSV file (movies.csv) - you should be able to see it in your uploaded files)
+* **1.4** Enforce public access prevention on this bucket 
+* **1.5** Enter a name for the bucket, i.e: **"caa-bucket"**, change the Location type to **region** and select **europe-west6 (Zurich)** and keep other default parameters. Now you can click **"CREATE"**
+* **1.6** You can now go to the folder of this lab and download the [file](data/movies.csv) **"movies.csv"** dataset, we will use this for our cloud storage ! (**Hint:** To make it easier for future labs, you can clone the project on a private repository and pull each week. In this specific case, you can also download directly the file on Github - Go on the file and click on Download raw file <img width="20" alt="Download" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/e152ee70-4b27-4ce7-843d-d3c51e00778d"/>)
+* **1.7** Now you can go back to your **bucket** select **Upload files** from the tab **Upload**, and upload the given CSV file (movies.csv). You should be able to see it in your bucket files.
 
 ----
 
@@ -57,7 +58,7 @@ In this exercise we will look on how to **create a bucket in Cloud Storage** and
 - You imported your first file on Google Cloud Storage
 - This facilitates access and storage of data on the cloud - in particular large files
 - It is much more effective to store csv dataset files in Cloud Storage compared to Github.
-- Github has a maximum individual file size of 100MB while google cloud storage accepts files up to 5TB.
+- GitHub has a maximum individual file size of 100MB while google cloud storage accepts files up to 5TB.
 - Google Cloud Storage could also be used as backup for files. 
 
 **A few words on movies.csv:** This dataset contains three columns: movieId, title and genres and has a total of 27'278 rows
@@ -80,10 +81,10 @@ In this exercise we will look on how to **create a bucket in Cloud Storage** and
   - Authenticate and authorize specific users to access and manipulate the files
 
 To generate authentification keys, please following the steps:
-- **2.1:** Navigate to IAM & Admin and click on **"Service accounts"** (you can also search in the search bar for **Service account**)
-- **2.2:** **"Create Service Account"** and enter a name e.g., **movie_dataset_csv_bucket**. You now need to grant this service account access to the bucket files. To do so, click on **Select a role** and select **Storage Admin** and click **CREATE**
-- **2.3** Once created, click on the **created service account** should look like something like *movie-dataset-csv-bucket@your_project_name.iam.gserviceaccount.com*, click on the three dots <img width="10"   alt="Admin" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/74805f93-ff4c-4b08-a946-a6e89efb4f7e"> select **manage keys**.
-- **2.4** Click on **ADD KEY** - **Create new key** - **key type: JSON** and click on **CREATE**
+- **2.1:** Navigate to IAM & Admin and click on **"Service Accounts"** (you can also search in the search bar for **Service account**)
+- **2.2:** **"Create Service Account"** and enter a name e.g., **movie_dataset_csv_bucket**. In the permissions step, you need to grant this service account access to the bucket files. To do so, click on select the role **Storage Admin** and click **Done**.
+- **2.3** Once created, click on the **created service account** should look like something like *movie-dataset-csv-bucket@your_project_name.iam.gserviceaccount.com*, click on the three dots <img width="10"   alt="Admin" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/74805f93-ff4c-4b08-a946-a6e89efb4f7e"> select **Manage keys**.
+- **2.4** Click on **Add Key** - **Create new key** - **key type: JSON** and click on **Create**.
 
 **Hints (in case you get stuck)**
 
@@ -97,7 +98,7 @@ To generate authentification keys, please following the steps:
 -----------------------------------
 
 
-**Step 3: Python code and connection: (Optional / Advanced)**
+**Step 3: Python code and connection:**
 
 **!Disclaimer!** The keys that you have generated and tested before can be used in a Streamlit website to import the Google Cloud Storage file ! If you would like to execute the code below and create the streamlit app, please make sure to have the different libraries installed - if you have any questions please refer the [python documentation](https://packaging.python.org/en/latest/tutorials/installing-packages/) or to [stack overflow](https://stackoverflow.com/).
 
@@ -113,7 +114,7 @@ To generate authentification keys, please following the steps:
 - ```bash
   streamlit run streamlit_google_cloud_storage.py
 - Now you can **upload the JSON keys** inside the project and change the following paths:
-    - Copy the path (RELATIVE Path) and paste it into the **"big-scale-analytics-YOUR_PATH.json"**, please also put the **bucket_name** and the **file_name**
+    - Copy the path (RELATIVE Path) of **YOUR_KEY.json**, please also put the **bucket_name** and the **file_name**
 - Run the command line:
 - ```bash
   streamlit run streamlit_google_cloud_storage.py
@@ -154,20 +155,19 @@ In this section, we will essentially focus on Big Query ! To do so, you can firs
 
 
 Now you can follow these steps:
-- **1.1** On the left pannel, select **Big Query** or type **Big Query** in the search bar
-- **1.2** We are now going to create our first **table** Select the **Add** Button
-- **1.3** Click on **Local File**
-- **1.4** **BROWSE** file and select **Players.csv**
-- **1.5** Click on **Dataset** and **CREATE A NEW DATASET**. In the **Dataset ID** add **world_cup** and select **Region**, put Zurich (or europe-west6) and click **CREATE DATASET**
-- **1.6** Under **Table** insert the table name, in our case **players** (lowercase!) and select for the **Schema** -> **Auto detect** and click **CREATE TABLE**
-- **1.7** You just created your first table ! you can click on the table and then on the plus symbol (<img width="20" alt="Screenshot 2024-02-15 at 11 51 24" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/9566de9f-7d28-4a33-87d6-9cb58bf82db5"/>). This opens an editor window, on which you can do SQL queries. Copy and paste the following SQL query to get all the teams from the table players in the database world_cup
+- **1.1** On the left panel, select **Big Query** or type **Big Query** in the search bar
+- **1.2** We are now going to create our first **table**. In the main page, in the tab **Add your own data**, upload a local file by selecting the **Add data** button.
+- **1.3** In the the **Select file** field, click **Browse** select your file **Players.csv**
+- **1.4** Click on **Dataset** and **CREATE A NEW DATASET**. In the **Dataset ID** add **world_cup** and select **europe-west6**, then click **Create dataset**.
+- **1.5** Under **Table** insert the table name, in our case **players** (lowercase!) and select for the **Schema** -> **Auto detect** and click **Create table**
+- **1.6** You just created your first table ! You can click on the table and then on the plus symbol (<img width="20" alt="Screenshot 2024-02-15 at 11 51 24" src="https://github.com/michalis0/Cloud-and-Advanced-Analytics/assets/43532600/9566de9f-7d28-4a33-87d6-9cb58bf82db5"/>). This opens an editor window, on which you can do SQL queries. Copy and paste the following SQL query to get all the teams from the table players in the database world_cup
 - ```
     SELECT team FROM `YOUR_PROJECT_ID.world_cup.players` 
 
 - **1.8** On the left menu, you can select the three dots next to **world_cup** and select **Create table**
-- **1.9** As before, select **Create table from** and select **Upload**, then import **Browse** - select file **Teams.csv**,call the table **teams** (lowercase), select **Schema** -> **Auto detect** and click **CREATE TABLE**
-- **1.10** Finally, do the same for the last table. Select **Create table from** and select **Upload**, then import **Browse** - select file **PlayersExt.csv**,call the table **players_and_teams** (lowercase), select **Schema** -> **Auto detect** and click **CREATE TABLE**
-- **1.10** Done ! You just created your first Big Query Database
+- **1.9** As before, select **Create table from** and select **Upload**, then import **Browse** - select file **Teams.csv**,call the table **teams** (lowercase), select **Schema** -> **Auto detect** and click **Create table**
+- **1.10** Finally, do the same for the last table. Select **Create table from** and select **Upload**, then import **Browse** - select file **PlayersExt.csv**,call the table **players_and_teams** (lowercase), select **Schema** -> **Auto detect** and click **Create table**
+- **1.11** Done ! You just created your first Big Query Database
 
 * **Hints (in case you get stuck)**
 
@@ -199,7 +199,7 @@ Therefore, we will follow this suggestion using the following steps:
 - Create a new bucket, i.e: **big_rating_dataset**
 - Select **Region** - **Zurich** and click on **CREATE**
 - **Click** on upload files and upload the dataset and wait for the upload to complete
-- **Go back to Big Query** and create a new table, but this time instead of selecting **Upload** select **Google Cloud Storage** and **BROWSE** and select the CSV file in your bucket
+- **Go back to Big Query** and create a new table, but this time instead of selecting **Upload** select **Google Cloud Storage** and **Browse** and select the CSV file in your bucket
 
 **Hints (in case you get stuck)**
 

@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 
 # ----------------------------------------#
 # Set the path to your service account key file
-key_path = './' #'./big-scale-analytics-......json'
+key_path = './' #'./project_id-xxxxxx.json (key)'
 def load_data():
     try:
         bucket_name = 'YOUR_BUCKET_NAME' #'big_scale_analytics_bucket'
