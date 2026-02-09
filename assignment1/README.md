@@ -32,26 +32,26 @@ Here’s a preview of how the movies and the rating tables look like respectivel
 | **4**  | 1      | 50      | 3.5    | 1112484580 |
 
 
-### Functionalities to implement:
+### Features to implement:
 
-- **Autocomplete (in SQL)** to help you explore the titles based on what you type.
-- **Filter by language (SQL).**
-- **Filter by movie genre (SQL).**
-- **Filter by average rating of a movie (SQL)** - e.g., getting the movies with an average rating higher than 4.0. This requires doing a group by / average aggregation and also a join in SQL.
-- **Filter by release year (e.g., after 2019).**
+- **Title autocomplete (SQL):** assist users in exploring movie titles as they type.
+- **Language filter (SQL):** allow filtering movies by language.
+- **Genre filter (SQL):** allow filtering movies by genre.
+- **Average rating filter (SQL):** retrieve movies with an average rating above a given threshold (e.g. > 4.0), using SQL JOIN, GROUP BY, and aggregation.
+- **Release year filter:** filter movies by release year (e.g. released after 2019).
 
-Show the results of the user query. If a movie is selected, show more details. Use the **OpenMovieDatabase** or **The Movie Database** to show the cover of the movie selected, as well as more details (e.g., overview of the movie, cast of the movie, etc.). Your database should be **BigQuery**. Your UI will be implemented in **Streamlit**.
+Render the results of the user query. When a movie is selected, show additional details. Use the **OpenMovieDatabase** or **The Movie Database** to display the movie poster and enriched information (e.g., overview of the movie, cast of the movie, etc.). Your database must be **BigQuery**, and the user interface (UI) must be implemented using **Streamlit**.
 
-Typically, we would break our application into 3 parts: **database**, **middleware (the logic)**, and **the UI**. Just to simplify things for this assignment, we will implement it in **2 parts**: the **database** and the **logic+UI**, so the SQL queries will be incorporated into the UI.
+Typically, an application is divided into three layers: **database**, **middleware (business logic)**, and **the UI**. To simplify things for this assignment, we will implement only **2 layers**: the **database** and a combined **logic + UI** layer, so the SQL queries will be incorporated into the UI layer.
 
-The **Streamlit visual application will be dockerized and deployed** to run on the Google Cloud. We will test the endpoints and the code quality.
+**The Streamlit application will be dockerized and deployed** on the Google Cloud. We will test the endpoints and the code quality.
 
 ### Expected components:
-- **BigQuery**
-- **SQL**
-- **Docker**
-- **Google Cloud**
-- **Streamlit** for the user interface
+- **BigQuery** (database)
+- **SQL** (query language)
+- **Docker** (containerization)
+- **Google Cloud Platform** (deployment)
+- **Streamlit** (user interface)
 
 ### Deliverables
 A zip of your git repository with your code (**zip of GitHub**). The `README.md` should include the **Internet URL** where we can test your application.
@@ -63,7 +63,7 @@ A zip of your git repository with your code (**zip of GitHub**). The `README.md`
 - You will receive **one grade** for both Part 1 and Part 2 of the assignment, but we will give you textual feedback for Part 1.
 
 ### Example Image
-![Assignement1 - diagram](https://github.com/michalis0/Cloud-and-Advanced-Analytics/blob/main/assignment1/images/assignment1-diagram.png)
+![Assignment1 - diagram](images/assignment1-diagram.png)
 
 ### Steps to complete the assignment
 1. Download the dataset.
