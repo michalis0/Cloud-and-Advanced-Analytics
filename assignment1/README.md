@@ -1,8 +1,8 @@
 # Cloud & Advanced Analytics 2025
-## Assignment 1 (due date: March 09)
+## Assignment 1
 
 ### Goal
-You will implement a simple interface that interacts with a BigQuery cloud database. The application should run on the Google Cloud.
+You will implement a simple interface that interacts with a BigQuery cloud database. The application should run on the Google Cloud. The learning goals for the assignment is to familiarize yourself with Docker, Google Cloud, and SQL.
 
 ### Details
 In this assignment, you will implement a web application that will issue queries on a movie database. You can search titles of movies and also issue more advanced search functionalities. The advanced search functionality will allow users to specify filters to refine their search results. For instance, a user may want to find all the movies from Germany that are in the comedy genre and were released in 2019. 
