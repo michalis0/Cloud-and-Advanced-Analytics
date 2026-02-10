@@ -1,27 +1,26 @@
 # Cloud & Advanced Analytics 2025 - Assignment Part 2
 
-## Due Date: April 06
-
 ## Goal
-You will create a **movie recommendation application** that allows users to input their movie preferences and receive personalized recommendations. The application should be deployed on **Google Cloud**.
+You will create a **movie recommendation application** that allows users to input their movie preferences and receive personalized recommendations, and you will adapt your autocomplete feature to use **Elasticsearch**. The application should be deployed on **Google Cloud**.
 
 ---
 
 ## Details
 In this assignment, you will:
 - Train a **recommendation system** on the provided dataset.
-- Implement a **web application** where users can select their preferred movies and receive recommendations.
-- Develop a **search bar with autocomplete** for movie titles.
-- Display the **top-n recommended movie titles** along with their posters.
-
+- Build a **web application** with:
+  - an autocomplete search bar for movie titles using Elasticsearch,
+  - an interface allowing users to select multiple preferred movies,
+  - a recommendation view displaying the top-N movies with posters.
+  
 Users will select multiple preferred movies, and after submission, the system will recommend movies based on the preferences. The application will determine similar users in the dataset and generate recommendations accordingly.
-
+If no movie has been selected, display a global list of recommended movies based on your own defined criteria.
 ---
 
 ## Tasks
 
 1. **Data Upload to BigQuery**
-   - The datasets are from the **movielens-small dataset** (used in Week 5 recommender systems lab).
+   - The datasets are from the [**ml-small-movies dataset**](../labs/05-Recommendations/data/ml-small-movies.csv) (used in Week 5 recommender systems lab).
    - Retrieve datasets from the course's **GitHub repository**.
    - Upload **user ratings, links, and movies datasets** to BigQuery.
 
@@ -50,14 +49,14 @@ Users will select multiple preferred movies, and after submission, the system wi
 4. **Web Application Development**
    - **Backend (Flask Application)**
      - Train and store the **recommender model** in **BigQuery ML**.
-     - Implement **autocomplete** using **Elasticsearch**.
+     - Implement an **autocomplete** using **Elasticsearch**.
      - Identify **similar users** (SQL queries on BigQuery).
      - Generate **movie recommendations** based on similar users.
      - Retrieve **movie posters** from **The Movie Database API**.
 
    - **Frontend (Streamlit Application)**
      - **Movie title search bar** with **autocomplete**.
-     - Users can **select multiple movies** before requesting recommendations.
+     - A component that allows users to select **multiple movies** to receive **personalized recommendations** based on their preferences. If no movie is selected, the application displays **generic recommendations**.
      - Display **recommended movies** along with their **posters**.
 
 5. **Deployment**
@@ -78,8 +77,8 @@ Users will select multiple preferred movies, and after submission, the system wi
 ---
 
 ## Deliverables
-- A **ZIP file** containing your **GitHub repository**.
-- A **README.md** file including:
+- A **ZIP file** of your Git repository (GitHub), including a Dockerfile that allows building the image locally and displaying the executed queries and their outputs in the terminal.
+- The **README.md** file must include:
   - The **Internet URL** where we can test your application.
   - A brief explanation of the **similarity computation method** used for identifying similar users.
 
@@ -90,12 +89,12 @@ Users will select multiple preferred movies, and after submission, the system wi
   - Functional movie recommendation system.
   - Proper deployment of backend and frontend.
   - Correct implementation of **autocomplete** using **Elasticsearch**.
+  - Quality of the graphical user interface, responsiveness, and overall visual appearance.
 
 - **Code Quality (50%)**
   - Well-structured and documented code.
-  - Effective use of **BigQuery ML, SQL, and Python**.
+  - Effective use of **BigQuery ML, SQL, Elasticsearch, and Python**.
   - Proper API calls and integration between frontend and backend.
-
 - **Working URL Requirement**
   - If the application URL does **not work**, **zero points** will be awarded for the code.
   - To receive **full points**, the following must be implemented:
