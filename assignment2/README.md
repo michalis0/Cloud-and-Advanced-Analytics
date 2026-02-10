@@ -15,6 +15,7 @@ In this assignment, you will:
   
 Users will select multiple preferred movies, and after submission, the system will recommend movies based on the preferences. The application will determine similar users in the dataset and generate recommendations accordingly.
 If no movie has been selected, display a global list of recommended movies based on your own defined criteria.
+
 ---
 
 ## Tasks
