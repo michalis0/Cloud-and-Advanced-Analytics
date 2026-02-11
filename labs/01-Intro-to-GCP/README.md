@@ -32,7 +32,7 @@ Please follow these steps to prepare for this week's lab:
     - Please do NOT activate your free $300 trial on Google Cloud yet. We will utilize this for a project later in the course. Instead, we'll start with a voucher.
 3. **Voucher Redemption**:
     - Redeem the student voucher code we provided, using your .unil or .epfl account. See instructions in Moodle.
-    - Redeem the voucher and add it to your Google Cloud Account using this [link](https://console.cloud.google.com/edu?_ga=2.76628693.1729908852.1708547866-247021585.1677676382), more information [here](https://cloud.google.com/billing/docs/how-to/edu-grants)
+    - Redeem the voucher you received by email voucher on your Google Cloud Account, more information [here](https://cloud.google.com/billing/docs/how-to/edu-grants)
     - Verify that the $50 voucher code has been applied to your account by checking the billing tab on your Google Cloud Profile. 
     - Important note: For the Google Cloud account, the student code will give you a free $50 credit. Once you've exhausted this, you'll need to enter your credit card information (you won't be charged). This simply verifies that you are not a bot. At this point, you'll receive a free $300 credit valid for 3 months. More details are available [here](https://edu.google.com/programs/students/?modal_active=none).
 
