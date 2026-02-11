@@ -35,6 +35,10 @@ Please follow these steps to prepare for this week's lab:
     - Redeem the voucher you received by email on your Google Cloud Account.
     - Verify that the $50 voucher code has been applied to your account by checking the billing tab on your Google Cloud Profile. 
     - Important note: For the Google Cloud account, the student code will give you a free $50 credit. Once you've exhausted this, you'll need to enter your credit card information (you won't be charged). This simply verifies that you are not a bot. At this point, you'll receive a free $300 credit valid for 3 months. More details are available [here](https://edu.google.com/programs/students/?modal_active=none).
+4. **Install the required software**
+    - [Github desktop](https://desktop.github.com/download/)
+    - [Docker](https://docs.docker.com/desktop/)
+    - An IDE ([Visual Studio Code](https://code.visualstudio.com/download)/[Antigravity](https://antigravity.google/download) etc...)
 
 Make sure to create your account by the end of this week. Thereafter, familiarize yourself with various Google Cloud features. 
 
