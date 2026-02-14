@@ -115,6 +115,7 @@ A Google Cloud Function is a serverless compute service that lets you run code s
         - Region: **Zurich**
         - Runtime: **Python 3.13** 
         - Allow unauthenticated invocations
+        - Keep all other options as default.
     - 3.5. Click on **Create** and **Enable** the required APIs
 
 - **Step 4.**
@@ -142,6 +143,7 @@ If ever there are any issues, verify the **LOGS** tab for potential errors.
         - Region: **Zurich**
         - Runtime: **Python 3.13** 
         - Allow unauthenticated invocations
+        - Keep all other options as default
     - 6.4. Click on **Create** and **Enable** the required APIs
     - 6.5. **Paste** the function 2 in the code editor on Google Cloud, and change the entry point to **get_movie_details**
     - 6.6. **Copy** the libraries and **paste** them in the **requirements.txt**
@@ -225,6 +227,7 @@ If ever there are any issues, verify the **LOGS** tab for potential errors.
   - In **Container image URL**, select your image: **my_streamlit_app**
   - Select the right region (europe-west6) 
   - Add **Allow unauthenticated invocations**
+  - Keep all other options as default
   - Click **Create**
   - Wait 1-2 minutes and Done! You should have access to an URL allowing you to access your website from the Cloud ! Click on the URL to show your app deployed on the Web. 
 
