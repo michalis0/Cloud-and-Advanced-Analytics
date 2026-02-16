@@ -9,7 +9,7 @@ In this assignment, you will implement a web application that will issue queries
 
 ### Tasks
 Upload the movies and the user ratings datasets in BigQuery in the proper tables. You can find these datasets in the following zip file:
-- [**assignment1-data.zip**](https://unils-my.sharepoint.com/:u:/g/personal/dimitri_roulin_unil_ch/EUB9EaTsDddIqKBs7xosJZcBsea800PmN2FFDjxF7Q923g?e=qN3O5D)
+- [**assignment1-data.zip**](https://1drv.ms/u/c/faded94de0413ee1/IQDdZe52wAHTS7mc75xH0xydAQHbvBgy3JCduHNAvD1GutU?e=8a3t0p)
 
 Here’s a preview of how the movies and the rating tables look like respectively:
 
