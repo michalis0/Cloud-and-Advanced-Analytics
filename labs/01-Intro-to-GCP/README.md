@@ -1,12 +1,12 @@
 <h1 align="center"> LAB 1 - INTRO TO GCP</h1>
 <div>
-<td> 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Logo_Universit%C3%A9_de_Lausanne.svg/2000px-Logo_Universit%C3%A9_de_Lausanne.svg.png" style="padding-right:10px;width:240px;float:left"/></td>
-<h2 style="white-space: nowrap">Cloud and Advanced Analytics </h2></td>
-<hr style="clear:both">
-<p style="font-size:0.85em; margin:2px; text-align:justify">
-<br>
-<br>
+    <br/>
+    <img src="https://www.unil.ch/modules/refonte-assets/images/unil-logo.svg" style="padding-right:10px;width:180px;float:left"/>
+    <br/><br/><br/>
+    <h2 style="white-space: nowrap">Cloud and Advanced Analytics </h2>
+    <hr style="clear:both">
+    <p style="font-size:0.85em; margin:2px; text-align:justify">
+    <br/>
 </div>
 
 ## Learning Goals
@@ -18,7 +18,7 @@ Welcome to the first lab of Cloud and Advanced Analytics! In this week, we'll in
 ## Lab Walkthrough
 In this lab, TAs will demonstrate the following on the Google Console:
 * Google Cloud account setup
-* Exploring Google Cloud Console features, specifically Billing, Storage, Big Query, AI, Cloud Functions
+* Exploring Google Cloud Console features, Billing, Storage, Big Query, AI, Cloud Functions
 * Introduction to serverless backend with Cloud Functions
 * Deploying your first streamlit app in Google Cloud
 
@@ -31,7 +31,6 @@ Please follow these steps to prepare for this week's lab:
     - Create a Google account with your academic email address (if you do not already have one) on [Google Cloud](https://cloud.google.com). This needs to be a Google account.
     - Please do NOT activate your free $300 trial on Google Cloud yet. We will utilize this for a project later in the course. Instead, we'll start with a voucher.
 3. **Voucher Redemption**:
-    - Redeem the student voucher code we provided, using your .unil or .epfl account. See instructions in Moodle.
     - Redeem the voucher you received by email on your Google Cloud Account.
     - Verify that the $50 voucher code has been applied to your account by checking the billing tab on your Google Cloud Profile. 
     - Important note: For the Google Cloud account, the student code will give you a free $50 credit. Once you've exhausted this, you'll need to enter your credit card information (you won't be charged). This simply verifies that you are not a bot. At this point, you'll receive a free $300 credit valid for 3 months. More details are available [here](https://edu.google.com/programs/students/?modal_active=none).
