@@ -1,13 +1,14 @@
 <h1 align="center"> HEC, University of Lausanne </h1>
 <div>
-<td> 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Logo_Universit%C3%A9_de_Lausanne.svg/2000px-Logo_Universit%C3%A9_de_Lausanne.svg.png" style="padding-right:10px;width:240px;float:left"/></td>
-<h2 style="white-space: nowrap">Cloud and Advanced Analytics </h2></td>
-<hr style="clear:both">
-<p style="font-size:0.85em; margin:2px; text-align:justify">
-<br>
-<br>
+    <br/>
+    <img src="https://www.unil.ch/modules/refonte-assets/images/unil-logo.svg" style="padding-right:10px;width:180px;float:left"/>
+    <br/><br/><br/>
+    <h2 style="white-space: nowrap">Cloud and Advanced Analytics </h2>
+    <hr style="clear:both">
+    <p style="font-size:0.85em; margin:2px; text-align:justify">
+    <br/>
 </div>
+
 
 Here you will find everything needed for the labs. The labs have the same basic structure:
 
