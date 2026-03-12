@@ -1,0 +1,4 @@
+google-cloud-bigquery
+db-dtypes
+Flask
+requests
