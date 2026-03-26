@@ -1,12 +1,12 @@
-<h1 align="center"> LAB 6 - Elastic Cloud</h1>
+<h1 align="center"> LAB 1 - INTRO TO GCP</h1>
 <div>
-<td> 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Logo_Universit%C3%A9_de_Lausanne.svg/2000px-Logo_Universit%C3%A9_de_Lausanne.svg.png" style="padding-right:10px;width:240px;float:left"/></td>
-<h2 style="white-space: nowrap">Cloud and Advanced Analytics </h2></td>
-<hr style="clear:both">
-<p style="font-size:0.85em; margin:2px; text-align:justify">
-<br>
-<br>
+    <br/>
+    <img src="https://www.unil.ch/modules/refonte-assets/images/unil-logo.svg" style="padding-right:10px;width:180px;float:left"/>
+    <br/><br/><br/>
+    <h2 style="white-space: nowrap">Cloud and Advanced Analytics </h2>
+    <hr style="clear:both">
+    <p style="font-size:0.85em; margin:2px; text-align:justify">
+    <br/>
 </div>
 
 This week, you will learn about Elastic Cloud, a platform which enables search and analytics for both structured and unstructured data.
