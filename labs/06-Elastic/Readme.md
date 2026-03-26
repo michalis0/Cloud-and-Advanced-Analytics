@@ -1,4 +1,4 @@
-<h1 align="center"> LAB 1 - INTRO TO GCP</h1>
+<h1 align="center"> LAB 6 - Elasticsearch</h1>
 <div>
     <br/>
     <img src="https://www.unil.ch/modules/refonte-assets/images/unil-logo.svg" style="padding-right:10px;width:180px;float:left"/>
