@@ -1,4 +1,4 @@
-# Cloud & Advanced Analytics 2025 - Assignment Part 2
+# Cloud & Advanced Analytics 2026 - Assignment Part 2
 
 ## Goal
 You will create a **movie recommendation application** that allows users to input their movie preferences and receive personalized recommendations, and you will adapt your autocomplete feature to use **Elasticsearch**. The application should be deployed on **Google Cloud**.
