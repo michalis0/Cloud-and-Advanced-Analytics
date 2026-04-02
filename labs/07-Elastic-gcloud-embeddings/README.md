@@ -1,12 +1,12 @@
-<h1 align="center"> Semantic search using BigQuery embeddings</h1>
+<h1 align="center">LAB 7 - Semantic search using BigQuery embeddings</h1>
 <div>
-<td> 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Logo_Universit%C3%A9_de_Lausanne.svg/2000px-Logo_Universit%C3%A9_de_Lausanne.svg.png" style="padding-right:10px;width:240px;float:left"/></td>
-<h2 style="white-space: nowrap">Cloud and Advanced Analytics </h2></td>
-<hr style="clear:both">
-<p style="font-size:0.85em; margin:2px; text-align:justify">
-<br>
-<br>
+    <br/>
+    <img src="https://www.unil.ch/modules/refonte-assets/images/unil-logo.svg" style="padding-right:10px;width:180px;float:left"/>
+    <br/><br/><br/>
+    <h2 style="white-space: nowrap">Cloud and Advanced Analytics </h2>
+    <hr style="clear:both">
+    <p style="font-size:0.85em; margin:2px; text-align:justify">
+    <br/>
 </div>
 
 This week you will continue to learn about elastic search. More precisely, we will have a look at search using embeddings - [resource on vector embeddings](https://www.elastic.co/what-is/vector-embedding) . 
@@ -29,7 +29,7 @@ In this part we walk through the end-to-end process of creating and using text e
 
 __From the [documentation](https://cloud.google.com/bigquery/docs/vector-index)__: A vector index is a data structure designed to let the VECTOR_SEARCH function perform a more efficient vector search of embeddings. When VECTOR_SEARCH is able to use a vector index, the function uses the Approximate Nearest Neighbor search technique to help improve search performance, with the trade-off of reducing recall and thus returning more approximate results.
 
-- **1.1:** Create a Bigquery dataset. For the **"Location type"** parameter select **"Multi-region"** and from the drop-down menu select **"EU (Multiple regions in EU)**. Create separate tables for the two datasets:
+- **1.1:** Create a BigQuery dataset. For the **"Location type"** parameter select **"Multi-region"** and from the drop-down menu select **"EU (Multiple regions in EU)**. Create separate tables for the two datasets:
   - **sentences** --> sentences.csv
   - **youtube_videos** --> elastic_data_youtube_videos.csv
  
@@ -39,12 +39,12 @@ __From the [documentation](https://cloud.google.com/bigquery/docs/vector-index)_
 
     - In the BigQuery page click on **Add data** and search for **Vertex AI**.
     
-    - In the Connection ID field, enter a name for your connection, e.g. VertexAI_connection_lab7. In the Connection type list, select **Vertex AI remote models, remote functions and BigLake (Cloud Resource)**.
+    - In the Connection ID field, enter a name for your connection, e.g. VertexAI_connection_lab7. In the Connection type list, select **Vertex AI remote models, remote functions, BigLake and Spanner (Cloud Resource)**.
       
     <img src="imgs/Vertex1.png" width=400pxl> <img src="imgs/Vertex2.png" width=400pxl> <img src="imgs/Vertex3.png" width=400pxl>
 
-    - Click Create Connection. Then go to the connection and in the drop-down **External connections** info panel, copy the **service account ID** - last ID in the UI. You will need it later.
-
+    - Click Create Connection. Then go to **Connections** info panel in the BigQuery left panel and copy the **Service account ID** - last ID in the UI. You will need it later.
+    <img src="imgs/Vertex_connections.png">
   - **1.2.2** Next you need to grant the connection's service account an appropriate role to access the Vertex AI service.
   
     - Go to **IAM & Admin page**.
@@ -52,7 +52,6 @@ __From the [documentation](https://cloud.google.com/bigquery/docs/vector-index)_
     - In the New principals field, enter the **service account ID** that you just copied.
     - In the Select a role field, choose Vertex AI, and then select **Vertex AI User** role and then click save.
     <img src="imgs/grant_access.png" >
-    <img src="imgs/connection_info.png">
 
   - **1.2.3** Now you will create the remote model for text embedding generation. This remote model represents a hosted Vertex AI text embedding generation model. In the BigQuery query editor run the following statement:
   ```
