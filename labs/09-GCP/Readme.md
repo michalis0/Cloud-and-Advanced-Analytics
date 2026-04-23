@@ -1,12 +1,12 @@
 <h1 align="center"> Continuous integration</h1>
 <div>
-<td> 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Logo_Universit%C3%A9_de_Lausanne.svg/2000px-Logo_Universit%C3%A9_de_Lausanne.svg.png" style="padding-right:10px;width:240px;float:left"/></td>
-<h2 style="white-space: nowrap">Cloud and Advanced Analytics </h2></td>
-<hr style="clear:both">
-<p style="font-size:0.85em; margin:2px; text-align:justify">
-<br>
-<br>
+    <br/>
+    <img src="https://www.unil.ch/modules/refonte-assets/images/unil-logo.svg" style="padding-right:10px;width:180px;float:left"/>
+    <br/><br/><br/>
+    <h2 style="white-space: nowrap">Cloud and Advanced Analytics </h2>
+    <hr style="clear:both">
+    <p style="font-size:0.85em; margin:2px; text-align:justify">
+    <br/>
 </div>
 
 
@@ -50,13 +50,13 @@ Before getting started, make sure you have the following:
    - Deploy your Streamlit app to Google Cloud Run as we have done in the past. But first start by pushing your code to Github !
 
 2. **Push to Artifact Registry**:
-   - Build the Docker image:
+   - Create the repo, build the Docker image and push it:
      ```
-     docker build -t eu.gcr.io/PROJECT_ID/my_streamlit_app_v1:latest .
+     gcloud artifacts repositories create streamlit-repo-gcp --repository-format=docker --location=europe-west6 --description="Docker repository for Streamlit images"
      ```
    - Push the Docker image to Google Cloud Artifact Registry:
      ```
-     docker push eu.gcr.io/PROJECT_ID/my_streamlit_app_v1:latest
+      gcloud builds submit --tag europe-west6-docker.pkg.dev/PROJECT_ID/streamlit-repo-gcp/my_streamlit_app:latest .
      ```
 
 3. **Verify Deployment**:
