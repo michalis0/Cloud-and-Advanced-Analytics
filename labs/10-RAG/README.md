@@ -72,11 +72,11 @@ By the end of this lab, you should be able to:
 
 In this lab, we will:
 
-1. Upload the provided documents to Cloud Storage
-2. Create a Google Cloud RAG Engine corpus from the uploaded documents
-3. Test the corpus in Agent Studio with a Gemini model
-4. Test the system with questions based on the corpus automatically
-5. Evaluate the quality of retrieval and generation
+1. Upload the provided document corpus to Cloud Storage (bucket).
+2. Create a RAG Engine corpus from the Cloud Storage files.
+3. Test the corpus in Agent Studio with a Gemini model.
+4. Run an automated batch evaluation using predefined questions.
+5. Evaluate the generated answers using reference answers.
 
 -----------------------------------
 
