@@ -139,16 +139,17 @@ Suggested configuration:
 
 Keep the default values for the other options.
 
-Open the bucket and upload the full folder provided by the teaching team.
+Open the bucket and upload the full folder provided.
 
 At the end of this step, your files should be available under a path similar to:
 
-![Bucket detail example](./img/bucket_details.png)
 ```bash
 gs://rag-fal-corpus
 ```
 
 Copy this Cloud Storage URI. You will need it when creating the RAG Engine corpus.
+
+![Bucket detail example](./img/bucket_details.png)
 
 -----------------------------------
 
@@ -196,15 +197,17 @@ In Google Cloud Console:
 4. Select your data from Google Cloud Storage
 5. Provide your gs address: **gs://rag-fal-corpus**
 6. Click **Continue**. On the next page, select **Text Multilingual Embedding 002** as the embedding model and choose the managed Cloud Spanner option for the vector database.
-7. 7. Finally, create the corpus by clicking **Create corpus** in the left panel.
+7. Finally, create the corpus by clicking **Create corpus** in the left panel.
 
 #### What are embeddings?
 
-Embeddings are numerical representations of data such as text, images, or videos. They transform content into vectors, which are lists of numbers that capture meaning and semantic relationships.
+#### What are embeddings?
 
-In a RAG system, embeddings help compare a user question with the documents in the corpus. If two vectors are close to each other, their original contents are likely to be semantically related.
+In this lab, embeddings are numerical representations of text. They transform words, sentences, or document passages into vectors, which are lists of numbers designed to capture patterns of meaning and semantic relationships.
 
-The quality of these embeddings is important because it directly affects how well the system retrieves relevant passages from the document collection.
+In our RAG system, embeddings make it possible to compare a user question with passages from the document corpus. Passages whose vectors are close to the question vector are considered semantically related and can be retrieved as context for the language model.
+
+The quality of the embeddings is important because it directly affects retrieval quality. If the embeddings represent the meaning of the text poorly, the system may retrieve irrelevant passages or miss passages that are necessary to answer the question.
 
 -----------------------------------
 
@@ -212,11 +215,9 @@ The quality of these embeddings is important because it directly affects how wel
 
 -----------------------------------
 
-Once the corpus has been created and the documents have been imported, you can test the RAG system directly in **Agent Studio**.
+Once the corpus has been created and the documents have been imported, you can test the RAG system directly in **Agent Studio** (Test button).
 
 Agent Studio provides an interactive interface where you can send prompts to a Gemini model and connect the model to tools or grounding sources. In this lab, it is used to test whether the model can retrieve relevant information from the RAG Engine corpus and produce grounded answers.
-
-Open **Agent Studio** from Google Cloud Console.
 
 ![Agent studio](./img/Agent_Studio.png)
 
@@ -235,8 +236,7 @@ In this lab, we will not add custom system instructions. We will test the RAG sy
 
 ### Step 6.1: Manual Evaluation
 
-RAG does not eliminate the need for evaluation. It changes the evaluation question. Instead of only asking whether an answer sounds plausible, we ask whether it is supported by retrieved evidence.
-
+RAG systems still require careful evaluation. In this context, the main question is not only whether an answer sounds plausible, but whether it is supported by the documents retrieved from the corpus.
 
 #### Retrieval failure
 
