@@ -12,7 +12,7 @@
 
 ## Introduction
 
-In the previous labs, you have already used Google Cloud services and generative AI tools. This lab builds on that work by introducing a more rigorous use case: **Retrieval-Augmented Generation**, usually abbreviated as **RAG**.
+This lab introduces a practical use case for **Retrieval-Augmented Generation**, usually abbreviated as **RAG**, using Google Cloud. The objective is to show how a generative model can be connected to a specific document corpus so that its answers are grounded in retrieved evidence rather than only in general model knowledge.
 
 A Large Language Model can produce fluent and convincing text, but it does not automatically know the content of a specific archive, document collection, or institutional corpus. When asked about such material, it may answer from general knowledge, infer too much, or produce plausible statements that are not supported by the documents. This is a serious limitation in academic work, where an answer must be connected to evidence.
 
