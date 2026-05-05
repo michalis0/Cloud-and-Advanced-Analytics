@@ -56,7 +56,7 @@ In the **Expanding** section, students will learn to craft detailed, context-awa
 * **1.4** Click **Instances**, then click **Create New**, then click **Advanced** and set up the new instance as follows:
   * **Region**: us-central1 (lowa)
   * **Zone**: us-central1-a
-  * (In *us-central1 (Iowa)*, you can attach an NVIDIA T4 GPU, but for this lab, we will not use it)
+  * (In *us-central1 (Iowa)*, (It is possible to attach an NVIDIA T4 GPU, but for this lab, we will not use it)
   * Under **Machine type**, select **E2**, then click **Create**.
 * **1.5** Once the instance has been created, **wait for it to provision**. This usually takes about 1–2 minutes. Then, select **Open JupyterLab**. This will open a **JupyterLab** instance.
 ### Exercise
