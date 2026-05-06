@@ -201,8 +201,6 @@ In Google Cloud Console:
 
 #### What are embeddings?
 
-#### What are embeddings?
-
 In this lab, embeddings are numerical representations of text. They transform words, sentences, or document passages into vectors, which are lists of numbers designed to capture patterns of meaning and semantic relationships.
 
 In our RAG system, embeddings make it possible to compare a user question with passages from the document corpus. Passages whose vectors are close to the question vector are considered semantically related and can be retrieved as context for the language model.
@@ -281,7 +279,9 @@ Quand et où l’hôtel Bellevue doit-il être vendu aux enchères, et dans quel
 Quels éléments caractérisent le grand bal paré et masqué annoncé au Casino le 25 janvier 1868 ?
 ```
 
+In the following screenshot, we can see that it aggregated several documents, some of which are not directly related to the question. For example, it added information about costume rental.
 
+![wrong_answer](./img/wrong_answers.png)
 
 ### Step 6.2: Evaluation: LLM-as-a-Judge
 
@@ -297,6 +297,8 @@ For each question, the LLM assigns a binary score:
  - **0** if the generated answer is incorrect, incomplete, unsupported, or not aligned with the expected answer.
 
 At the end of the process, the notebook reports an overall score, corresponding to the proportion of generated answers that were judged correct.
+
+![rag_eval](./img/rag_generation_eval.png)
 
 This evaluation procedure allows us to move beyond qualitative inspection and obtain a reproducible measure of the RAG system’s performance on the provided question set.
 
