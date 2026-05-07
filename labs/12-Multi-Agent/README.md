@@ -340,7 +340,8 @@ Do not ask the model to use the full workflow in the prompt. The workflow is alr
 
 This first version may produce a playable game, but it has not been reviewed.
 
-![first_snake](./img/snake_v1.png)
+
+<img src="./img/snake_v1.png" alt="snake_v1" width="200"/>
 
 If you're experiencing issues because the model is exhausted or you've used up your free credits, you can switch to a different model. For example, you can try the non-lite version of Gemini or the latest.
 
@@ -666,7 +667,10 @@ root_agent = SequentialAgent(
 Now compare the output with the previous version. The result should not only be reviewed and revised, but also improved from a gameplay or user-experience perspective, such this case with visual feedback.
 
 ![example_game_design](./img/example_game_design.png)
-![snake_v2](./img/snake_v2.png)
+
+
+<img src="./img/snake_v2.png" alt="snake_v2" width="200"/>
+
 -----------------------------------
 
 ### Step 4.4: Add the Loop Orchestrator
@@ -896,9 +900,9 @@ root_agent = SequentialAgent(
 
 The loop agent improves the game through several controlled iterations. Each iteration can introduce small design refinements, review the current implementation, and revise the code. Typical improvements may include clearer visuals, better controls, a more informative game-over screen, or gameplay changes such as increasing the snake speed when food is eaten.
 
-![final_version](./img/snake_v3.png)
 ![final_version](./img/final_modifications.png)
 
+<img src="./img/snake_v3.png" alt="snake_v3" width="200"/>
 
 -----------------------------------
 
