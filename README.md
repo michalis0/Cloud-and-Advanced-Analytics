@@ -1,9 +1,9 @@
-<h1 align="center"> HEC, University of Lausanne </h1>
+<h1 align="center"> Cloud and Advanced Analytics </h1>
 <div>
     <br/>
     <img src="https://www.unil.ch/modules/refonte-assets/images/unil-logo.svg" style="padding-right:10px;width:180px;float:left"/>
     <br/><br/><br/>
-    <h2 style="white-space: nowrap">Cloud and Advanced Analytics </h2>
+    <h2 style="white-space: nowrap">HEC Lausanne </h2>
     <hr style="clear:both">
     <p style="font-size:0.85em; margin:2px; text-align:justify">
     <br/>
