@@ -1,13 +1,5 @@
 <h1 align="center"> Cloud and Advanced Analytics </h1>
-<div>
-    <br/>
-    <img src="https://www.unil.ch/modules/refonte-assets/images/unil-logo.svg" style="padding-right:10px;width:180px;float:left"/>
-    <br/><br/><br/>
-    <h2 style="white-space: nowrap">HEC Lausanne </h2>
-    <hr style="clear:both">
-    <p style="font-size:0.85em; margin:2px; text-align:justify">
-    <br/>
-</div>
+<h2 style="white-space: nowrap">HEC Lausanne </h2>
 
 In this course, we will learn how to use Google Cloud to deploy dockerized applications. We will also explore various other modern analytics.
 
