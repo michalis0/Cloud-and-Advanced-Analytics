@@ -15,5 +15,6 @@ In this course, we will learn how to use Google Cloud to deploy dockerized appli
 7. [Big Query Embeddings](labs\07-Elastic-gcloud-embeddings\Readme.md)
 8. [Graph Analytics in Python](labs\08-Graph-Analytics\readme.md)
 9. [Continuous Integration GCP](labs\09-GCP\Readme.md)
-10. [GenAI studio](labs\10-GenAI\README.md)
-11. [Chatbots on GCP](labs\11-Chatbot\README.md)
+10. [GenAI](labs\10-GenAI\README.md)
+11. [Chatbots and RAG](labs\11-RAG\README.md)
+12. [Agentic AI (with adk)](labs\12-Agentic-AI\README.md)
