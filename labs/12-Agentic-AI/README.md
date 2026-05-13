@@ -339,7 +339,7 @@ Do not ask the model to use the full workflow in the prompt. The workflow is alr
 This first version may produce a playable game, but it has not been reviewed.
 
 
-<img src="./img/snake_v1.png" alt="snake_v1" width="200"/>
+<img src="./img/snake_v1.gif" alt="snake_v1" width="200"/>
 
 If you're experiencing issues because the model is exhausted or you've used up your free credits, you can switch to a different model. For example, you can try the non-lite version of Gemini or the latest.
 
@@ -667,7 +667,7 @@ Now compare the output with the previous version. The result should not only be 
 ![example_game_design](./img/example_game_design.png)
 
 
-<img src="./img/snake_v2.png" alt="snake_v2" width="200"/>
+<img src="./img/snake_v2.gif" alt="snake_v2" width="200"/>
 
 -----------------------------------
 
@@ -900,7 +900,7 @@ The loop agent improves the game through several controlled iterations. Each ite
 
 ![final_version](./img/final_modifications.png)
 
-<img src="./img/snake_v3.png" alt="snake_v3" width="200"/>
+<img src="./img/snake_v3.gif" alt="snake_v3" width="200"/>
 
 -----------------------------------
 
