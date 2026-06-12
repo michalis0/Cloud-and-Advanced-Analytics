@@ -11,6 +11,9 @@
 <br>
 </div>
 
+# TODO for 2027
+Use the "self._client.insert_rows_json(...)" to insert data fast from M5stack to middleware to Bigquery.
+
 ## Learning Goals
 By the end of this lab you will learn:
 
