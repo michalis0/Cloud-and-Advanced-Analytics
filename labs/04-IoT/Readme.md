@@ -1,8 +1,4 @@
 
-
-
-<h1 align="center">IoT: Sending Data to BigQuery</h1>
-
 <table border="0" width="100%">
   <tr>
     <td width="250" valign="top">
@@ -13,8 +9,13 @@
     </td>
   </tr>
 </table>
-
 <hr>
+
+<h1 align="center">IoT: Sending Data to BigQuery</h1>
+
+
+
+
 
 # TODO for 2027
 Use the "self._client.insert_rows_json(...)" to insert data fast from M5stack to middleware to Bigquery.
