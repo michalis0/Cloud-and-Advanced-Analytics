@@ -1,15 +1,20 @@
 
 
-<h1 align="center"> IoT: Sending Data to BigQuery</h1>
-<div>
-<td> 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Logo_Universit%C3%A9_de_Lausanne.svg/2000px-Logo_Universit%C3%A9_de_Lausanne.svg.png" style="padding-right:10px;width:240px;float:left"/></td>
-<h2 style="white-space: nowrap">Cloud and Advanced Analytics </h2></td>
-<hr style="clear:both">
-<p style="font-size:0.85em; margin:2px; text-align:justify">
-<br>
-<br>
-</div>
+
+<h1 align="center">IoT: Sending Data to BigQuery</h1>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="250" valign="top">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Logo_Universit%C3%A9_de_Lausanne.svg/2000px-Logo_Universit%C3%A9_de_Lausanne.svg.png" width="240" alt="UNIL Logo"/>
+    </td>
+    <td valign="middle">
+      <h2>Cloud and Advanced Analytics</h2>
+    </td>
+  </tr>
+</table>
+
+<hr>
 
 # TODO for 2027
 Use the "self._client.insert_rows_json(...)" to insert data fast from M5stack to middleware to Bigquery.
