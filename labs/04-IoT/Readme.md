@@ -6,7 +6,7 @@
 <table border="0" width="100%">
   <tr>
     <td width="250" valign="top">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Logo_Universit%C3%A9_de_Lausanne.svg/2000px-Logo_Universit%C3%A9_de_Lausanne.svg.png" width="240" alt="UNIL Logo"/>
+      <img src="[https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Logo_Universit%C3%A9_de_Lausanne.svg/2000px-Logo_Universit%C3%A9_de_Lausanne.svg.png](https://api.unil.ch/newsunil/v1/api-newsunil/resources/image/1747994673370.M?2025-05-23T10:24:35.755)" width="240" alt="UNIL Logo"/>
     </td>
     <td valign="middle">
       <h2>Cloud and Advanced Analytics</h2>
